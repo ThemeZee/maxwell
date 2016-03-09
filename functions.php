@@ -36,7 +36,7 @@ function maxwell_setup() {
 	add_theme_support( 'post-thumbnails' );
 	
 	// Set detfault Post Thumbnail size
-	set_post_thumbnail_size( 900, 400, true );
+	set_post_thumbnail_size( 850, 550, true );
 
 	// Register Navigation Menu
 	register_nav_menu( 'primary', esc_html__( 'Main Navigation', 'maxwell' ) );
@@ -47,7 +47,7 @@ function maxwell_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'maxwell_custom_background_args', array( 'default-color' => 'dddddd' ) ) );
+	add_theme_support( 'custom-background', apply_filters( 'maxwell_custom_background_args', array( 'default-color' => 'ffffff' ) ) );
 	
 	// Set up the WordPress core custom header feature.
 	add_theme_support( 'custom-header', apply_filters( 'maxwell_custom_header_args', array(
@@ -158,7 +158,7 @@ add_action( 'wp_enqueue_scripts', 'maxwell_scripts' );
 function maxwell_google_fonts_url() {
     
 	// Set default Fonts
-	$font_families = array( 'Open Sans:400,400italic,700,700italic', 'Titillium Web:400,400italic,700,700italic' );
+	$font_families = array( 'Titillium Web:400,400italic,700,700italic', 'Amaranth:400,400italic,700,700italic' );
 
 	// Build Fonts URL
 	$query_args = array(
@@ -177,12 +177,12 @@ function maxwell_google_fonts_url() {
 function maxwell_add_image_sizes() {
 	
 	// Add Slider Image Size
-	add_image_size( 'maxwell-slider-image', 780, 420, true );
+	add_image_size( 'maxwell-slider-image', 790, 430, true );
 	
 	// Add different thumbnail sizes for Magazine Posts widgets
 	add_image_size( 'maxwell-thumbnail-small', 120, 80, true );
-	add_image_size( 'maxwell-thumbnail-medium', 360, 200, true );
-	add_image_size( 'maxwell-thumbnail-large', 600, 330, true );
+	add_image_size( 'maxwell-thumbnail-medium', 360, 240, true );
+	add_image_size( 'maxwell-thumbnail-large', 600, 400, true );
 	
 }
 add_action( 'after_setup_theme', 'maxwell_add_image_sizes' );

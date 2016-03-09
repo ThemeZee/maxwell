@@ -179,9 +179,9 @@ class Maxwell_Magazine_Posts_Grid_Widget extends WP_Widget {
 			
 								<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'maxwell-thumbnail-large' ); ?></a>
 
-								<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-							
 								<?php $this->entry_meta( $settings ); ?>
+								
+								<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 						
 							</header><!-- .entry-header -->
 
@@ -260,9 +260,9 @@ class Maxwell_Magazine_Posts_Grid_Widget extends WP_Widget {
 			
 								<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'maxwell-thumbnail-medium' ); ?></a>
 
-								<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-							
 								<?php $this->entry_meta( $settings ); ?>
+							
+								<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 						
 							</header><!-- .entry-header -->
 

@@ -21,18 +21,17 @@
 	
 		<div class="slide-content clearfix">
 
-			<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-			
 			<?php maxwell_slider_meta(); ?>
-											
+			
+			<?php the_title( sprintf( '<h1 class="slide-title entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+								
 			<div class="entry-content clearfix">
 				
 				<?php the_excerpt(); ?>
+				<?php maxwell_more_link(); ?>
 			
 			</div><!-- .entry-content -->
-						
-			<div class="read-more"><?php maxwell_more_link(); ?></div>
-			
+
 		</div>
 
 	</li>

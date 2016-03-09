@@ -44,7 +44,7 @@ add_action( 'wp_enqueue_scripts', 'maxwell_slider_scripts' );
  * @return int
  */
 function maxwell_slider_excerpt_length($length) {
-    return 25;
+    return 20;
 }
 
 

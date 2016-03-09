@@ -100,25 +100,11 @@ function maxwell_entry_meta() {
 		$postmeta .= maxwell_meta_date();
 		
 	}
-
-	// Display author unless user has deactivated it via settings
-	if ( true == $theme_options['meta_author'] ) {
-	
-		$postmeta .= maxwell_meta_author();
-	
-	}
 	
 	// Display categories unless user has deactivated it via settings
 	if ( true == $theme_options['meta_category'] ) {
 	
 		$postmeta .= maxwell_meta_category();
-	
-	}
-	
-	// Display categories unless user has deactivated it via settings
-	if ( true == $theme_options['meta_comments'] ) {
-	
-		$postmeta .= maxwell_meta_comments();
 	
 	}
 		
@@ -151,6 +137,18 @@ function maxwell_meta_date() {
 endif;
 
 
+if ( ! function_exists( 'maxwell_meta_category' ) ):
+/**
+ * Displays the category of posts
+ */	
+function maxwell_meta_category() { 
+
+	return '<span class="meta-category"> ' . get_the_category_list(' / ') . '</span>';
+	
+} // maxwell_meta_category()
+endif;
+
+
 if ( ! function_exists( 'maxwell_meta_author' ) ):
 /**
  * Displays the post author
@@ -169,37 +167,28 @@ function maxwell_meta_author() {
 endif;
 
 
-if ( ! function_exists( 'maxwell_meta_category' ) ):
+if ( ! function_exists( 'maxwell_posted_by' ) ):
 /**
- * Displays the category of posts
- */	
-function maxwell_meta_category() { 
+ * Displays the post author
+ */
+function maxwell_posted_by() {  
+	
+	// Get Theme Options from Database
+	$theme_options = maxwell_theme_options();
+	
+	// Return early if author is turned off
+	if ( false == $theme_options['meta_author'] ) {
+		return false;
+	}
+	
+	// Get Author Avatar
+	$avatar = get_avatar( get_the_author_meta( 'ID' ), 32 );
+	
+	$byline = sprintf( esc_html_x( 'Posted by %s', 'post author', 'maxwell' ), maxwell_meta_author() );
+	
+	echo '<div class="posted-by"> ' . $avatar . $byline . '</div>';
 
-	return '<span class="meta-category"> ' . get_the_category_list(', ') . '</span>';
-	
-} // maxwell_meta_category()
-endif;
-
-
-if ( ! function_exists( 'maxwell_meta_comments' ) ):
-/**
- * Displays the post comments
- */	
-function maxwell_meta_comments() { 
-
-	// Start Output Buffering
-	ob_start();
-	
-	// Display Comments
-	comments_popup_link( esc_html__( 'Leave a comment', 'maxwell' ), esc_html__( 'One comment', 'maxwell' ), esc_html__( '% comments', 'maxwell' ) );
-	$comments = ob_get_contents();
-	
-	// End Output Buffering
-	ob_end_clean();
-	
-	return '<span class="meta-comments"> ' . $comments . '</span>';
-	
-} // maxwell_meta_comments()
+}  // maxwell_posted_by()
 endif;
 
 
@@ -290,7 +279,7 @@ function maxwell_related_posts() {
 
 		themezee_related_posts( array( 
 			'class' => 'related-posts type-page clearfix',
-			'before_title' => '<h2 class="page-title related-posts-title">',
+			'before_title' => '<h2 class="archive-title related-posts-title">',
 			'after_title' => '</h2>'
 		) );
 		

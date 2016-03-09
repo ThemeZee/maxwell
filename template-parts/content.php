@@ -16,18 +16,16 @@
 			
 			<header class="entry-header">
 
-				<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-				
 				<?php maxwell_entry_meta(); ?>
+				
+				<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 			
 			</header><!-- .entry-header -->
 
 			<div class="entry-content entry-excerpt clearfix">
 				<?php the_excerpt(); ?>
-				
+				<?php maxwell_more_link(); ?>
 			</div><!-- .entry-content -->
-			
-			<div class="read-more"><?php maxwell_more_link(); ?></div>
 		
 		</article>
 		

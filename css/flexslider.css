@@ -75,6 +75,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 
 .post-slider-wrap {
 	position: relative;
+	background: #f3f3f3;
 }
 
 .post-slider, .zeeflexslider .zeeslides {
@@ -95,35 +96,27 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 .post-slider .zeeslide .slide-image {
-	float: left;
+	float: right;
 	width: 65%;
 	height: auto;
-	max-width: 780px;
-	max-height: 420px;
+	max-width: 790px;
+	max-height: 430px;
 	vertical-align: top;
 	margin: 0;
-	padding-left: 1px;
 }
 
 .post-slider .zeeslide .slide-content {
-	float: right;
+	float: left;
 	width: 35%;
-	padding: 0 1.5em;
+	padding: 1.5em 2em;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
-.post-slider .zeeslide .slide-content .read-more {
-	position: absolute;
-	bottom: 0;
-	left: 65%;
-}
-
-.post-slider .zeeslide .slide-content .read-more .more-link {
-	margin-left: 1.5em;
-	max-height: 40px;
-	padding: 0.5em 1em;
+.post-slider .zeeslide .slide-content .slide-title {
+	font-size: 28px;
+	font-size: 1.75rem;
 }
 
 .post-slider-controls {
@@ -134,8 +127,8 @@ html[xmlns] .zeeflexslider .zeeslides {
 .post-slider-controls .zeeflex-direction-nav {
 	*height: 0;
 	position: absolute;
-	bottom: 0;
-	right: 0;
+	bottom: 1.5em;
+	right: 1.5em;
 }
 
 .post-slider-controls .zeeflex-direction-nav a {
@@ -144,7 +137,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 	margin: -40px 0 0 -80px;
 	width: 40px;
 	height: 40px;
-	background: #dd5533;
+	background: #33bbcc;
 	text-align: left;
 	color #fff;
 	font-size: 0;
@@ -191,6 +184,44 @@ html[xmlns] .zeeflexslider .zeeslides {
 
 .post-slider-controls .zeeflex-direction-nav .zeeflex-next {
 	left: 42px;
+}
+
+/* Control Nav */
+.post-slider-controls .zeeflex-control-nav {
+	position: absolute; 
+	top: 1.5em;
+	right: 1.5em;
+	z-index: 99;
+}
+
+.post-slider-controls .zeeflex-control-nav li {
+	margin: 0 2px;
+	display: inline-block; 
+	zoom: 1; 
+	*display: inline;
+}
+
+.post-slider-controls .zeeflex-control-nav li a {
+	width: 25px; 
+	height: 10px; 
+	display: block; 
+	background: rgba(255,255,255,0.5);
+	cursor: pointer; 
+	text-indent: -9999px;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-ms-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.post-slider-controls .zeeflex-control-nav li a:hover { 
+	background: rgba(255,255,255,0.7);
+}
+
+.post-slider-controls .zeeflex-control-nav li a.zeeflex-active { 
+	background: rgba(255,255,255,0.9);
+	cursor: default; 
 }
 
 

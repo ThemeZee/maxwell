@@ -96,22 +96,6 @@ function maxwell_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 	
-	$wp_customize->add_setting( 'maxwell_theme_options[meta_author]', array(
-        'default'           => true,
-		'type'           	=> 'option',
-        'transport'         => 'refresh',
-        'sanitize_callback' => 'maxwell_sanitize_checkbox'
-		)
-	);
-    $wp_customize->add_control( 'maxwell_theme_options[meta_author]', array(
-        'label'    => esc_html__( 'Display post author', 'maxwell' ),
-        'section'  => 'maxwell_section_post',
-        'settings' => 'maxwell_theme_options[meta_author]',
-        'type'     => 'checkbox',
-		'priority' => 5
-		)
-	);
-	
 	$wp_customize->add_setting( 'maxwell_theme_options[meta_category]', array(
         'default'           => true,
 		'type'           	=> 'option',
@@ -124,23 +108,7 @@ function maxwell_customize_register_post_settings( $wp_customize ) {
         'section'  => 'maxwell_section_post',
         'settings' => 'maxwell_theme_options[meta_category]',
         'type'     => 'checkbox',
-		'priority' => 6
-		)
-	);
-	
-	$wp_customize->add_setting( 'maxwell_theme_options[meta_comments]', array(
-        'default'           => true,
-		'type'           	=> 'option',
-        'transport'         => 'refresh',
-        'sanitize_callback' => 'maxwell_sanitize_checkbox'
-		)
-	);
-    $wp_customize->add_control( 'maxwell_theme_options[meta_comments]', array(
-        'label'    => esc_html__( 'Display post comments', 'maxwell' ),
-        'section'  => 'maxwell_section_post',
-        'settings' => 'maxwell_theme_options[meta_comments]',
-        'type'     => 'checkbox',
-		'priority' => 7
+		'priority' => 5
 		)
 	);
 	
@@ -157,7 +125,7 @@ function maxwell_customize_register_post_settings( $wp_customize ) {
             'label' => esc_html__( 'Single Posts', 'maxwell' ),
             'section' => 'maxwell_section_post',
             'settings' => 'maxwell_theme_options[single_post_headline]',
-            'priority' => 8
+            'priority' => 6
             )
         )
     );
@@ -175,7 +143,23 @@ function maxwell_customize_register_post_settings( $wp_customize ) {
         'section'  => 'maxwell_section_post',
         'settings' => 'maxwell_theme_options[post_image_single]',
         'type'     => 'checkbox',
-		'priority' => 9
+		'priority' => 7
+		)
+	);
+	
+	$wp_customize->add_setting( 'maxwell_theme_options[meta_author]', array(
+        'default'           => true,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'maxwell_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'maxwell_theme_options[meta_author]', array(
+        'label'    => esc_html__( 'Display post author on single posts', 'maxwell' ),
+        'section'  => 'maxwell_section_post',
+        'settings' => 'maxwell_theme_options[meta_author]',
+        'type'     => 'checkbox',
+		'priority' => 8
 		)
 	);
 	
@@ -191,7 +175,7 @@ function maxwell_customize_register_post_settings( $wp_customize ) {
         'section'  => 'maxwell_section_post',
         'settings' => 'maxwell_theme_options[meta_tags]',
         'type'     => 'checkbox',
-		'priority' => 10
+		'priority' => 9
 		)
 	);
 	
@@ -207,7 +191,7 @@ function maxwell_customize_register_post_settings( $wp_customize ) {
         'section'  => 'maxwell_section_post',
         'settings' => 'maxwell_theme_options[post_navigation]',
         'type'     => 'checkbox',
-		'priority' => 11
+		'priority' => 10
 		)
 	);
 	

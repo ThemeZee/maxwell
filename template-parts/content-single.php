@@ -12,12 +12,14 @@
 		
 		<header class="entry-header">
 			
+			<?php maxwell_entry_meta(); ?>
+			
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 			
-			<?php maxwell_entry_meta(); ?>
+			<?php maxwell_posted_by(); ?>
 
 		</header><!-- .entry-header -->
-
+		
 		<div class="entry-content clearfix">
 			<?php the_content(); ?>
 			<!-- <?php trackback_rdf(); ?> -->

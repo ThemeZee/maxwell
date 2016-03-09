@@ -40,6 +40,8 @@ function maxwell_body_classes( $classes ) {
 		$classes[] = 'post-layout-two-columns post-layout-columns';
 	} elseif ( 'three-columns' == $theme_options['post_layout'] ) {
 		$classes[] = 'post-layout-three-columns post-layout-columns';
+	} else {
+		$classes[] = 'post-layout-one-column';
 	}
 
 	return $classes;

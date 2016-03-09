@@ -53,8 +53,7 @@
 }
 
 .tzwb-posts-list .tzwb-entry-meta {
-	font-size: 12px;
-	font-size: 0.75rem;
+	margin: 0;
 }
 
 /*--------------------------------------------------------------
@@ -131,12 +130,12 @@
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:hover, 
 .tzwb-tabbed-content .tzwb-tabnavi li a:active {
-	background: #dd5533;
+	background: #33bbcc;
 	text-decoration: none;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a.current-tab {
-	background: #dd5533;
+	background: #33bbcc;
 }
 
 .tzwb-tabbed-content .tzwb-tabcontent {
@@ -159,7 +158,7 @@
 
 .tzwb-social-icons .social-icons-menu li a {
 	padding: 0.75em;
-	background: #dd5533;
+	background: #33bbcc;
 }
 
 .tzwb-social-icons .social-icons-menu li a:before {
