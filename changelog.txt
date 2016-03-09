@@ -1,0 +1,13 @@
+===================================
+Maxwell Changelog
+===================================
+
+Version 1.0
+-----------------------------------
+[added] Magazine Homepage template
+[added] two column post layout
+[added] post slider
+
+Version 0.9
+-----------------------------------
+Initial Release
