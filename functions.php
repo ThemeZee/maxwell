@@ -47,13 +47,13 @@ function maxwell_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'maxwell_custom_background_args', array( 'default-color' => 'ffffff' ) ) );
+	add_theme_support( 'custom-background', apply_filters( 'maxwell_custom_background_args', array( 'default-color' => '303030' ) ) );
 	
 	// Set up the WordPress core custom header feature.
 	add_theme_support( 'custom-header', apply_filters( 'maxwell_custom_header_args', array(
 		'header-text' => false,
-		'width'	=> 1920,
-		'height' => 480,
+		'width'	=> 1250,
+		'height' => 450,
 		'flex-height' => true
 	) ) );
 	
@@ -91,8 +91,8 @@ function maxwell_widgets_init() {
 		'name' => esc_html__( 'Sidebar', 'maxwell' ),
 		'id' => 'sidebar',
 		'description' => esc_html__( 'Appears on posts and pages except full width template.', 'maxwell' ),
-		'before_widget' => '<div class="widget-wrap"><aside id="%1$s" class="widget %2$s clearfix">',
-		'after_widget' => '</aside></div>',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
+		'after_widget' => '</aside>',
 		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
 		'after_title' => '</h3></div>',
 	));
@@ -140,6 +140,9 @@ function maxwell_scripts() {
 	// Register and enqueue navigation.js
 	wp_enqueue_script( 'maxwell-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery') );
 	
+	// Passing Parameters to navigation.js
+	wp_localize_script( 'maxwell-jquery-navigation', 'maxwell_menu_title', esc_html__( 'Navigation', 'maxwell' ) );
+	
 	// Register and Enqueue Google Fonts
 	wp_enqueue_style( 'maxwell-default-fonts', maxwell_google_fonts_url(), array(), null );
 
@@ -177,12 +180,12 @@ function maxwell_google_fonts_url() {
 function maxwell_add_image_sizes() {
 	
 	// Add Slider Image Size
-	add_image_size( 'maxwell-slider-image', 790, 430, true );
+	add_image_size( 'maxwell-slider-image', 850, 500, true );
 	
 	// Add different thumbnail sizes for Magazine Posts widgets
 	add_image_size( 'maxwell-thumbnail-small', 120, 80, true );
-	add_image_size( 'maxwell-thumbnail-medium', 360, 240, true );
-	add_image_size( 'maxwell-thumbnail-large', 600, 400, true );
+	add_image_size( 'maxwell-thumbnail-medium', 360, 230, true );
+	add_image_size( 'maxwell-thumbnail-large', 600, 380, true );
 	
 }
 add_action( 'after_setup_theme', 'maxwell_add_image_sizes' );

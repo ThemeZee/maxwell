@@ -68,9 +68,9 @@
 			</div>
 		
 		</header><!-- #masthead -->
-		
-		<?php maxwell_breadcrumbs(); ?>
-		
+
 		<?php maxwell_header_image(); ?>
 			
 		<div id="content" class="site-content container clearfix">
+		
+			<?php maxwell_breadcrumbs(); ?>

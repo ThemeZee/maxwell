@@ -88,31 +88,27 @@ F) Licenses of bundled resources
 	License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
 	Copyright: 2015 WooThemes, http://www.woothemes.com
 	
-	5. Titillium Web Font - https://www.google.com/fonts/specimen/Open+Sans
-	License: Distributed under the terms of the Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
-	Copyright: 2012 Steve Matteson
-	
-	6. Amaranth Font - https://www.google.com/fonts/specimen/Titillium+Web
+	5. Titillium Web Font - https://www.google.com/fonts/specimen/Titillium+Web
 	License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/OFL)
 	Copyright: 2013 Accademia di Belle Arti di Urbino
 	
+	6. Amaranth Font - https://www.google.com/fonts/specimen/Amaranth
+	License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/OFL)
+	Copyright: Gesine Todt
+	
 	7. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
 	
-	Image 1: https://pixabay.com/en/martinique-sunset-boat-twilight-844982/
+	Image 1: https://pixabay.com/en/architecture-modern-building-facade-1048092/
 	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-	Copyright: 2009 Agnès alias agnesti (https://pixabay.com/en/users/agnesti-1137469/)
+	Copyright: 2015 Michael Gaida (https://pixabay.com/en/users/MichaelGaida-652234/)
 	
-	Image 2: https://pixabay.com/en/pirate-port-harbour-festival-1101524/
+	Image 2:https://pixabay.com/en/building-monument-view-cityscape-1031524/
 	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-	Copyright: 2012 Petra (https://pixabay.com/en/users/ptra-359668/)
+	Copyright: 2016 Unsplash (https://pixabay.com/en/users/Unsplash-242387/)
 	
-	Image 3: https://pixabay.com/en/thailand-longtail-boat-sea-1195997/
+	Image 3: https://pixabay.com/en/riga-housewife-art-nouveau-1085269/
 	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-	Copyright: 2008 kod88 (https://pixabay.com/en/users/kod88-2044225/)
-	
-	Image 4: https://pixabay.com/en/garda-sunset-mountains-mood-dusk-202068/
-	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-	Copyright: 2012 Sabrina Schlich (https://pixabay.com/en/users/sabrinaschlich-77730/)
+	Copyright: 2014 Monika Neumann (https://pixabay.com/en/users/monikawl999-1744293/)
 
 ===================================
 Enjoy!

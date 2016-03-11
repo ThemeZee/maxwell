@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Maxwell\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2016-03-08 10:51+0100\n"
-"PO-Revision-Date: 2016-03-08 10:51+0100\n"
+"POT-Creation-Date: 2016-03-11 16:37+0100\n"
+"PO-Revision-Date: 2016-03-11 16:37+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: en_US\n"
@@ -30,11 +30,11 @@ msgid ""
 "of the links below?"
 msgstr ""
 
-#: comments.php:30 inc/template-tags.php:194
+#: comments.php:30
 msgid "One comment"
 msgstr ""
 
-#: comments.php:30 inc/template-tags.php:194
+#: comments.php:30
 #, php-format
 msgid "% comments"
 msgstr ""
@@ -87,6 +87,10 @@ msgstr ""
 msgid ""
 "Appears on Magazine Homepage template only. You can use the Magazine Posts "
 "widgets here."
+msgstr ""
+
+#: functions.php:144
+msgid "Navigation"
 msgstr ""
 
 #: header.php:26
@@ -142,20 +146,22 @@ msgid ""
 "Please upgrade and try again."
 msgstr ""
 
-#: inc/template-tags.php:162
+#: inc/template-tags.php:160
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/template-tags.php:194
-msgid "Leave a comment"
+#: inc/template-tags.php:187
+#, php-format
+msgctxt "post author"
+msgid "Posted by %s"
 msgstr ""
 
-#: inc/template-tags.php:239
+#: inc/template-tags.php:228
 msgid "Continue reading &raquo;"
 msgstr ""
 
-#: inc/template-tags.php:342
+#: inc/template-tags.php:331
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr ""
@@ -373,33 +379,26 @@ msgid "Display post date"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:107
-#: inc/widgets/widget-magazine-posts-boxed.php:464
-#: inc/widgets/widget-magazine-posts-columns.php:410
-#: inc/widgets/widget-magazine-posts-grid.php:453
-msgid "Display post author"
-msgstr ""
-
-#: inc/customizer/sections/customizer-post.php:123
 msgid "Display post categories"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:139
-msgid "Display post comments"
-msgstr ""
-
-#: inc/customizer/sections/customizer-post.php:157
+#: inc/customizer/sections/customizer-post.php:125
 msgid "Single Posts"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:174
+#: inc/customizer/sections/customizer-post.php:142
 msgid "Display featured image on single posts"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:190
+#: inc/customizer/sections/customizer-post.php:158
+msgid "Display post author on single posts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:174
 msgid "Display post tags on single posts"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:206
+#: inc/customizer/sections/customizer-post.php:190
 msgid "Display post navigation on single posts"
 msgstr ""
 
@@ -485,6 +484,12 @@ msgstr ""
 
 #: inc/widgets/widget-magazine-posts-boxed.php:450
 msgid "Vertical Arrangement"
+msgstr ""
+
+#: inc/widgets/widget-magazine-posts-boxed.php:464
+#: inc/widgets/widget-magazine-posts-columns.php:410
+#: inc/widgets/widget-magazine-posts-grid.php:453
+msgid "Display post author"
 msgstr ""
 
 #: inc/widgets/widget-magazine-posts-columns.php:21

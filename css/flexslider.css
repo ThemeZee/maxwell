@@ -88,19 +88,14 @@ html[xmlns] .zeeflexslider .zeeslides {
 
 .zeeflex-viewport {
   max-height: 2000px;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
 }
 
 .post-slider .zeeslide .slide-image {
 	float: right;
 	width: 65%;
 	height: auto;
-	max-width: 790px;
-	max-height: 430px;
+	max-width: 850px;
+	max-height: 500px;
 	vertical-align: top;
 	margin: 0;
 }
@@ -134,20 +129,15 @@ html[xmlns] .zeeflexslider .zeeslides {
 .post-slider-controls .zeeflex-direction-nav a {
 	display: block;
 	position: absolute;
-	margin: -40px 0 0 -80px;
-	width: 40px;
-	height: 40px;
+	margin: -38px 0 0 -76px;
+	width: 38px;
+	height: 38px;
 	background: #33bbcc;
 	text-align: left;
 	color #fff;
 	font-size: 0;
 	cursor: pointer;
 	z-index: 10;
-	-webkit-transition: all 0.4s ease;
-	-moz-transition: all 0.4s ease;
-	-ms-transition: all 0.4s ease;
-	-o-transition: all 0.4s ease;
-	transition: all 0.4s ease;
 }
 
 .post-slider-controls .zeeflex-direction-nav a:hover {
@@ -183,7 +173,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 .post-slider-controls .zeeflex-direction-nav .zeeflex-next {
-	left: 42px;
+	left: 40px;
 }
 
 /* Control Nav */
@@ -208,11 +198,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 	background: rgba(255,255,255,0.5);
 	cursor: pointer; 
 	text-indent: -9999px;
-	-webkit-transition: all 0.4s ease;
-	-moz-transition: all 0.4s ease;
-	-ms-transition: all 0.4s ease;
-	-o-transition: all 0.4s ease;
-	transition: all 0.4s ease;
 }
 
 .post-slider-controls .zeeflex-control-nav li a:hover { 
@@ -229,23 +214,33 @@ html[xmlns] .zeeflexslider .zeeslides {
 # Media Queries
 --------------------------------------------------------------*/
 
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 80em) {
 	
-	.post-slider .zeeslide .entry-content {
+	.post-slider .zeeslide .slide-content .slide-title {
+		font-size: 24px;
+		font-size: 1.5rem;
+	}
+	
+	.post-slider .zeeslide .slide-content .entry-content {
+		font-size: 17px;
+		font-size: 1.0625rem;
+	}
+	
+	.post-slider .zeeslide .slide-content .entry-content .more-link {
+		display: none;
+	}
+	
+}
+
+@media only screen and (max-width: 70em) {
+	
+	.post-slider .zeeslide .slide-content .entry-content {
 		display: none;
 	}
 	
 }
 
 @media only screen and (max-width: 60em) {
-	
-	.post-slider .zeeslide .read-more {
-		display: none;
-	}
-	
-}
-
-@media only screen and (max-width: 55em) {
 	
 	.post-slider .zeeslide .slide-image {
 		float: none;
@@ -256,38 +251,68 @@ html[xmlns] .zeeflexslider .zeeslides {
 	.post-slider .zeeslide .slide-content {
 		float: none;
 		width: 100%;
+		padding: 1.5em 2em 2em;
+	}
+	
+	.post-slider .zeeslide .slide-content .slide-title {
+		font-size: 28px;
+		font-size: 1.75rem;
+	}
+	
+	.post-slider .zeeslide .slide-content .entry-content,
+	.post-slider .zeeslide .slide-content .entry-content .more-link {
+		display: inline-block;
+	}
+	
+	.post-slider-controls .zeeflex-direction-nav {
+		bottom: 2em;
+		right: 2em;
+	}
+	
+}
+
+@media only screen and (max-width: 30em) {
+	
+	.post-slider-wrap {
+		background: none;
+	}
+
+	.post-slider .zeeslide .slide-content .slide-title {
+		font-size: 24px;
+		font-size: 1.5rem;
+	}
+	
+	.post-slider .zeeslide .slide-content {
 		padding: 1em 0 0;
 	}
 	
-	.post-slider .zeeslide .entry-content {
-		display: block;
-	}
-	
-	.post-slider .zeeslide .slide-content .read-more {
-		display: block;
-		position: static;
-		bottom: auto;
-		left: auto;
-	}
-
-	.post-slider .zeeslide .slide-content .read-more .more-link {
-		margin-left: 0;
+	.post-slider-controls .zeeflex-direction-nav {
+		bottom: 0;
+		right: 0;
 	}
 	
 }
 
 @media only screen and (max-width: 25em) {
 	
-	.post-slider .zeeslide .read-more .more-link {
-		margin-bottom: 4em;
+	.post-slider-controls .zeeflex-control-nav {
+		display: none;
+	}
+	
+}
+
+@media only screen and (max-width: 20em) {
+	
+	.post-slider-wrap {
+		padding-bottom: 3.5em;
 	}
 	
 	.post-slider-controls .zeeflex-direction-nav {
 		left: 0;
-		right: auto;
 	}
 	
 	.post-slider-controls .zeeflex-direction-nav a {
 		margin-left: 0;
+	}
 	
 }

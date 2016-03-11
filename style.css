@@ -3,7 +3,7 @@ Theme Name: Maxwell
 Theme URI: https://themezee.com/themes/maxwell/
 Author: ThemeZee
 Author URI: https://themezee.com
-Description: Maxwell is a highly flexible and adventurous WordPress theme for your pirate magazine or any news related website. It supports three different post layouts, two sidebar schemes and a Magazine Homepage template based on widgets. Other highlights of Maxwell are the beautiful post slider and header widgets area. Arrr!
+Description: Maxwell is a minimalistic and elegant WordPress theme featuring an ultra clean magazine layout. With a beautiful typography, various post layouts and a gorgeous featured posts slideshow Maxwell truly helps you to stand out.  
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -372,7 +372,7 @@ html {
 }
 
 body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
+	background: #303030; /* Fallback for when there is no custom background color defined. */
 }
 
 blockquote:before,
@@ -471,11 +471,6 @@ input[type="submit"] {
 	background: #33bbcc;
 	border: none;
 	text-decoration: none;
-	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
-	transition: all 0.2s ease;
 }
 
 button:hover,
@@ -605,7 +600,7 @@ textarea {
 
 .content-area {
 	float: left;
-	width: 74%;
+	width: 75%;
 	padding-right: 4em;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -634,7 +629,7 @@ textarea {
 .site-branding {
 	float: left;
 	max-width: 100%;
-	margin: 1em 0;
+	margin: 0;
 	padding: 0;
 }
 
@@ -652,14 +647,9 @@ textarea {
 	padding: 0;
 	color: #303030;
 	font-family: 'Amaranth', sans-serif;
-	font-size: 40px;
-	font-size: 2.5rem;
+	font-size: 44px;
+	font-size: 2.75rem;
 	text-decoration: none;
-	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
-	transition: all 0.2s ease;
 }
 
 .site-branding a:hover .site-title {
@@ -673,7 +663,7 @@ textarea {
 
 .header-widget {
 	float: right;
-	margin: 0.5em 0 0 1.5em;
+	margin: 1em 0 0 1.5em;
 }
 
 .header-widget ul {
@@ -685,14 +675,18 @@ textarea {
 	margin: 0 0 0.5em;
 }
 
+.header-widget img {
+	margin-top: -1em;
+}
+
 /* Custom Header Image */
 .header-image {
+	margin: 2em 0 0;
 	text-align: center;
 }
 
 .header-image img {
-	max-width: 2500px;
-	max-height: 500px;
+	max-width: 1230px;
 	vertical-align: top;
 	width: 100%;
 	height: auto;
@@ -725,23 +719,23 @@ textarea {
 .main-navigation-menu li {
 	float: left;
 	position: relative;
-	margin: 0 1.25em 0 0;
+	margin: 0 1.2em 0 0;
 }
 
 .main-navigation-menu a {
 	display: block;
 	font-family: 'Titillium Web', Tahoma, Arial;
-	font-size: 16px;
-	font-size: 1rem;
+	font-size: 17px;
+	font-size: 1.0625rem;
 	margin: -1px 0 0;
-	padding: 0.7em;
+	padding: 0.6em 0.8em 0.8em;
 	border-top: 0.3em solid transparent;
 	text-decoration: none;
 }
 
 .main-navigation-menu > .menu-item-has-children > a:after {
 	display: inline-block;
-	margin: 0.4em 0 0 0.3em;
+	margin: 0.5em 0 0 0.3em;
 	font-size: 16px;
 	line-height: 1;
 	font-family: 'Genericons';
@@ -787,11 +781,6 @@ textarea {
 	font-size: 13px;
 	font-size: 0.8125rem;
 	border-bottom: 1px solid rgba(255,255,255,0.1);
-	-webkit-transition: none;
-	-moz-transition: none;
-	-ms-transition: none;
-	-o-transition: none;
-	transition: none;
 }
 
 .main-navigation-menu ul a:link, 
@@ -810,7 +799,7 @@ textarea {
 
 .main-navigation-menu ul .menu-item-has-children > a:after {
 	display: inline-block;
-	margin: 0.4em 0 0 0.3em;
+	margin: 0.3em 0 0 0.3em;
 	font-size: 14px;
 	line-height: 1;
 	font-family: 'Genericons';
@@ -964,6 +953,16 @@ textarea {
 	max-width: 100%;
 }
 
+.widget-title a:link, 
+.widget-title a:visited  {
+	color: #303030;
+}
+
+.widget-title a:hover, 
+.widget-title a:active  {
+	text-decoration: underline;
+}
+
 /*--------------------------------------------------------------
 ## 11.1 - Default Widgets
 --------------------------------------------------------------*/
@@ -985,6 +984,7 @@ textarea {
 .search-form .search-field {
 	display: inline-block;
 	margin: 0;
+	min-width: 300px;
 	width: 100%;
 	padding: 0.5em 1.5em 0.5em 0.7em;
 	-webkit-box-sizing: border-box;
@@ -1000,11 +1000,6 @@ textarea {
 	border: none;
 	padding: 0.65em 0.75em 0 0.2em;
 	cursor: pointer;
-	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
-	transition: all 0.2s ease;
 }
 
 .search-form .search-submit .genericon-search {
@@ -1052,17 +1047,9 @@ textarea {
 	font-size: 1.0625rem;
 }
 
-.widget-magazine-posts .type-post .entry-content p {
-	margin: 1em 0 0;
-}
-
-.widget-magazine-posts .type-post .more-link {
-	margin: 1em 0 0;
-}
-
 .widget-magazine-posts .large-post .entry-title {
-	font-size: 24px;
-	font-size: 1.5rem;
+	font-size: 28px;
+	font-size: 1.75rem;
 }
 
 .widget-magazine-posts .medium-post {
@@ -1075,9 +1062,10 @@ textarea {
 	box-sizing: border-box;
 }
 
-.widget-magazine-posts .medium-post .entry-title {
-	font-size: 17px;
-	font-size: 1.0625rem;
+.widget-magazine-posts .medium-post .entry-title,
+.widget-magazine-posts .small-post .entry-title {
+	font-size: 18px;
+	font-size: 1.125rem;
 }
 
 .widget-magazine-posts .small-post {
@@ -1093,11 +1081,6 @@ textarea {
 	float: left;
 	margin: 0 1.5em 0 0;
 	max-width: 40%;
-}
-
-.widget-magazine-posts .small-post .entry-title {
-	font-size: 16px;
-	font-size: 1rem;
 }
 
 .widget-magazine-posts .medium-post .entry-meta,
@@ -1221,11 +1204,6 @@ textarea {
 .entry-title a:visited {
 	color: #303030;
 	text-decoration: none;
-	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
-	transition: all 0.2s ease;
 }
 
 .entry-title a:hover, 
@@ -1263,11 +1241,6 @@ textarea {
 	color: #fff;
 	background: #33bbcc;
 	text-decoration: none;
-	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
-	transition: all 0.2s ease;
 }
 
 .more-link:link, 
@@ -1374,11 +1347,6 @@ textarea {
 .entry-tags .meta-tags a:link, 
 .entry-tags .meta-tags a:visited {
 	color: #fff;
-	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
-	transition: all 0.2s ease;
 }
 
 .widget_tag_cloud .tagcloud a:hover, 
@@ -1483,10 +1451,8 @@ textarea {
 
 /* Breadcrumbs */
 .breadcrumbs {
-	margin: 0;
-	padding: 0.5em 0;
-	background: #fff;
-	box-shadow: 0 2px 2px #aaa;
+	margin: 0 0 1em;
+	padding: 0;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -1586,6 +1552,10 @@ textarea {
 	flex-grow: 1;
 }
 
+.post-layout-columns .post-wrapper .post-column .type-post .wp-post-image {
+	margin: 0;
+}
+
 /* 2 Columns */
 .post-layout-two-columns .post-wrapper .post-column {
 	width: 50%;
@@ -1643,7 +1613,7 @@ textarea {
 .comment {
 	margin: 0 0 1.5em;
 	padding: 1.5em 0 0;
-	border-top: 1px dotted #aaa;
+	border-top: 1px solid #ddd;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -1738,12 +1708,7 @@ textarea {
 # 12.0 - Footer
 --------------------------------------------------------------*/
 .footer-wrap {
-	border-top: 1px solid #303030;
-}
-
-.site-footer {
-	font-size: 15px;
-	font-size: 0.9375rem;
+	border-top: 1px solid #ddd;
 }
 
 .site-footer .site-info {
@@ -1848,23 +1813,23 @@ object {
 /*--------------------------------------------------------------
 ## 14.1 - Desktop X-Large ( < 1200px )
 --------------------------------------------------------------*/
-@media only screen and (max-width: 80em) {
+@media only screen and (max-width: 85em) {
 
-	.container {
-		padding: 0 1.5em;
+	.site {
+		padding: 0 3em;
 	}
 	
 	.site-content {
-		padding-top: 1.5em;
+		padding: 2em 0 1em;
 	}
 	
 	.content-area {
-		padding-right: 1.5em;
+		padding-right: 3em;
 	}
 	
-	.header-main {
-		padding-top: 1em;
-		padding-bottom: 1em;
+	.header-main,
+	.site-footer .site-info {
+		padding: 2em 0;
 	}
 	
 	.widget,
@@ -1874,54 +1839,73 @@ object {
 	.type-attachment,
 	.post-pagination,
 	.comments-area {
-		margin-bottom: 1.5em;
+		margin-bottom: 2em;
 	}
 	
+	/* Multiple Post Columns */
 	.post-layout-columns .post-wrapper {
-		margin-right: -1.5em;
+		margin-right: -2em;
 	}
 
 	.post-layout-columns .post-wrapper .post-column {
-		padding-right: 1.5em;
+		padding-right: 2em;
 	}
-	
+
 }
 
 /*--------------------------------------------------------------
 ## 14.2 - Desktop Large ( < 1120px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 70em) {
-	
-	.content-area {
-		width: 70%;
-	}
 
-	.sidebar {
-		width: 30%;
+	.header-widget {
+		max-width: 70%;
 	}
 	
-	.post-layout-columns .post-wrapper .post-column  .type-post .entry-title {
-		font-size: 20px;
-		font-size: 1.25rem;
+	.site-title {
+		font-size: 40px;
+		font-size: 2.5rem;
 	}
 	
-	/* Magazine Post Widgets */
-	.widget-magazine-posts .large-post .entry-title {
-		font-size: 20px;
-		font-size: 1.25rem;
+	.page-title, 
+	.entry-title {
+		font-size: 32px;
+		font-size: 2rem;
 	}
-
-	.widget-magazine-posts .medium-post .entry-title {
+	
+	.post-wrapper .type-post .entry-title {
+		font-size: 24px;
+		font-size: 1.5rem;
+	}
+		
+	/* One Column Layout */
+	.post-layout-one-column .post-wrapper .type-post .wp-post-image {
+		max-width: 40%;
+	}
+	
+	.post-layout-one-column .post-wrapper .type-post .entry-content {
 		font-size: 16px;
 		font-size: 1rem;
 	}
 	
+	/* Magazine Post Widgets */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 24px;
+		font-size: 1.5rem;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title,
 	.widget-magazine-posts .small-post .entry-title {
-		font-size: 15px;
-		font-size: 0.9375rem;
+		font-size: 17px;
+		font-size: 1.0625rem;
+	}
+
+	.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .more-link  {
+		display: none;
 	}
 	
-	.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .more-link  {
+	.widget-magazine-posts .small-post .entry-meta span:after,
+	.widget-magazine-posts .small-post .entry-meta .meta-author {
 		display: none;
 	}
 	
@@ -1951,30 +1935,13 @@ object {
 	}
 	
 	.sidebar {
-		display: flex;
-		flex-wrap: wrap;
 		float: none;
 		padding: 0;
-		width: auto;
-		margin-right: -1.5em;
-	}
-
-	.sidebar .widget-wrap {
-		float: right;
-		display: flex;
-		width: 50%;
-		padding-right: 1.5em;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-	}
-	
-	.sidebar .widget-wrap .widget {
 		width: 100%;
 	}
 	
-	.sidebar .widget-wrap:nth-child(2n + 1) {
-		clear: left;
+	.header-main {
+		padding-top: 1.5em;
 	}
 	
 	.site-branding {
@@ -2000,21 +1967,31 @@ object {
 	.header-widget .search-form {
 		max-width: 300px;
 	}
-	
-	.post-layout-three-columns .post-wrapper .post-column {
-		width: 50%;
-	}
 
-	.archive-title,
 	.page-title, 
 	.entry-title {
-		font-size: 26px;
-		font-size: 1.625rem;
+		font-size: 36px;
+		font-size: 2.25rem;
 	}
 	
-	.post-layout-columns .post-wrapper .post-column  .type-post .entry-title {
-		font-size: 22px;
-		font-size: 1.375rem;
+	.post-wrapper .type-post .entry-title {
+		font-size: 28px;
+		font-size: 1.75rem;
+	}
+	
+	/* One Column Layout */
+	.post-layout-one-column .post-wrapper .type-post .wp-post-image {
+		max-width: 45%;
+	}
+	
+	.post-layout-one-column .post-wrapper .type-post .entry-content {
+		font-size: 17px;
+		font-size: 1.0625rem;
+	}
+	
+	/* Three Column Layout */
+	.post-layout-three-columns .post-wrapper .post-column {
+		width: 50%;
 	}
 	
 	/*** Mobile Main Navigation ***/
@@ -2063,36 +2040,43 @@ object {
 	.main-navigation-toggle {
 		float: left;
 		display: inline-block;
-		margin: 0 0 0 1.5em;
-		padding: 0.8em 1.2em;
-		background: #33bbcc;
+		margin: -1px 0 0;
+		padding: 0.8em 1em 1em;
+		border-top: 0.3em solid #303030;
+		color: #303030;
+		background: #fff;
 	}
 	
 	.main-navigation-toggle:hover,
 	.main-navigation-toggle:focus,
 	.main-navigation-toggle:active {
-		cursor: pointer;
 		background: none;
 	}
 	
-	.main-navigation-toggle:after {
+	.main-navigation-toggle:hover,
+	.main-navigation-toggle:active {
+		cursor: pointer;
+		color: #999;
+	}
+	
+	.main-navigation-toggle:before {
 		float: left;
 		display: inline-block;
+		margin: 0.15em 0.5em 0 0;
 		font-size: 24px;
 		line-height: 1;
 		font-family: 'Genericons';
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		text-decoration: inherit;
-		vertical-align: middle;
+		vertical-align: top;
 		content: '\f419';
-		color: #fff;
+		color: #303030;
 	}
 	
-	.main-navigation-toggle:active,
-	.main-navigation-toggle:focus,
-	.main-navigation-toggle:hover {
-		background: #33bbcc;
+	.main-navigation-toggle:active:before,
+	.main-navigation-toggle:hover:before {
+		color: #999;
 	}
 	
 	/* Main Navigation Menu */
@@ -2104,25 +2088,41 @@ object {
 		float: left;
 		width: 100%;
 		display: none;
-		padding: 3px 0;
-		border-top: 5px solid #33bbcc;
+		margin: 0;
+		padding: 0;
+		background: #303030;
+	}
+	
+	.main-navigation-menu li {
+		margin: 0;
 	}
 	
 	.main-navigation-menu a {
 		display: block;
 		clear: left;
 		padding: 1em 1.5em;
-		border-bottom: 1px dotted rgba(255,255,255,0.2);
+		border: none;
+		border-bottom: 1px solid rgba(255,255,255,0.1);
 	}
 	
 	.main-navigation-menu li:last-child a {
 		border-bottom: none;
 	}
+	
+	.main-navigation-menu a:link, 
+	.main-navigation-menu a:visited {
+		color: #fff;
+	}
+
+	.main-navigation-menu a:hover,
+	.main-navigation-menu a:active {
+		background: rgba(255,255,255,0.1);
+	}
 
 	.main-navigation-menu ul {
 		float: none;
 		width: 100%;
-		border: none;
+		border-top: 1px solid rgba(255,255,255,0.1);
 	}
 	
 	.main-navigation-menu ul a {
@@ -2144,12 +2144,11 @@ object {
 	}
 	
 	.main-navigation-menu ul li:last-child a {
-		border-bottom: 1px dotted rgba(255,255,255,0.2);
+		border-bottom: 1px solid rgba(255,255,255,0.1);
 	}
 	
-	.main-navigation-menu ul ul {
-		border-top: 1px dotted rgba(255,255,255,0.2);
-		border-left: none;
+	.main-navigation-menu li.current-menu-item > a {
+		border-color: rgba(255,255,255,0.1);
 	}
 	
 	/* Mobile Submenu Dropdowns */
@@ -2157,7 +2156,7 @@ object {
 		float: right;
 		display: block;
 		margin: 0;
-		padding: 0.8em 1.2em;
+		padding: 0.85em 1.2em;
 	}
 	
 	.main-navigation-menu .submenu-dropdown-toggle:hover {
@@ -2178,7 +2177,7 @@ object {
 	
 	.main-navigation-menu .submenu-dropdown-toggle:hover,
 	.main-navigation-menu .submenu-dropdown-toggle:active {
-		background: #33bbcc;
+		background: rgba(255,255,255,0.1);
 	}
 	
 	.main-navigation-menu .submenu-dropdown-toggle.active:before {
@@ -2199,19 +2198,15 @@ object {
 		display: inline-block;
 	}
 	
-	.widget-magazine-posts .large-post .entry-title 	{
-		font-size: 22px;
-		font-size: 1.375rem;
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 28px;
+		font-size: 1.75rem;
 	}
 
-	.widget-magazine-posts .medium-post .entry-title {
-		font-size: 17px;
-		font-size: 1.0625rem;
-	}
-	
+	.widget-magazine-posts .medium-post .entry-title,
 	.widget-magazine-posts .small-post .entry-title {
-		font-size: 16px;
-		font-size: 1rem;
+		font-size: 18px;
+		font-size: 1.125rem;
 	}
 	
 }
@@ -2230,32 +2225,31 @@ object {
 --------------------------------------------------------------*/
 @media only screen and (max-width: 50em) {
 	
-	.archive-title,
+	.site {
+		padding: 0 2em;
+	}
+	
 	.page-title, 
 	.entry-title {
+		font-size: 32px;
+		font-size: 2rem;
+	}
+	
+	.post-wrapper .type-post .entry-title {
 		font-size: 24px;
 		font-size: 1.5rem;
 	}
 	
-	.post-layout-columns .post-wrapper .post-column  .type-post .entry-title {
-		font-size: 20px;
-		font-size: 1.25rem;
-	}
-	
 	/* Magazine Post Widgets */
 	.widget-magazine-posts .large-post .entry-title {
-		font-size: 20px;
-		font-size: 1.25rem;
+		font-size: 24px;
+		font-size: 1.5rem;
 	}
 
-	.widget-magazine-posts .medium-post .entry-title {
-		font-size: 16px;
-		font-size: 1rem;
-	}
-	
+	.widget-magazine-posts .medium-post .entry-title,
 	.widget-magazine-posts .small-post .entry-title {
-		font-size: 15px;
-		font-size: 0.9375rem;
+		font-size: 17px;
+		font-size: 1.0625rem;
 	}
 	
 	.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .more-link  {
@@ -2269,9 +2263,10 @@ object {
 --------------------------------------------------------------*/
 @media only screen and (max-width: 45em) {
 	
-	.widget-magazine-posts .medium-post .entry-title {
-		font-size: 15px;
-		font-size: 0.9375rem;
+	.widget-magazine-posts .medium-post .entry-title,
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
 	}
 	
 	.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .entry-content {
@@ -2285,6 +2280,19 @@ object {
 --------------------------------------------------------------*/
 @media only screen and (max-width: 40em) {
 	
+	.type-post .wp-post-image,
+	.type-page .wp-post-image {
+		margin: 0;
+	}
+	
+	/* One Column Layout */
+	.post-layout-one-column .post-wrapper .type-post .wp-post-image {
+		float: none;
+		max-width: 100%;
+		margin: 0;
+	}
+	
+	/* Multiple Columns Layout */
 	.post-layout-columns .post-wrapper {
 		display: block;
 		margin-right: 0;
@@ -2301,39 +2309,30 @@ object {
 		width: 100%;
 	}
 
-	.archive-title,
 	.page-title, 
 	.entry-title,
-	.post-layout-columns .post-wrapper .post-column  .type-post .entry-title {
-		font-size: 22px;
-		font-size: 1.375rem;
+	.post-wrapper .type-post .entry-title {
+		font-size: 28px;
+		font-size: 1.75rem;
 	}
 	
 	.entry-content {
-		font-size: 16px;
-		font-size: 1rem;
-	}
-	
-	/* Sidebar */
-	.sidebar {
-		margin-right: 0;
-	}
-
-	.sidebar .widget-wrap {
-		float: none;
-		width: 100%;
-		padding-right: 0;
+		font-size: 17px;
+		font-size: 1.0625rem;
 	}
 	
 	/* Magazine Post Widgets */
-	.widget-magazine-posts-grid .large-post-row {
+	.widget-magazine-posts-grid .large-post-row,
+	.widget-magazine-posts-grid .medium-post-row	{
 		margin-right: 0;
 	}
 	
 	.widget-magazine-posts-grid .magazine-posts-grid-row .large-post,
 	.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .wp-post-image,
+	.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .post-content,
 	.widget-magazine-posts-boxed .magazine-posts-boxed-vertical .large-post,
-	.widget-magazine-posts-columns .magazine-posts-column-left {
+	.widget-magazine-posts-columns .magazine-posts-column-left,
+	.widget-magazine-posts .medium-post {
 		float: none;
 		width: 100%;
 		padding: 0;
@@ -2347,58 +2346,28 @@ object {
 		padding-left: 0;
 	}
 	
-	.widget-magazine-posts .large-post .wp-post-image {
-		float: left;
-		margin: 0 1.5em 0 0;
-		max-width: 50%;
-	}
-	
-	.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .post-content {
-		float: right;
-		width: 50%;
-		padding-left: 1.5em;
-	}
-	
-	.widget-magazine-posts-grid .magazine-posts-grid-row .large-post {
-		clear: left;
-	}
-	
-	.widget-magazine-posts-grid .magazine-posts-grid-row .large-post .wp-post-image {
-		margin-bottom: 1em;
-	}
-
-	.widget-magazine-posts .large-post .entry-content {
-		display: none;
-	}
-	
-	.widget-magazine-posts .large-post .entry-title {
-		font-size: 18px;
-		font-size: 1.125rem;
-	}
-	
-}
-
-/*--------------------------------------------------------------
-## 14.8 - Mobile Large ( < 560px )
---------------------------------------------------------------*/
-@media only screen and (max-width: 35em) {
-
-	.widget-magazine-posts-grid .medium-post-row {
-		margin-right: 0;
-	}
-	
-	.widget-magazine-posts .medium-post {
-		float: none;
-		width: 100%;
-		padding-right: 0;
+	.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .more-link,
+	.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .entry-content {
+		display: inline-block;
 	}
 	
 	.widget-magazine-posts .medium-post .wp-post-image {
 		float: left;
-		margin: 0 1em 0 0;
-		max-width: 120px;
+		margin: 0 1.5em 0 0;
+		max-width: 40%;
 	}
 	
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 28px;
+		font-size: 1.75rem;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title,
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+
 }
 
 /*--------------------------------------------------------------
@@ -2407,16 +2376,15 @@ object {
 @media only screen and (max-width: 30em) {
 	
 	.site-branding .site-title {
-		font-size: 32px;
-		font-size: 2rem;
+		font-size: 36px;
+		font-size: 2.25rem;
 	}
 	
-	.archive-title,
 	.page-title, 
 	.entry-title,
-	.post-layout-columns .post-wrapper .post-column  .type-post .entry-title {
-		font-size: 20px;
-		font-size: 1.25rem;
+	.post-wrapper .type-post .entry-title {
+		font-size: 24px;
+		font-size: 1.5rem;
 	}
 	
 	.alignright, .alignleft {
@@ -2425,32 +2393,15 @@ object {
 	}
 	
 	/* Magazine Homepage: Category Post Widgets */
-	.widget-magazine-posts .medium-post .wp-post-image,
-	.widget-magazine-posts .small-post .wp-post-image {
-		max-width: 30%;
-	}
-	
-	.widget-magazine-posts .large-post .wp-post-image,
-	.widget-magazine-posts-grid .magazine-posts-grid-row .large-post .wp-post-image {
-		float: none;
-		margin: 0 0 0.5em 0;
-		max-width: 100%;
-	}
-	
-	.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .post-content {
-		float: none;
-		width: 100%;
-		padding: 0;
-	}
-	
 	.widget-magazine-posts .large-post .entry-title {
-		font-size: 20px;
-		font-size: 1.25rem;
+		font-size: 24px;
+		font-size: 1.5rem;
 	}
-	
-	.widget-magazine-posts .large-post .entry-content,
-	.widget-magazine-posts .large-post .entry-content .more-link {
-		display: inline-block;
+
+	.widget-magazine-posts .medium-post .entry-title,
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
 	}
 	
 }
@@ -2461,31 +2412,36 @@ object {
 @media only screen and (max-width: 20em) {
 	
 	.site-branding .site-title {
-		font-size: 28px;
-		font-size: 1.75rem;
+		font-size: 32px;
+		font-size: 2rem;
 	}
 	
-	.archive-title,
 	.page-title, 
 	.entry-title,
-	.post-layout-columns .post-wrapper .post-column  .type-post .entry-title {
-		margin: 0 0 0.5em;
-		font-size: 18px;
-		font-size: 1.125rem;
+	.post-wrapper .type-post .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
 	}
 	
 	.entry-meta .meta-date,
-	.entry-meta .meta-author,
-	.entry-meta .meta-category,
-	.entry-meta .meta-comments {
+	.entry-meta .meta-category {
 		display: block;
 	}
 	
+	.entry-meta span:after {
+		display: none;
+	}
+	
+	/* Magazine Homepage: Category Post Widgets */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+
 	.widget-magazine-posts .medium-post .entry-title,
 	.widget-magazine-posts .small-post .entry-title {
-		font-size: 13px;
-		font-size: 0.8125rem;
-		vertical-align: top;
+		font-size: 16px;
+		font-size: 1rem;
 	}
 	
 	.widget-magazine-posts .medium-post .entry-meta,
@@ -2513,11 +2469,11 @@ object {
 	float: left;
 }
 
-@media only screen and (max-width: 80em) {
+@media only screen and (max-width: 85em) {
 
 	.sidebar-left .content-area {
 		padding-right: 0;
-		padding-left: 1.5em;
+		padding-left: 3em;
 	}
 	
 }
