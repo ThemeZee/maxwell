@@ -181,7 +181,7 @@ class Maxwell_Magazine_Posts_Grid_Widget extends WP_Widget {
 
 								<?php $this->entry_meta( $settings ); ?>
 								
-								<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+								<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 						
 							</header><!-- .entry-header -->
 
@@ -262,7 +262,7 @@ class Maxwell_Magazine_Posts_Grid_Widget extends WP_Widget {
 
 								<?php $this->entry_meta( $settings ); ?>
 							
-								<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+								<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 						
 							</header><!-- .entry-header -->
 
@@ -348,7 +348,7 @@ class Maxwell_Magazine_Posts_Grid_Widget extends WP_Widget {
 				
 				// Display Widget Title with link to category archive
 				echo '<div class="widget-header">';
-				echo '<h1 class="widget-title"><a class="category-archive-link" href="'. $link_url .'" title="'. $link_title . '">'. $widget_title . '</a></h1>';
+				echo '<h3 class="widget-title"><a class="category-archive-link" href="'. $link_url .'" title="'. $link_title . '">'. $widget_title . '</a></h3>';
 				echo '</div>';
 			
 			else:
