@@ -26,7 +26,7 @@ function maxwell_slider_scripts() {
 		wp_enqueue_style( 'maxwell-flexslider', get_template_directory_uri() . '/css/flexslider.css' );
 
 		// FlexSlider JS
-		wp_enqueue_script( 'maxwell-flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array('jquery'), '2.5.0' );
+		wp_enqueue_script( 'maxwell-flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array('jquery'), '2.6.0' );
 
 		// Register and enqueue slider.js
 		wp_enqueue_script( 'maxwell-post-slider', get_template_directory_uri() .'/js/slider.js', array('maxwell-flexslider') );
