@@ -33,7 +33,8 @@
 						
 				<div id="logo" class="site-branding clearfix">
 				
-					<?php do_action( 'maxwell_site_title' ); ?>
+					<?php maxwell_site_logo(); ?>
+					<?php maxwell_site_title(); ?>
 				
 				</div><!-- .site-branding -->
 				

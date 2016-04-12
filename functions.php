@@ -49,6 +49,14 @@ function maxwell_setup() {
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'maxwell_custom_background_args', array( 'default-color' => '303030' ) ) );
 	
+	// Set up the WordPress core custom logo feature
+	add_theme_support( 'custom-logo', apply_filters( 'maxwell_custom_logo_args', array(
+		'height' => 50,
+		'width' => 350,
+		'flex-height' => true,
+		'flex-width' => true,
+	) ) );
+	
 	// Set up the WordPress core custom header feature.
 	add_theme_support( 'custom-header', apply_filters( 'maxwell_custom_header_args', array(
 		'header-text' => false,

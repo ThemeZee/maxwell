@@ -41,6 +41,23 @@ function maxwell_customize_register_options( $wp_customize ) {
 	$wp_customize->get_control( 'background_color'  )->section   = 'background_image';
 	$wp_customize->get_section( 'background_image'  )->title     = esc_html__( 'Background', 'maxwell' );
 	
+	// Add Display Site Title Setting
+	$wp_customize->add_setting( 'maxwell_theme_options[site_title]', array(
+        'default'           => true,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'maxwell_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'maxwell_theme_options[site_title]', array(
+        'label'    => esc_html__( 'Display Site Title', 'maxwell' ),
+        'section'  => 'title_tagline',
+        'settings' => 'maxwell_theme_options[site_title]',
+        'type'     => 'checkbox',
+		'priority' => 10
+		)
+	);
+	
 	// Add Header Image Link
 	$wp_customize->add_setting( 'maxwell_theme_options[custom_header_link]', array(
         'default'           => '',
