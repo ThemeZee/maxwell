@@ -51,8 +51,8 @@ function maxwell_setup() {
 	
 	// Set up the WordPress core custom logo feature
 	add_theme_support( 'custom-logo', apply_filters( 'maxwell_custom_logo_args', array(
-		'height' => 50,
-		'width' => 350,
+		'height' => 60,
+		'width' => 300,
 		'flex-height' => true,
 		'flex-width' => true,
 	) ) );

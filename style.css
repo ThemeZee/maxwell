@@ -663,6 +663,15 @@ textarea {
 	text-decoration: underline;
 }
 
+.site-branding .custom-logo {
+	margin: 0.5em 1em 0 0;
+	padding: 0;
+	border: none;
+	vertical-align: top;
+	max-width: 100%;
+	height: auto;
+}
+
 /* Header Widgets */
 .header-widgets {
 	display: inline;
