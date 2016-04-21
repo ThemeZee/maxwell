@@ -98,7 +98,7 @@ function maxwell_widgets_init() {
 	register_sidebar( array(
 		'name' => esc_html__( 'Sidebar', 'maxwell' ),
 		'id' => 'sidebar',
-		'description' => esc_html__( 'Appears on posts and pages except full width template.', 'maxwell' ),
+		'description' => esc_html__( 'Appears on posts and pages except the full width template.', 'maxwell' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
 		'after_widget' => '</aside>',
 		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
@@ -133,20 +133,22 @@ add_action( 'widgets_init', 'maxwell_widgets_init' );
  * Enqueue scripts and styles.
  */
 function maxwell_scripts() {
-	global $wp_scripts;
+
+	// Get Theme Version
+	$theme_version = wp_get_theme()->get( 'Version' );
 	
 	// Register and Enqueue Stylesheet
-	wp_enqueue_style( 'maxwell-stylesheet', get_stylesheet_uri() );
+	wp_enqueue_style( 'maxwell-stylesheet', get_stylesheet_uri(), array(), $theme_version );
 	
 	// Register Genericons
-	wp_enqueue_style( 'maxwell-genericons', get_template_directory_uri() . '/css/genericons/genericons.css' );
+	wp_enqueue_style( 'maxwell-genericons', get_template_directory_uri() . '/css/genericons/genericons.css', array(), '3.4.1' );
 	
 	// Register and Enqueue HTML5shiv to support HTML5 elements in older IE versions
-	wp_enqueue_script( 'maxwell-html5shiv', get_template_directory_uri() . '/js/html5shiv.min.js', array(), '3.7.2', false );
-	$wp_scripts->add_data( 'maxwell-html5shiv', 'conditional', 'lt IE 9' );
+	wp_enqueue_script( 'maxwell-html5shiv', get_template_directory_uri() . '/js/html5shiv.min.js', array(), '3.7.3' );
+	wp_script_add_data( 'maxwell-html5shiv', 'conditional', 'lt IE 9' );
 
 	// Register and enqueue navigation.js
-	wp_enqueue_script( 'maxwell-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery') );
+	wp_enqueue_script( 'maxwell-jquery-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20160421' );
 	
 	// Passing Parameters to navigation.js
 	wp_localize_script( 'maxwell-jquery-navigation', 'maxwell_menu_title', esc_html__( 'Navigation', 'maxwell' ) );
