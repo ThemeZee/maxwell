@@ -4,7 +4,10 @@ Maxwell Changelog
 
 Version 1.0.1
 -----------------------------------
-[updated] flexlider to version 2.6.0
+[added] support for custom logo feature
+[added] version numbers to wp_enqueue_style and wp_enqueue_script functions
+[updated] flexlider, html5shiv and Genericons
+[fixed] three column post layout on search and archive pages
 
 Version 1.0
 -----------------------------------
