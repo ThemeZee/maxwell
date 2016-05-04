@@ -11,7 +11,7 @@ add_action( 'after_setup_theme', 'maxwell_theme_addons_setup' );
 
 function maxwell_theme_addons_setup() {
 
-	// Add Theme Support for Anderson Pro Plugin
+	// Add Theme Support for Maxwell Pro Plugin
 	add_theme_support( 'maxwell-pro' );
 	
 	// Add Theme Support for ThemeZee Plugins
