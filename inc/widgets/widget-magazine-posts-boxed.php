@@ -21,7 +21,8 @@ class Maxwell_Magazine_Posts_Boxed_Widget extends WP_Widget {
 			sprintf( esc_html__( 'Magazine Posts: Boxed (%s)', 'maxwell' ), wp_get_theme()->Name ), // Name
 			array( 
 				'classname' => 'maxwell-magazine-posts-boxed', 
-				'description' => esc_html__( 'Displays your posts from a selected category in a boxed layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'maxwell' ) 
+				'description' => esc_html__( 'Displays your posts from a selected category in a boxed layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'maxwell' ),
+				'customize_selective_refresh' => true, 
 			) // Args
 		);
 
