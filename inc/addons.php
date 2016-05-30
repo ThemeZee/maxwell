@@ -23,6 +23,7 @@ function maxwell_theme_addons_setup() {
 	add_theme_support( 'infinite-scroll', array(
 		'type' 		=> 'click',
 		'container' => 'main',
+		'wrapper'	=> 'post-wrapper',
 		'render'    => 'maxwell_infinite_scroll_render',
 	) );
 	
@@ -76,12 +77,9 @@ function maxwell_theme_addons_image_sizes() {
  */
 function maxwell_infinite_scroll_render() {
 
-	// Get Theme Options from Database
-	$theme_options = maxwell_theme_options();
-	
 	while ( have_posts() ) {
 		the_post();
-		get_template_part( 'template-parts/content', $theme_options['post_content'] );
+		get_template_part( 'template-parts/content' );
 	}
 	
 } // maxwell_infinite_scroll_render()
