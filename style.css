@@ -4,11 +4,11 @@ Theme URI: https://themezee.com/themes/maxwell/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Maxwell is a minimalistic and elegant WordPress theme featuring an ultra clean magazine layout. With a beautiful typography, various post layouts and a gorgeous featured posts slideshow Maxwell truly helps you to stand out.  
-Version: 1.0.1
+Version: 1.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: maxwell
-Tags: two-columns, light, blue, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, red, silver, white, green, gray
+Tags: two-columns, blog, news, custom-background, custom-header, custom-menu, editor-style, grid-layout, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, education, entertainment, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -32,8 +32,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 8.0 - Layout Structure
 9.0 - Header
 10.0 - Navigation
-	10.1 - Main Navigation
-	10.2 - Social Icon Menu
 11.0 - Widgets
 	11.1 - Default Widgets
 	11.2 - Magazine Posts Widgets

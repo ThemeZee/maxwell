@@ -2,6 +2,12 @@
 Maxwell Changelog
 ===================================
 
+Version 1.0.2
+-----------------------------------
+[added] support for selective refresh
+[updated] custom logo styling and editor-style.css
+[improved] styling of lists, tables and blockquotes
+
 Version 1.0.1
 -----------------------------------
 [added] support for custom logo feature

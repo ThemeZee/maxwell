@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Maxwell\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2016-03-11 16:37+0100\n"
-"PO-Revision-Date: 2016-03-11 16:37+0100\n"
+"POT-Creation-Date: 2016-05-31 09:45+0100\n"
+"PO-Revision-Date: 2016-05-31 09:45+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: en_US\n"
@@ -63,37 +63,37 @@ msgstr ""
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:91 sidebar.php:20
+#: functions.php:102 sidebar.php:20
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:93
-msgid "Appears on posts and pages except full width template."
+#: functions.php:104
+msgid "Appears on posts and pages except the full width template."
 msgstr ""
 
-#: functions.php:101
+#: functions.php:112
 msgid "Header"
 msgstr ""
 
-#: functions.php:103
+#: functions.php:114
 msgid "Appears on header area. You can use a search or ad widget here."
 msgstr ""
 
-#: functions.php:111
+#: functions.php:122
 msgid "Magazine Homepage"
 msgstr ""
 
-#: functions.php:113
+#: functions.php:124
 msgid ""
 "Appears on Magazine Homepage template only. You can use the Magazine Posts "
 "widgets here."
 msgstr ""
 
-#: functions.php:144
+#: functions.php:157
 msgid "Navigation"
 msgstr ""
 
-#: header.php:26
+#: header.php:28
 msgid "Skip to content"
 msgstr ""
 
@@ -133,35 +133,29 @@ msgid ""
 "set up the theme like the demo website."
 msgstr ""
 
-#: inc/back-compat.php:40
-msgid ""
-"%$1s requires at least WordPress version 4.2. You are running version %$2s. "
-"Please upgrade and try again."
-msgstr ""
-
-#: inc/back-compat.php:49 inc/back-compat.php:61
+#: inc/back-compat.php:42 inc/back-compat.php:52 inc/back-compat.php:65
 #, php-format
 msgid ""
-"Maxwell requires at least WordPress version 4.2. You are running version %s. "
+"%1$s requires at least WordPress version %2$s. You are running version %3$s. "
 "Please upgrade and try again."
 msgstr ""
 
-#: inc/template-tags.php:160
+#: inc/template-tags.php:191
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/template-tags.php:187
+#: inc/template-tags.php:218
 #, php-format
 msgctxt "post author"
 msgid "Posted by %s"
 msgstr ""
 
-#: inc/template-tags.php:228
+#: inc/template-tags.php:259
 msgid "Continue reading &raquo;"
 msgstr ""
 
-#: inc/template-tags.php:331
+#: inc/template-tags.php:362
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr ""
@@ -175,15 +169,15 @@ msgstr ""
 msgid "Theme Info"
 msgstr ""
 
-#: inc/theme-info.php:49 inc/customizer/customizer.php:102
+#: inc/theme-info.php:49 inc/customizer/customizer.php:119
 msgid "Theme Links"
 msgstr ""
 
-#: inc/theme-info.php:50 inc/customizer/customizer.php:103
+#: inc/theme-info.php:50 inc/customizer/customizer.php:120
 msgid "https://themezee.com/themes/maxwell/"
 msgstr ""
 
-#: inc/theme-info.php:50 inc/customizer/customizer.php:104
+#: inc/theme-info.php:50 inc/customizer/customizer.php:121
 msgid "Theme Page"
 msgstr ""
 
@@ -196,16 +190,16 @@ msgid "Theme Demo"
 msgstr ""
 
 #: inc/theme-info.php:53 inc/theme-info.php:74
-#: inc/customizer/customizer.php:105
+#: inc/customizer/customizer.php:122
 msgid "https://themezee.com/docs/maxwell-documentation/"
 msgstr ""
 
 #: inc/theme-info.php:53 inc/theme-info.php:68
-#: inc/customizer/customizer.php:106
+#: inc/customizer/customizer.php:123
 msgid "Theme Documentation"
 msgstr ""
 
-#: inc/theme-info.php:54 inc/customizer/customizer.php:108
+#: inc/theme-info.php:54 inc/customizer/customizer.php:125
 msgid "Rate this theme"
 msgstr ""
 
@@ -304,18 +298,21 @@ msgid "Background"
 msgstr ""
 
 #: inc/customizer/customizer.php:53
-msgid "Header Image Link"
+msgid "Display Site Title"
 msgstr ""
 
 #: inc/customizer/customizer.php:70
+msgid "Header Image Link"
+msgstr ""
+
+#: inc/customizer/customizer.php:87
 msgid "Hide header image on front page"
 msgstr ""
 
 #: inc/customizer/functions/custom-controls.php:61
-#: inc/widgets/widget-magazine-posts-boxed.php:435
-#: inc/widgets/widget-magazine-posts-columns.php:355
-#: inc/widgets/widget-magazine-posts-columns.php:376
-#: inc/widgets/widget-magazine-posts-grid.php:411
+#: inc/widgets/widget-magazine-posts-columns.php:356
+#: inc/widgets/widget-magazine-posts-columns.php:377
+#: inc/widgets/widget-magazine-posts-grid.php:412
 msgid "All Categories"
 msgstr ""
 
@@ -372,9 +369,8 @@ msgid "Post Meta"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:91
-#: inc/widgets/widget-magazine-posts-boxed.php:457
-#: inc/widgets/widget-magazine-posts-columns.php:403
-#: inc/widgets/widget-magazine-posts-grid.php:446
+#: inc/widgets/widget-magazine-posts-columns.php:404
+#: inc/widgets/widget-magazine-posts-grid.php:447
 msgid "Display post date"
 msgstr ""
 
@@ -446,52 +442,6 @@ msgstr ""
 msgid "More Features"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-boxed.php:21
-#, php-format
-msgid "Magazine Posts: Boxed (%s)"
-msgstr ""
-
-#: inc/widgets/widget-magazine-posts-boxed.php:24
-msgid ""
-"Displays your posts from a selected category in a boxed layout. Please use "
-"this widget ONLY in the Magazine Homepage widget area."
-msgstr ""
-
-#: inc/widgets/widget-magazine-posts-boxed.php:373
-#: inc/widgets/widget-magazine-posts-columns.php:289
-#: inc/widgets/widget-magazine-posts-grid.php:346
-#, php-format
-msgid "View all posts from category %s"
-msgstr ""
-
-#: inc/widgets/widget-magazine-posts-boxed.php:426
-#: inc/widgets/widget-magazine-posts-grid.php:402
-msgid "Title:"
-msgstr ""
-
-#: inc/widgets/widget-magazine-posts-boxed.php:432
-#: inc/widgets/widget-magazine-posts-grid.php:408
-msgid "Category:"
-msgstr ""
-
-#: inc/widgets/widget-magazine-posts-boxed.php:447
-msgid "Post Layout:"
-msgstr ""
-
-#: inc/widgets/widget-magazine-posts-boxed.php:449
-msgid "Horizontal Arrangement"
-msgstr ""
-
-#: inc/widgets/widget-magazine-posts-boxed.php:450
-msgid "Vertical Arrangement"
-msgstr ""
-
-#: inc/widgets/widget-magazine-posts-boxed.php:464
-#: inc/widgets/widget-magazine-posts-columns.php:410
-#: inc/widgets/widget-magazine-posts-grid.php:453
-msgid "Display post author"
-msgstr ""
-
 #: inc/widgets/widget-magazine-posts-columns.php:21
 #, php-format
 msgid "Magazine Posts: 2 Columns (%s)"
@@ -503,29 +453,40 @@ msgid ""
 "ONLY in the Magazine Homepage widget area."
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-columns.php:346
+#: inc/widgets/widget-magazine-posts-columns.php:290
+#: inc/widgets/widget-magazine-posts-grid.php:347
+#, php-format
+msgid "View all posts from category %s"
+msgstr ""
+
+#: inc/widgets/widget-magazine-posts-columns.php:347
 msgid "Left Category Title:"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-columns.php:352
+#: inc/widgets/widget-magazine-posts-columns.php:353
 msgid "Left Category:"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-columns.php:367
+#: inc/widgets/widget-magazine-posts-columns.php:368
 msgid "Right Category Title:"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-columns.php:373
+#: inc/widgets/widget-magazine-posts-columns.php:374
 msgid "Right Category:"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-columns.php:388
-#: inc/widgets/widget-magazine-posts-grid.php:431
+#: inc/widgets/widget-magazine-posts-columns.php:389
+#: inc/widgets/widget-magazine-posts-grid.php:432
 msgid "Number of posts:"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-columns.php:396
+#: inc/widgets/widget-magazine-posts-columns.php:397
 msgid "Highlight first post (big image + excerpt)"
+msgstr ""
+
+#: inc/widgets/widget-magazine-posts-columns.php:411
+#: inc/widgets/widget-magazine-posts-grid.php:454
+msgid "Display post author"
 msgstr ""
 
 #: inc/widgets/widget-magazine-posts-grid.php:21
@@ -539,18 +500,26 @@ msgid ""
 "this widget ONLY in the Magazine Homepage widget area."
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-grid.php:423
+#: inc/widgets/widget-magazine-posts-grid.php:403
+msgid "Title:"
+msgstr ""
+
+#: inc/widgets/widget-magazine-posts-grid.php:409
+msgid "Category:"
+msgstr ""
+
+#: inc/widgets/widget-magazine-posts-grid.php:424
 msgid "Grid Layout:"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-grid.php:425
+#: inc/widgets/widget-magazine-posts-grid.php:426
 msgid "Two Columns Grid"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-grid.php:426
+#: inc/widgets/widget-magazine-posts-grid.php:427
 msgid "Three Columns Grid"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-grid.php:439
+#: inc/widgets/widget-magazine-posts-grid.php:440
 msgid "Display post excerpt"
 msgstr ""
