@@ -60,8 +60,8 @@ function maxwell_setup() {
 	// Set up the WordPress core custom header feature.
 	add_theme_support( 'custom-header', apply_filters( 'maxwell_custom_header_args', array(
 		'header-text' => false,
-		'width'	=> 1250,
-		'height' => 450,
+		'width'	=> 1200,
+		'height' => 400,
 		'flex-height' => true
 	) ) );
 	
@@ -86,7 +86,7 @@ add_action( 'after_setup_theme', 'maxwell_setup' );
  * @global int $content_width
  */
 function maxwell_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'maxwell_content_width', 840 );
+	$GLOBALS['content_width'] = apply_filters( 'maxwell_content_width', 810 );
 }
 add_action( 'after_setup_theme', 'maxwell_content_width', 0 );
 
