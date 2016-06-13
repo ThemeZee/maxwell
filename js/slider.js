@@ -1,15 +1,15 @@
 /**
- * jQuery Slider JS
+ * Flexslider Setup
  *
  * Adds the Flexslider Plugin for the Featured Post Slideshow
  *
  * @package Maxwell
  */
 
-jQuery(document).ready(function($) {
+jQuery( document ).ready(function($) {
 
-	/* Add flexslider to #post-slider div */ 
-	$("#post-slider").flexslider({
+	/* Add flexslider to #post-slider div */
+	$( "#post-slider" ).flexslider({
 		animation: maxwell_slider_params.animation,
 		slideshowSpeed: maxwell_slider_params.speed,
 		namespace: "zeeflex-",
@@ -18,5 +18,5 @@ jQuery(document).ready(function($) {
 		pauseOnHover: true,
 		controlsContainer: ".post-slider-controls"
 	});
-	
+
 });
