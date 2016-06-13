@@ -4,33 +4,34 @@
  *
  * @package Maxwell
  */
+
 ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		
-		<?php maxwell_post_image_single(); ?>
-		
-		<header class="entry-header">
-			
-			<?php maxwell_entry_meta(); ?>
-			
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-			
-			<?php maxwell_posted_by(); ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		</header><!-- .entry-header -->
-		
-		<div class="entry-content clearfix">
-			<?php the_content(); ?>
-			<!-- <?php trackback_rdf(); ?> -->
-			<div class="page-links"><?php wp_link_pages(); ?></div>
-		</div><!-- .entry-content -->
-		
-		<footer class="entry-footer">
-			
-			<?php maxwell_entry_tags(); ?>
-			<?php maxwell_post_navigation(); ?>
-			
-		</footer><!-- .entry-footer -->
+	<?php maxwell_post_image_single(); ?>
 
-	</article>
+	<header class="entry-header">
+
+		<?php maxwell_entry_meta(); ?>
+
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+		<?php maxwell_posted_by(); ?>
+
+	</header><!-- .entry-header -->
+
+	<div class="entry-content clearfix">
+		<?php the_content(); ?>
+		<!-- <?php trackback_rdf(); ?> -->
+		<div class="page-links"><?php wp_link_pages(); ?></div>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+
+		<?php maxwell_entry_tags(); ?>
+		<?php maxwell_post_navigation(); ?>
+
+	</footer><!-- .entry-footer -->
+
+</article>
