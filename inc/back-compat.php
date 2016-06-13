@@ -1,4 +1,4 @@
- <?php
+<?php
 /**
  * Maxwell back compat functionality
  *
@@ -8,18 +8,17 @@
  *
  * @package Maxwell
  *
- * Original Code: Twenty Sixteen http://wordpress.org/themes/maxwell
+ * Original Code: Twenty Sixteen http://wordpress.org/themes/twentysixteen
  * Original Copyright: the WordPress team and contributors.
- * 
- * The following code is a derivative work of the code from the Twenty Sixteen theme, 
- * which is licensed GPLv2 or later. This code therefore is also licensed under the terms 
+ *
+ * The following code is a derivative work of the code from the Twenty Sixteen theme,
+ * which is licensed GPLv2 or later. This code therefore is also licensed under the terms
  * of the GNU Public License, version 2.
  */
 
 /**
  * Prevent switching to Maxwell on old versions of WordPress.
  * Switches to the default theme.
- *
  */
 function maxwell_switch_theme() {
 	switch_theme( WP_DEFAULT_THEME, WP_DEFAULT_THEME );
