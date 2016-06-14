@@ -18,14 +18,14 @@ $theme_options = maxwell_theme_options();
 
 			<header class="page-header">
 
-				<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'maxwell' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'maxwell' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h1>
 				<p><?php get_search_form(); ?></p>
 
 			</header><!-- .page-header -->
 
 		<?php if ( have_posts() ) :  ?>
 
-			<div id="homepage-posts" class="post-wrapper clearfix">
+			<div id="post-wrapper" class="post-wrapper clearfix">
 
 				<?php while ( have_posts() ) : the_post();
 
