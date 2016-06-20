@@ -639,8 +639,6 @@ textarea {
 	float: left;
 	width: 75%;
 	padding-right: 4em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -1036,8 +1034,6 @@ textarea {
 	min-width: 300px;
 	width: 100%;
 	padding: 0.5em 1.5em 0.5em 0.7em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	-webkit-appearance: none;
 }
@@ -1106,8 +1102,6 @@ textarea {
 	display: block;
 	width: 33.33333333%;
 	padding-right: 2em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -1121,8 +1115,6 @@ textarea {
 	float: left;
 	display: block;
 	width: 100%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -1147,8 +1139,6 @@ textarea {
 	float: left;
 	width: 50%;
 	padding-right: 2em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -1162,8 +1152,6 @@ textarea {
 	float: left;
 	width: 50%;
 	padding-right: 1em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -1171,8 +1159,6 @@ textarea {
 	margin-left: 50%;
 	width: 50%;
 	padding-left: 1em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -1546,27 +1532,17 @@ textarea {
 
 /* Multiple Post Columns */
 .post-layout-columns .post-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	margin-right: -3em;
 }
 
 .post-layout-columns .post-wrapper .post-column {
-	float: left;
-	display: flex;
 	padding-right: 3em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-}
-
-.post-layout-columns .post-wrapper .post-column .type-post {
-	display: flex;
-	flex-direction: column;
-}
-
-.post-layout-columns .post-wrapper .post-column  .type-post .entry-content {
-	flex-grow: 1;
 }
 
 .post-layout-columns .post-wrapper .post-column .type-post .wp-post-image {
@@ -1576,10 +1552,6 @@ textarea {
 /* 2 Columns */
 .post-layout-two-columns .post-wrapper .post-column {
 	width: 50%;
-}
-
-.post-layout-two-columns .post-wrapper .post-column:nth-child(2n + 1) {
-	clear: left;
 }
 
 /* 3 Columns */
@@ -1593,8 +1565,13 @@ textarea {
 	width: 33.3333333333333%;
 }
 
-.post-layout-three-columns .post-wrapper .post-column:nth-child(3n + 1) {
-	clear: left;
+/* Fix Render Bug for Safari */
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
+	@media {
+		.post-layout-columns .post-wrapper .post-column {
+			margin-right: -1px;
+		}
+	}
 }
 
 /*--------------------------------------------------------------
