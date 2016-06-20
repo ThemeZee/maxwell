@@ -202,7 +202,7 @@ class Maxwell_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 						<header class="entry-header">
 
-							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'maxwell-thumbnail-large' ); ?></a>
+							<?php maxwell_post_image( 'maxwell-thumbnail-large' ); ?>
 
 							<?php $this->entry_meta( $settings ); ?>
 
@@ -221,9 +221,7 @@ class Maxwell_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'small-post clearfix' ); ?>>
 
-						<?php if ( has_post_thumbnail() ) : ?>
-							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'maxwell-thumbnail-small' ); ?></a>
-						<?php endif; ?>
+						<?php maxwell_post_image( 'maxwell-thumbnail-small' ); ?>
 
 						<div class="small-post-content">
 
