@@ -23,7 +23,10 @@ endif;
 	<section id="primary" class="content-archive content-area">
 		<main id="main" class="site-main" role="main">
 
-			<?php // Display Homepage Title.
+		<?php
+		if ( have_posts() ) :
+
+			// Display Homepage Title.
 			if ( '' !== $theme_options['blog_title'] ) : ?>
 
 				<header class="page-header clearfix">
@@ -37,17 +40,22 @@ endif;
 
 			<div id="post-wrapper" class="post-wrapper clearfix">
 
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+				<?php while ( have_posts() ) : the_post();
 
-						get_template_part( 'template-parts/content' );
+					get_template_part( 'template-parts/content' );
 
-					endwhile;
-
-				endif; ?>
+				endwhile; ?>
 
 			</div>
 
 			<?php maxwell_pagination(); ?>
+
+		<?php
+		else :
+
+			get_template_part( 'template-parts/content', 'none' );
+
+		endif; ?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
