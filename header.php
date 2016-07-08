@@ -35,6 +35,7 @@
 
 					<?php maxwell_site_logo(); ?>
 					<?php maxwell_site_title(); ?>
+					<?php maxwell_site_description(); ?>
 
 				</div><!-- .site-branding -->
 

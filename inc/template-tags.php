@@ -52,6 +52,33 @@ function maxwell_site_title() {
 endif;
 
 
+if ( ! function_exists( 'maxwell_site_description' ) ) :
+/**
+ * Displays the site description in the header area
+ */
+function maxwell_site_description() {
+
+	// Get theme options from database.
+	$theme_options = maxwell_theme_options();
+
+	// Return early if site title is deactivated.
+	if ( false == $theme_options['site_description'] ) {
+		return;
+	}
+
+	$description = get_bloginfo( 'description', 'display' ); /* WPCS: xss ok. */
+
+	if ( $description || is_customize_preview() ) : ?>
+
+		<p class="site-description"><?php echo $description; ?></p>
+
+	<?php
+	endif;
+
+}
+endif;
+
+
 if ( ! function_exists( 'maxwell_header_image' ) ) :
 /**
  * Displays the custom header image below the navigation menu
@@ -100,7 +127,7 @@ if ( ! function_exists( 'maxwell_post_image' ) ) :
  * @param string $size Post thumbnail size.
  * @param array  $attr Post thumbnail attributes.
  */
-function maxwell_post_image( $size = '', $attr = array() ) {
+function maxwell_post_image( $size = 'post-thumbnail', $attr = array() ) {
 
 	// Display Post Thumbnail.
 	if ( has_post_thumbnail() ) : ?>

@@ -57,6 +57,23 @@ function maxwell_customize_register_options( $wp_customize ) {
 		)
 	);
 
+	// Add Display Tagline Setting.
+	$wp_customize->add_setting( 'maxwell_theme_options[site_description]', array(
+		'default'           => false,
+		'type'           	=> 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'maxwell_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control( 'maxwell_theme_options[site_description]', array(
+		'label'    => esc_html__( 'Display Tagline', 'maxwell' ),
+		'section'  => 'title_tagline',
+		'settings' => 'maxwell_theme_options[site_description]',
+		'type'     => 'checkbox',
+		'priority' => 11,
+		)
+	);
+
 	// Add Header Image Link.
 	$wp_customize->add_setting( 'maxwell_theme_options[custom_header_link]', array(
 		'default'           => '',
