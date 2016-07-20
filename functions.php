@@ -155,7 +155,7 @@ function maxwell_scripts() {
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 
 	// Register and enqueue navigation.js.
-	wp_enqueue_script( 'maxwell-jquery-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20160619' );
+	wp_enqueue_script( 'maxwell-jquery-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20160719' );
 
 	// Passing Parameters to navigation.js.
 	wp_localize_script( 'maxwell-jquery-navigation', 'maxwell_menu_title', esc_html__( 'Navigation', 'maxwell' ) );
