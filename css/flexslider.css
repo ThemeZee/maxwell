@@ -44,16 +44,16 @@
 	-webkit-backface-visibility: hidden;
 }
 .zeeflexslider .zeeslides img {
-	width: 100%;
 	display: block;
+	width: 100%;
 }
 .zeeflexslider .zeeslides:after {
-	content: "\0020";
 	display: block;
-	clear: both;
 	visibility: hidden;
-	line-height: 0;
+	clear: both;
 	height: 0;
+	content: "\0020";
+	line-height: 0;
 }
 html[xmlns] .zeeflexslider .zeeslides {
 	display: block;
@@ -92,19 +92,19 @@ html[xmlns] .zeeflexslider .zeeslides {
 
 .post-slider .zeeslide .slide-image {
 	float: right;
-	width: 65%;
-	height: auto;
+	margin: 0;
 	max-width: 850px;
 	max-height: 500px;
+	width: 65%;
+	height: auto;
 	vertical-align: top;
-	margin: 0;
 }
 
 .post-slider .zeeslide .slide-content {
 	float: left;
-	width: 35%;
-	padding: 1.5em 2em;
 	box-sizing: border-box;
+	padding: 1.5em 2em;
+	width: 35%;
 }
 
 .post-slider .zeeslide .slide-content .slide-title {
@@ -118,38 +118,38 @@ html[xmlns] .zeeflexslider .zeeslides {
 
 /* Direction Nav */
 .post-slider-controls .zeeflex-direction-nav {
-	*height: 0;
 	position: absolute;
-	bottom: 1.5em;
 	right: 1.5em;
+	bottom: 1.5em;
+	*height: 0;
 }
 
 .post-slider-controls .zeeflex-direction-nav a {
-	display: block;
 	position: absolute;
+	z-index: 10;
+	display: block;
 	margin: -38px 0 0 -76px;
 	width: 38px;
 	height: 38px;
 	background: #33bbcc;
-	text-align: left;
 	color: #fff;
+	text-align: left;
 	font-size: 0;
 	cursor: pointer;
-	z-index: 10;
 }
 
 .post-slider-controls .zeeflex-direction-nav a:hover {
-	text-decoration: none;
 	background: #303030;
+	text-decoration: none;
 }
 
 .post-slider-controls .zeeflex-direction-nav a:before {
-	-webkit-font-smoothing: antialiased;
 	display: inline-block;
-	font: normal 28px/1 Genericons;
-	text-decoration: inherit;
-	vertical-align: text-bottom;
 	color: #fff;
+	vertical-align: text-bottom;
+	text-decoration: inherit;
+	font: normal 28px/1 Genericons;
+	-webkit-font-smoothing: antialiased;
 }
 
 .post-slider-controls .zeeflex-direction-nav a.zeeflex-next:before {
@@ -183,19 +183,19 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 .post-slider-controls .zeeflex-control-nav li {
-	margin: 0 2px;
 	display: inline-block;
-	zoom: 1;
 	*display: inline;
+	margin: 0 2px;
+	zoom: 1;
 }
 
 .post-slider-controls .zeeflex-control-nav li a {
+	display: block;
 	width: 25px;
 	height: 10px;
-	display: block;
 	background: rgba(255,255,255,0.5);
-	cursor: pointer;
 	text-indent: -9999px;
+	cursor: pointer;
 }
 
 .post-slider-controls .zeeflex-control-nav li a:hover {
@@ -213,7 +213,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 --------------------------------------------------------------*/
 
 @media only screen and (max-width: 80em) {
-
 	.post-slider .zeeslide .slide-content .slide-title {
 		font-size: 24px;
 		font-size: 1.5rem;
@@ -231,7 +230,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 @media only screen and (max-width: 70em) {
-
 	.post-slider .zeeslide .slide-content .entry-content {
 		display: none;
 	}
@@ -239,17 +237,16 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 @media only screen and (max-width: 60em) {
-
 	.post-slider .zeeslide .slide-image {
 		float: none;
-		width: 100%;
 		padding: 0;
+		width: 100%;
 	}
 
 	.post-slider .zeeslide .slide-content {
 		float: none;
-		width: 100%;
 		padding: 1.5em 2em 2em;
+		width: 100%;
 	}
 
 	.post-slider .zeeslide .slide-content .slide-title {
@@ -263,14 +260,13 @@ html[xmlns] .zeeflexslider .zeeslides {
 	}
 
 	.post-slider-controls .zeeflex-direction-nav {
-		bottom: 2em;
 		right: 2em;
+		bottom: 2em;
 	}
 
 }
 
 @media only screen and (max-width: 30em) {
-
 	.post-slider-wrap {
 		background: none;
 	}
@@ -285,14 +281,13 @@ html[xmlns] .zeeflexslider .zeeslides {
 	}
 
 	.post-slider-controls .zeeflex-direction-nav {
-		bottom: 0;
 		right: 0;
+		bottom: 0;
 	}
 
 }
 
 @media only screen and (max-width: 25em) {
-
 	.post-slider-controls .zeeflex-control-nav {
 		display: none;
 	}
@@ -300,7 +295,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 @media only screen and (max-width: 20em) {
-
 	.post-slider-wrap {
 		padding-bottom: 3.5em;
 	}

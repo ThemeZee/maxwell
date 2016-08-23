@@ -26,6 +26,9 @@ For more information about Maxwell please go to https://themezee.com/themes/maxw
 
 == Changelog ==
 
+= 1.0.5 =
+* added Right-to-Left language support
+
 = 1.0.4 =
 * added readme.txt file
 * improved styling of navigation menus
