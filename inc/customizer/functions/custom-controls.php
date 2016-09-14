@@ -85,21 +85,65 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 	}
 
 	/**
-	 * Displays the upgrade teasers in thhe Pro Version / More Features section.
+	 * Displays the theme links in the Theme Info section.
 	 */
-	class Maxwell_Customize_Upgrade_Control extends WP_Customize_Control {
+	class Maxwell_Customize_Theme_Links_Control extends WP_Customize_Control {
 		/**
 		 * Render Control
 		 */
 		public function render_content() {
 			?>
 
-			<div class="upgrade-pro-version">
+			<div class="theme-links">
 
-				<span class="customize-control-title"><?php esc_html_e( 'Pro Version', 'maxwell' ); ?></span>
+				<span class="customize-control-title"><?php esc_html_e( 'Theme Links', 'maxwell' ); ?></span>
+
+				<p>
+					<a href="<?php echo esc_url( __( 'https://themezee.com/themes/maxwell/', 'maxwell' ) ); ?>?utm_source=customizer&utm_medium=textlink&utm_campaign=maxwell&utm_content=theme-page" target="_blank">
+						<?php esc_html_e( 'Theme Page', 'maxwell' ); ?>
+					</a>
+				</p>
+
+				<p>
+					<a href="http://preview.themezee.com/maxwell/?utm_source=theme-info&utm_medium=textlink&utm_campaign=maxwell&utm_content=demo" target="_blank">
+						<?php esc_html_e( 'Theme Demo', 'maxwell' ); ?>
+					</a>
+				</p>
+
+				<p>
+					<a href="<?php echo esc_url( __( 'https://themezee.com/docs/maxwell-documentation/', 'maxwell' ) ); ?>?utm_source=customizer&utm_medium=textlink&utm_campaign=maxwell&utm_content=documentation" target="_blank">
+						<?php esc_html_e( 'Theme Documentation', 'maxwell' ); ?>
+					</a>
+				</p>
+
+				<p>
+					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/maxwell/reviews/?filter=5', 'maxwell' ) ); ?>" target="_blank">
+						<?php esc_html_e( 'Rate this theme', 'maxwell' ); ?>
+					</a>
+				</p>
+
+			</div>
+
+			<?php
+		}
+	}
+
+	/**
+	 * Displays the upgrade teasers in thhe Pro Version / More Features section.
+	 */
+	class Maxwell_Customize_Pro_Version_Control extends WP_Customize_Control {
+		/**
+		 * Render Control
+		 */
+		public function render_content() {
+			?>
+
+			<div class="pro-version">
+
+				<span class="customize-control-title"><?php esc_html_e( 'Pro Version Add-on', 'maxwell' ); ?></span>
 
 				<span class="textfield">
-					<?php printf( esc_html__( 'Purchase the Pro Version of %s to get additional features and advanced customization options.', 'maxwell' ), 'Maxwell' ); ?>
+					<?php printf( esc_html__( 'Purchase the %s Pro Add-on and get additional features and advanced customization options.', 'maxwell' ), 'Maxwell' ); ?>
 				</span>
 
 				<p>
@@ -110,20 +154,31 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 
 			</div>
 
-			<div class="upgrade-plugins">
+			<?php
+		}
+	}
 
-				<span class="customize-control-title"><?php esc_html_e( 'ThemeZee Plugins', 'maxwell' ); ?></span>
+	/**
+	 * Displays the upgrade teasers in thhe Pro Version / More Features section.
+	 */
+	class Maxwell_Customize_Recommended_Plugins_Control extends WP_Customize_Control {
+		/**
+		 * Render Control
+		 */
+		public function render_content() {
+			?>
+
+			<div class="recommended-plugins">
+
+				<span class="customize-control-title"><?php esc_html_e( 'Recommended Plugins', 'maxwell' ); ?></span>
 
 				<span class="textfield">
-					<?php esc_html_e( 'Extend the functionality of your WordPress website with our customized plugins.', 'maxwell' ); ?>
+					<?php esc_html_e( 'Extend the functionality of your WordPress website with our free and easy to use plugins.', 'maxwell' ); ?>
 				</span>
 
 				<p>
-					<a href="<?php echo esc_url( __( 'https://themezee.com/plugins/', 'maxwell' ) ); ?>?utm_source=customizer&utm_medium=button&utm_campaign=maxwell&utm_content=plugins" target="_blank" class="button button-secondary">
-						<?php esc_html_e( 'Browse Plugins', 'maxwell' ); ?>
-					</a>
-					<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-primary">
-						<?php esc_html_e( 'Install now', 'maxwell' ); ?>
+					<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-secondary">
+						<?php esc_html_e( 'View Recommended Plugins', 'maxwell' ); ?>
 					</a>
 				</p>
 

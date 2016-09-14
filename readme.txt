@@ -28,6 +28,7 @@ For more information about Maxwell please go to https://themezee.com/themes/maxw
 
 = 1.0.5 =
 * added Right-to-Left language support
+* changed implementation of Theme Links in Customizer
 
 = 1.0.4 =
 * added readme.txt file

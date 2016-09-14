@@ -122,29 +122,6 @@ add_action( 'customize_preview_init', 'maxwell_customize_preview_js' );
 
 
 /**
- * Embed JS file for Customizer Controls
- */
-function maxwell_customize_controls_js() {
-
-	wp_enqueue_script( 'maxwell-customizer-controls', get_template_directory_uri() . '/js/customizer-controls.js', array(), '20151202', true );
-
-	// Localize the script.
-	wp_localize_script( 'maxwell-customizer-controls', 'maxwell_theme_links', array(
-		'title'	=> esc_html__( 'Theme Links', 'maxwell' ),
-		'themeURL'	=> esc_url( __( 'https://themezee.com/themes/maxwell/', 'maxwell' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=maxwell&utm_content=theme-page' ),
-		'themeLabel'	=> esc_html__( 'Theme Page', 'maxwell' ),
-		'docuURL'	=> esc_url( __( 'https://themezee.com/docs/maxwell-documentation/', 'maxwell' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=maxwell&utm_content=documentation' ),
-		'docuLabel'	=> esc_html__( 'Theme Documentation', 'maxwell' ),
-		'rateURL'	=> esc_url( 'http://wordpress.org/support/view/theme-reviews/maxwell?filter=5' ),
-		'rateLabel'	=> esc_html__( 'Rate this theme', 'maxwell' ),
-		)
-	);
-
-}
-add_action( 'customize_controls_enqueue_scripts', 'maxwell_customize_controls_js' );
-
-
-/**
  * Embed CSS styles for the theme options in the Customizer
  */
 function maxwell_customize_preview_css() {
