@@ -131,7 +131,7 @@ function maxwell_theme_info_page() {
 						</p>
 						<p>
 							<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-secondary">
-								<?php esc_html_e( 'View Recommended Plugins', 'maxwell' ); ?>
+								<?php esc_html_e( 'Install Plugins', 'maxwell' ); ?>
 							</a>
 						</p>
 					</div>

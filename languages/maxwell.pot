@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Maxwell\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2016-09-14 20:23+0100\n"
-"PO-Revision-Date: 2016-09-14 20:24+0100\n"
+"POT-Creation-Date: 2016-09-16 12:49+0100\n"
+"PO-Revision-Date: 2016-09-16 12:49+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: en_US\n"
@@ -173,38 +173,38 @@ msgstr ""
 msgid "Theme Info"
 msgstr ""
 
-#: inc/theme-info.php:46 inc/customizer/functions/custom-controls.php:99
+#: inc/theme-info.php:46 inc/customizer/customizer.php:142
 msgid "Theme Links"
 msgstr ""
 
-#: inc/theme-info.php:47 inc/customizer/functions/custom-controls.php:102
+#: inc/theme-info.php:47 inc/customizer/customizer.php:145
 msgid "https://themezee.com/themes/maxwell/"
 msgstr ""
 
-#: inc/theme-info.php:47 inc/customizer/functions/custom-controls.php:103
+#: inc/theme-info.php:47 inc/customizer/customizer.php:146
 msgid "Theme Page"
 msgstr ""
 
-#: inc/theme-info.php:48 inc/customizer/functions/custom-controls.php:109
+#: inc/theme-info.php:48 inc/customizer/customizer.php:152
 msgid "Theme Demo"
 msgstr ""
 
 #: inc/theme-info.php:49 inc/theme-info.php:70
-#: inc/customizer/functions/custom-controls.php:114
+#: inc/customizer/customizer.php:157
 msgid "https://themezee.com/docs/maxwell-documentation/"
 msgstr ""
 
 #: inc/theme-info.php:49 inc/theme-info.php:64
-#: inc/customizer/functions/custom-controls.php:115
+#: inc/customizer/customizer.php:158
 msgid "Theme Documentation"
 msgstr ""
 
 #: inc/theme-info.php:50 inc/theme-info.php:152
-#: inc/customizer/functions/custom-controls.php:120
+#: inc/customizer/customizer.php:163
 msgid "https://wordpress.org/support/theme/maxwell/reviews/?filter=5"
 msgstr ""
 
-#: inc/theme-info.php:50 inc/customizer/functions/custom-controls.php:121
+#: inc/theme-info.php:50 inc/customizer/customizer.php:164
 msgid "Rate this theme"
 msgstr ""
 
@@ -243,38 +243,38 @@ msgstr ""
 msgid "Get more features"
 msgstr ""
 
-#: inc/theme-info.php:110 inc/customizer/functions/custom-controls.php:143
+#: inc/theme-info.php:110 inc/customizer/functions/custom-controls.php:99
 msgid "Pro Version Add-on"
 msgstr ""
 
-#: inc/theme-info.php:113 inc/customizer/functions/custom-controls.php:146
+#: inc/theme-info.php:113 inc/customizer/functions/custom-controls.php:102
 #, php-format
 msgid ""
 "Purchase the %s Pro Add-on and get additional features and advanced "
 "customization options."
 msgstr ""
 
-#: inc/theme-info.php:116 inc/customizer/functions/custom-controls.php:150
+#: inc/theme-info.php:116 inc/customizer/functions/custom-controls.php:106
 msgid "https://themezee.com/addons/maxwell-pro/"
 msgstr ""
 
-#: inc/theme-info.php:117 inc/customizer/functions/custom-controls.php:151
+#: inc/theme-info.php:117 inc/customizer/functions/custom-controls.php:107
 #, php-format
 msgid "Learn more about %s Pro"
 msgstr ""
 
-#: inc/theme-info.php:127 inc/customizer/functions/custom-controls.php:173
+#: inc/theme-info.php:127 inc/customizer/functions/custom-controls.php:115
 msgid "Recommended Plugins"
 msgstr ""
 
-#: inc/theme-info.php:130 inc/customizer/functions/custom-controls.php:176
+#: inc/theme-info.php:130 inc/customizer/functions/custom-controls.php:118
 msgid ""
 "Extend the functionality of your WordPress website with our free and easy to "
 "use plugins."
 msgstr ""
 
-#: inc/theme-info.php:134 inc/customizer/functions/custom-controls.php:181
-msgid "View Recommended Plugins"
+#: inc/theme-info.php:134 inc/customizer/functions/custom-controls.php:123
+msgid "Install Plugins"
 msgstr ""
 
 #: inc/theme-info.php:149
@@ -444,7 +444,7 @@ msgid "Slider Speed (in ms)"
 msgstr ""
 
 #: inc/customizer/sections/customizer-upgrade.php:19
-msgid "Theme Add-ons"
+msgid "More Features"
 msgstr ""
 
 #: inc/widgets/widget-magazine-posts-columns.php:24

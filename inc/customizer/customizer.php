@@ -29,7 +29,7 @@ function maxwell_customize_register_options( $wp_customize ) {
 		'capability'     => 'edit_theme_options',
 		'theme_supports' => '',
 		'title'          => esc_html__( 'Theme Options', 'maxwell' ),
-		'description'    => '',
+		'description'    => maxwell_customize_theme_links(),
 	) );
 
 	// Add postMessage support for site title and description.
@@ -125,6 +125,51 @@ add_action( 'customize_preview_init', 'maxwell_customize_preview_js' );
  * Embed CSS styles for the theme options in the Customizer
  */
 function maxwell_customize_preview_css() {
-	wp_enqueue_style( 'maxwell-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20151202' );
+	wp_enqueue_style( 'maxwell-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20160915' );
 }
 add_action( 'customize_controls_print_styles', 'maxwell_customize_preview_css' );
+
+/**
+ * Returns Theme Links
+ */
+function maxwell_customize_theme_links() {
+
+	ob_start();
+	?>
+
+		<div class="theme-links">
+
+			<span class="customize-control-title"><?php esc_html_e( 'Theme Links', 'maxwell' ); ?></span>
+
+			<p>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/maxwell/', 'maxwell' ) ); ?>?utm_source=customizer&utm_medium=textlink&utm_campaign=maxwell&utm_content=theme-page" target="_blank">
+					<?php esc_html_e( 'Theme Page', 'maxwell' ); ?>
+				</a>
+			</p>
+
+			<p>
+				<a href="http://preview.themezee.com/maxwell/?utm_source=theme-info&utm_medium=textlink&utm_campaign=maxwell&utm_content=demo" target="_blank">
+					<?php esc_html_e( 'Theme Demo', 'maxwell' ); ?>
+				</a>
+			</p>
+
+			<p>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/maxwell-documentation/', 'maxwell' ) ); ?>?utm_source=customizer&utm_medium=textlink&utm_campaign=maxwell&utm_content=documentation" target="_blank">
+					<?php esc_html_e( 'Theme Documentation', 'maxwell' ); ?>
+				</a>
+			</p>
+
+			<p>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/maxwell/reviews/?filter=5', 'maxwell' ) ); ?>" target="_blank">
+					<?php esc_html_e( 'Rate this theme', 'maxwell' ); ?>
+				</a>
+			</p>
+
+		</div>
+
+	<?php
+	$theme_links = ob_get_contents();
+	ob_end_clean();
+
+	return $theme_links;
+}
