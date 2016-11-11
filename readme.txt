@@ -26,6 +26,10 @@ For more information about Maxwell please go to https://themezee.com/themes/maxw
 
 == Changelog ==
 
+= 1.0.6 =
+* moved theme links to panel description in Customizer
+* updated Theme Info page
+
 = 1.0.5 =
 * added Right-to-Left language support
 * changed implementation of Theme Links in Customizer
