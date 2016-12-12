@@ -31,12 +31,12 @@
 	margin: 4px 0 16px;
 }
 
-#accordion-panel-maxwell_options_panel .customize-info .customize-help-toggle {
+#customize-theme-controls [id$=accordion-panel-maxwell_options_panel] .customize-info .customize-help-toggle {
 	top: 24px;
 	right: 4px;
 }
 
-#accordion-panel-maxwell_options_panel .customize-info .customize-help-toggle::before {
+#customize-theme-controls [id$=accordion-panel-maxwell_options_panel] .customize-info .customize-help-toggle::before {
 	content: "\f333";
 	color: #a0a5aa;
 	font-size: 28px;
@@ -45,40 +45,14 @@
 	top: 0;
 }
 
-#accordion-panel-maxwell_options_panel .customize-info .customize-help-toggle[aria-expanded="true"]::before {
+#customize-theme-controls [id$=accordion-panel-maxwell_options_panel] .customize-info .customize-help-toggle[aria-expanded="true"]::before {
 	content: "\f335";
 }
 
-#accordion-panel-maxwell_options_panel .customize-info .customize-help-toggle:hover::before {
+#customize-theme-controls [id$=accordion-panel-maxwell_options_panel] .customize-info .customize-help-toggle:hover::before {
 	color: #72777c;
 }
 
-#accordion-panel-maxwell_options_panel .customize-info .customize-help-toggle:focus::before {
-	box-shadow: none;
-}
-
-#accordion-panel-maxwell_options_panel .customize-info .customize-help-toggle {
-	top: 24px;
-	right: 4px;
-}
-
-#accordion-panel-maxwell_options_panel .customize-info .customize-help-toggle::before {
-	content: "\f333";
-	color: #a0a5aa;
-	font-size: 28px;
-	padding: 0;
-	left: 0;
-	top: 0;
-}
-
-#accordion-panel-maxwell_options_panel .customize-info .customize-help-toggle[aria-expanded="true"]::before {
-	content: "\f335";
-}
-
-#accordion-panel-maxwell_options_panel .customize-info .customize-help-toggle:hover::before {
-	color: #72777c;
-}
-
-#accordion-panel-maxwell_options_panel .customize-info .customize-help-toggle:focus::before {
+#customize-theme-controls [id$=accordion-panel-maxwell_options_panel] .customize-info .customize-help-toggle:focus::before {
 	box-shadow: none;
 }
