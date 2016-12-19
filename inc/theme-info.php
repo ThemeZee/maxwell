@@ -45,7 +45,7 @@ function maxwell_theme_info_page() {
 		<div class="important-links clearfix">
 			<p><strong><?php esc_html_e( 'Theme Links', 'maxwell' ); ?>:</strong>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/maxwell/', 'maxwell' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=maxwell&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'maxwell' ); ?></a>
-				<a href="http://preview.themezee.com/?demo=maxwell&utm_source=theme-info&utm_medium=textlink&utm_campaign=maxwell&utm_content=demo" target="_blank"><?php esc_html_e( 'Theme Demo', 'maxwell' ); ?></a>
+				<a href="http://preview.themezee.com/?demo=maxwell&utm_source=theme-info&utm_campaign=maxwell" target="_blank"><?php esc_html_e( 'Theme Demo', 'maxwell' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/maxwell-documentation/', 'maxwell' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=maxwell&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'maxwell' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/maxwell/reviews/?filter=5', 'maxwell' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'maxwell' ); ?></a>
 			</p>
