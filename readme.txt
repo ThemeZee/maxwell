@@ -26,6 +26,9 @@ For more information about Maxwell please go to https://themezee.com/themes/maxw
 
 == Changelog ==
 
+= 1.0.8 =
+* added centered layout in case no widgets were added to the sidebar
+
 = 1.0.7 =
 * added editor shortcuts and instant live preview for site title and tagline in Customizer
 * updated post pagination to use newer functions
