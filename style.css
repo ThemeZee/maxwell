@@ -647,8 +647,9 @@ textarea {
 	width: 25%;
 }
 
-/* No Sidebar Layout */
-.no-sidebar .content-area {
+/* No Sidebar & Centered Layout Template */
+.no-sidebar .content-area,
+.site-content .centered-content-area {
 	float: none;
 	width: 100%;
 	max-width: 840px;
@@ -657,10 +658,12 @@ textarea {
 }
 
 /* Fullwidth Template */
-.site-content .content-fullwidth {
+.site-content .fullwidth-content-area {
 	float: none;
+	margin: 0;
 	padding: 0;
 	width: 100%;
+	max-width: 100%;
 }
 
 /*--------------------------------------------------------------

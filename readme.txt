@@ -28,6 +28,8 @@ For more information about Maxwell please go to https://themezee.com/themes/maxw
 
 = 1.0.8 =
 * added centered layout in case no widgets were added to the sidebar
+* added fullwidth page template for blog posts
+* added centered page template for posts and static pages
 
 = 1.0.7 =
 * added editor shortcuts and instant live preview for site title and tagline in Customizer
