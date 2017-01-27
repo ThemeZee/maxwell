@@ -21,7 +21,7 @@
 
 <body <?php body_class(); ?>>
 
-	<div id="header-top" class="header-bar-wrap"><?php do_action( 'maxwell_header_bar' ); ?></div>
+	<?php do_action( 'maxwell_header_bar' ); ?>
 
 	<div id="page" class="hfeed site">
 
