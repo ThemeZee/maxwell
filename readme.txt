@@ -27,6 +27,7 @@ For more information about Maxwell please go to https://themezee.com/themes/maxw
 == Changelog ==
 
 = 1.0.8 =
+* added Magazine Homepage widgets to blog index
 * added centered layout in case no widgets were added to the sidebar
 * added fullwidth page template for blog posts
 * added centered page template for posts and static pages
