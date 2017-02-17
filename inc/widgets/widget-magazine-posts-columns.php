@@ -1,8 +1,8 @@
 <?php
 /**
- * Magazine Posts Columns Widget
+ * Magazine Columns Widget
  *
- * Display the latest posts from two categories in a 2-column layout.
+ * Display the latest posts from two categories in a two column layout.
  * Intented to be used in the Magazine Homepage widget area to built a magazine layouted page.
  *
  * @package Maxwell
@@ -21,21 +21,14 @@ class Maxwell_Magazine_Posts_Columns_Widget extends WP_Widget {
 		// Setup Widget.
 		parent::__construct(
 			'maxwell-magazine-posts-columns', // ID.
-			sprintf( esc_html__( 'Magazine Posts: 2 Columns (%s)', 'maxwell' ), wp_get_theme()->Name ), // Name.
+			esc_html__( 'Magazine (Columns)', 'maxwell' ), // Name.
 			array(
-				'classname' => 'maxwell-magazine-posts-columns',
+				'classname' => 'maxwell-magazine-columns-widget',
 				'description' => esc_html__( 'Displays your posts from two selected categories. Please use this widget ONLY in the Magazine Homepage widget area.', 'maxwell' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);
-
-		// Delete Widget Cache on certain actions.
-		add_action( 'save_post', array( $this, 'delete_widget_cache' ) );
-		add_action( 'deleted_post', array( $this, 'delete_widget_cache' ) );
-		add_action( 'switch_theme', array( $this, 'delete_widget_cache' ) );
-
 	}
-
 
 	/**
 	 * Set default settings of the widget
@@ -49,14 +42,10 @@ class Maxwell_Magazine_Posts_Columns_Widget extends WP_Widget {
 			'category_two_title'	=> '',
 			'number'				=> 4,
 			'highlight_post'		=> true,
-			'meta_date'				=> true,
-			'meta_author'			=> false,
 		);
 
 		return $defaults;
-
 	}
-
 
 	/**
 	 * Main Function to display the widget
@@ -67,22 +56,6 @@ class Maxwell_Magazine_Posts_Columns_Widget extends WP_Widget {
 	 * @param array $instance / Settings for this widget instance.
 	 */
 	function widget( $args, $instance ) {
-
-		$cache = array();
-
-		// Get Widget Object Cache.
-		if ( ! $this->is_preview() ) {
-			$cache = wp_cache_get( 'widget_maxwell_magazine_posts_columns', 'widget' );
-		}
-		if ( ! is_array( $cache ) ) {
-			$cache = array();
-		}
-
-		// Display Widget from Cache if exists.
-		if ( isset( $cache[ $this->id ] ) ) {
-			echo $cache[ $this->id ];
-			return;
-		}
 
 		// Start Output Buffering.
 		ob_start();
@@ -107,16 +80,9 @@ class Maxwell_Magazine_Posts_Columns_Widget extends WP_Widget {
 		<?php
 		echo $args['after_widget'];
 
-		// Set Cache.
-		if ( ! $this->is_preview() ) {
-			$cache[ $this->id ] = ob_get_flush();
-			wp_cache_set( 'widget_maxwell_magazine_posts_columns', $cache, 'widget' );
-		} else {
-			ob_end_flush();
-		}
-
-	} // widget()
-
+		// End Output Buffering.
+		ob_end_flush();
+	}
 
 	/**
 	 * Renders the Widget Content
@@ -130,7 +96,11 @@ class Maxwell_Magazine_Posts_Columns_Widget extends WP_Widget {
 	 * @param array $settings / Settings for this widget instance.
 	 */
 	function render( $args, $settings ) {
-	?>
+
+		// Get cached post ids.
+		$post_ids_category_one = maxwell_get_magazine_post_ids( $this->id . '-left-category', $settings['category_one'], $settings['number'] );
+		$post_ids_category_two = maxwell_get_magazine_post_ids( $this->id . '-right-category', $settings['category_two'], $settings['number'] );
+		?>
 
 		<div class="magazine-posts-column-left magazine-posts-columns clearfix">
 
@@ -140,7 +110,7 @@ class Maxwell_Magazine_Posts_Columns_Widget extends WP_Widget {
 					$this->category_title( $args, $settings, $settings['category_one'], $settings['category_one_title'] ); ?>
 
 				<div class="magazine-posts-columns-post-list clearfix">
-					<?php $this->magazine_posts( $settings, $settings['category_one'] ); ?>
+					<?php $this->magazine_posts( $settings, $post_ids_category_one ); ?>
 				</div>
 
 			</div>
@@ -155,16 +125,15 @@ class Maxwell_Magazine_Posts_Columns_Widget extends WP_Widget {
 					$this->category_title( $args, $settings, $settings['category_two'], $settings['category_two_title'] ); ?>
 
 				<div class="magazine-posts-columns-post-list clearfix">
-					<?php $this->magazine_posts( $settings, $settings['category_two'] ); ?>
+					<?php $this->magazine_posts( $settings, $post_ids_category_two ); ?>
 				</div>
 
 			</div>
 
 		</div>
 
-	<?php
-	} // render()
-
+		<?php
+	}
 
 	/**
 	 * Display Magazine Posts Loop
@@ -172,15 +141,14 @@ class Maxwell_Magazine_Posts_Columns_Widget extends WP_Widget {
 	 * @used-by this->render()
 	 *
 	 * @param array $settings / Settings for this widget instance.
-	 * @param int   $category_id / ID of the selected category.
+	 * @param array $post_ids / Array with post ids.
 	 */
-	function magazine_posts( $settings, $category_id ) {
+	function magazine_posts( $settings, $post_ids ) {
 
-		// Get latest posts from database.
+		// Fetch posts from database.
 		$query_arguments = array(
-			'posts_per_page' => (int) $settings['number'],
-			'ignore_sticky_posts' => true,
-			'cat' => (int) $category_id,
+			'post__in'            => $post_ids,
+			'no_found_rows'       => true,
 		);
 		$posts_query = new WP_Query( $query_arguments );
 		$i = 0;
@@ -196,46 +164,15 @@ class Maxwell_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 				$posts_query->the_post();
 
-				if ( true === $settings['highlight_post'] and ( isset( $i ) and 0 === $i  ) ) : ?>
+				if ( true === $settings['highlight_post'] and 0 === $i ) :
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class( 'large-post clearfix' ); ?>>
+					get_template_part( 'template-parts/widgets/magazine-content', 'large-post' );
 
-						<header class="entry-header">
+				else :
 
-							<?php maxwell_post_image( 'maxwell-thumbnail-large' ); ?>
+					get_template_part( 'template-parts/widgets/magazine-content', 'small-post' );
 
-							<?php $this->entry_meta( $settings ); ?>
-
-							<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-						</header><!-- .entry-header -->
-
-						<div class="entry-content">
-							<?php the_excerpt(); ?>
-							<?php maxwell_more_link(); ?>
-						</div><!-- .entry-content -->
-
-					</article>
-
-				<?php else : ?>
-
-					<article id="post-<?php the_ID(); ?>" <?php post_class( 'small-post clearfix' ); ?>>
-
-						<?php maxwell_post_image( 'maxwell-thumbnail-small' ); ?>
-
-						<div class="small-post-content">
-
-							<?php $this->entry_meta( $settings ); ?>
-
-							<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-						</div>
-
-					</article>
-
-				<?php
-				endif;
-				$i++;
+				endif; $i++;
 
 			endwhile;
 
@@ -246,39 +183,7 @@ class Maxwell_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 		// Reset Postdata.
 		wp_reset_postdata();
-
-	} // magazine_posts()
-
-
-	/**
-	 * Displays Entry Meta of Posts
-	 *
-	 * @param array $settings / Settings for this widget instance.
-	 */
-	function entry_meta( $settings ) {
-
-		$postmeta = '';
-
-		if ( true === $settings['meta_date'] ) {
-
-			$postmeta .= maxwell_meta_date();
-
-		}
-
-		if ( true === $settings['meta_author'] ) {
-
-			$postmeta .= maxwell_meta_author();
-
-		}
-
-		if ( $postmeta ) {
-
-			echo '<div class="entry-meta">' . $postmeta . '</div>';
-
-		}
-
-	} // entry_meta()
-
+	}
 
 	/**
 	 * Displays Category Widget Title
@@ -304,7 +209,7 @@ class Maxwell_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 				// Display Widget Title with link to category archive.
 				echo '<div class="widget-header">';
-				echo '<h3 class="widget-title"><a class="category-archive-link" href="'. $link_url .'" title="'. $link_title . '">'. $widget_title . '</a></h3>';
+				echo '<h3 class="widget-title"><a class="category-archive-link" href="' . $link_url . '" title="' . $link_title . '">' . $widget_title . '</a></h3>';
 				echo '</div>';
 
 			else :
@@ -315,9 +220,7 @@ class Maxwell_Magazine_Posts_Columns_Widget extends WP_Widget {
 			endif;
 
 		endif;
-
-	} // category_title()
-
+	}
 
 	/**
 	 * Update Widget Settings
@@ -335,14 +238,11 @@ class Maxwell_Magazine_Posts_Columns_Widget extends WP_Widget {
 		$instance['category_two'] = (int) $new_instance['category_two'];
 		$instance['number'] = (int) $new_instance['number'];
 		$instance['highlight_post'] = ! empty( $new_instance['highlight_post'] );
-		$instance['meta_date'] = ! empty( $new_instance['meta_date'] );
-		$instance['meta_author'] = ! empty( $new_instance['meta_author'] );
 
-		$this->delete_widget_cache();
+		maxwell_flush_magazine_post_ids();
 
 		return $instance;
 	}
-
 
 	/**
 	 * Displays Widget Settings Form in the Backend
@@ -357,7 +257,7 @@ class Maxwell_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'category_one_title' ); ?>"><?php esc_html_e( 'Left Category Title:', 'maxwell' ); ?>
-				<input class="widefat" id="<?php echo $this->get_field_id( 'category_one_title' ); ?>" name="<?php echo $this->get_field_name( 'category_one_title' ); ?>" type="text" value="<?php echo $settings['category_one_title']; ?>" />
+				<input class="widefat" id="<?php echo $this->get_field_id( 'category_one_title' ); ?>" name="<?php echo $this->get_field_name( 'category_one_title' ); ?>" type="text" value="<?php echo esc_attr( $settings['category_one_title'] ); ?>" />
 			</label>
 		</p>
 
@@ -378,7 +278,7 @@ class Maxwell_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 				<p>
 			<label for="<?php echo $this->get_field_id( 'category_two_title' ); ?>"><?php esc_html_e( 'Right Category Title:', 'maxwell' ); ?>
-				<input class="widefat" id="<?php echo $this->get_field_id( 'category_two_title' ); ?>" name="<?php echo $this->get_field_name( 'category_two_title' ); ?>" type="text" value="<?php echo $settings['category_two_title']; ?>" />
+				<input class="widefat" id="<?php echo $this->get_field_id( 'category_two_title' ); ?>" name="<?php echo $this->get_field_name( 'category_two_title' ); ?>" type="text" value="<?php echo esc_attr( $settings['category_two_title'] ); ?>" />
 			</label>
 		</p>
 
@@ -399,7 +299,7 @@ class Maxwell_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of posts:', 'maxwell' ); ?>
-				<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo (int) $settings['number']; ?>" size="3" />
+				<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo absint( $settings['number'] ); ?>" size="3" />
 			</label>
 		</p>
 
@@ -410,31 +310,7 @@ class Maxwell_Magazine_Posts_Columns_Widget extends WP_Widget {
 			</label>
 		</p>
 
-		<p>
-			<label for="<?php echo $this->get_field_id( 'meta_date' ); ?>">
-				<input class="checkbox" type="checkbox" <?php checked( $settings['meta_date'] ); ?> id="<?php echo $this->get_field_id( 'meta_date' ); ?>" name="<?php echo $this->get_field_name( 'meta_date' ); ?>" />
-				<?php esc_html_e( 'Display post date', 'maxwell' ); ?>
-			</label>
-		</p>
-
-		<p>
-			<label for="<?php echo $this->get_field_id( 'meta_author' ); ?>">
-				<input class="checkbox" type="checkbox" <?php checked( $settings['meta_author'] ); ?> id="<?php echo $this->get_field_id( 'meta_author' ); ?>" name="<?php echo $this->get_field_name( 'meta_author' ); ?>" />
-				<?php esc_html_e( 'Display post author', 'maxwell' ); ?>
-			</label>
-		</p>
-
-<?php
-	} // form()
-
-
-	/**
-	 * Delete Widget Cache
-	 */
-	public function delete_widget_cache() {
-
-		wp_cache_delete( 'widget_maxwell_magazine_posts_columns', 'widget' );
-
+		<?php
 	}
 }
 

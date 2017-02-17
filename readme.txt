@@ -26,6 +26,10 @@ For more information about Maxwell please go to https://themezee.com/themes/maxw
 
 == Changelog ==
 
+= 1.0.9 =
+* added template files for Magazine widgets to improve child theme compatibility
+* improved transient caching of Magazine widgets for increased performance
+
 = 1.0.8 =
 * added Magazine Homepage widgets to blog index
 * added centered layout in case no widgets were added to the sidebar

@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/maxwell/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Maxwell is a minimalistic and elegant WordPress theme featuring an ultra clean magazine layout. With a beautiful typography, various post layouts and a gorgeous featured posts slideshow Maxwell truly helps you to stand out.
-Version: 1.0.8
+Version: 1.0.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: maxwell
@@ -1117,7 +1117,6 @@ textarea {
 /*--------------------------------------------------------------
 ## 11.2 - Magazine Posts Widgets
 --------------------------------------------------------------*/
-
 .widget-magazine-posts {
 	margin-bottom: -1em;
 }
@@ -1182,15 +1181,20 @@ textarea {
 }
 
 /* Magazine Posts Grid Widget */
-.widget-magazine-posts-grid .magazine-posts-grid-row {
+.widget-magazine-posts .magazine-grid {
 	margin-right: -2em;
 }
 
-.widget-magazine-posts-grid .magazine-posts-grid-row .large-post {
+.widget-magazine-posts .magazine-grid .large-post {
 	float: left;
 	box-sizing: border-box;
 	padding-right: 2em;
 	width: 50%;
+}
+
+.widget-magazine-posts .magazine-grid .post-column:nth-child(3n) .large-post,
+.widget-magazine-posts .magazine-grid .post-column:nth-child(4n) .medium-post {
+    clear: left;
 }
 
 /* Magazine Posts Columns Widget */
@@ -2342,12 +2346,11 @@ object {
 	}
 
 	/* Magazine Post Widgets */
-	.widget-magazine-posts-grid .large-post-row,
-	.widget-magazine-posts-grid .medium-post-row	{
+	.widget-magazine-posts .magazine-grid {
 		margin-right: 0;
 	}
 
-	.widget-magazine-posts-grid .magazine-posts-grid-row .large-post,
+	.widget-magazine-posts .magazine-grid .large-post,
 	.widget-magazine-posts-columns .magazine-posts-column-left,
 	.widget-magazine-posts .medium-post {
 		float: none;
