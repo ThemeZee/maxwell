@@ -128,9 +128,7 @@ function maxwell_magazine_posts_excerpt_length( $length ) {
  * @return string
  */
 function maxwell_excerpt_more( $more_text ) {
-
 	return '';
-
 }
 add_filter( 'excerpt_more', 'maxwell_excerpt_more' );
 

@@ -166,11 +166,11 @@ class Maxwell_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 				if ( true === $settings['highlight_post'] and 0 === $i ) :
 
-					get_template_part( 'template-parts/widgets/magazine-content', 'large-post' );
+					get_template_part( 'template-parts/widgets/magazine-large-post', 'columns' );
 
 				else :
 
-					get_template_part( 'template-parts/widgets/magazine-content', 'small-post' );
+					get_template_part( 'template-parts/widgets/magazine-small-post', 'columns' );
 
 				endif; $i++;
 
