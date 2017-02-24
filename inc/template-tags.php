@@ -145,34 +145,14 @@ endif;
 
 if ( ! function_exists( 'maxwell_entry_meta' ) ) :
 	/**
-	 * Displays the date, author and categories of a post
+	 * Displays the date and categories of a post
 	 */
 	function maxwell_entry_meta() {
 
-		// Get theme options from database.
-		$theme_options = maxwell_theme_options();
+		$postmeta = maxwell_meta_date();
+		$postmeta .= maxwell_meta_category();
 
-		$postmeta = '';
-
-		// Display date unless user has deactivated it via settings.
-		if ( true === $theme_options['meta_date'] ) {
-
-			$postmeta .= maxwell_meta_date();
-
-		}
-
-		// Display categories unless user has deactivated it via settings.
-		if ( true === $theme_options['meta_category'] ) {
-
-			$postmeta .= maxwell_meta_category();
-
-		}
-
-		if ( $postmeta ) {
-
-			echo '<div class="entry-meta">' . $postmeta . '</div>';
-
-		}
+		echo '<div class="entry-meta">' . $postmeta . '</div>';
 	}
 endif;
 
@@ -257,17 +237,16 @@ if ( ! function_exists( 'maxwell_posted_by' ) ) :
 		// Get theme options from database.
 		$theme_options = maxwell_theme_options();
 
-		// Return early if author is turned off.
-		if ( false == $theme_options['meta_author'] ) {
-			return false;
+		// Display only if activated in settings.
+		if ( true === $theme_options['meta_author'] || is_customize_preview() ) {
+
+			// Get author avatar.
+			$avatar = get_avatar( get_the_author_meta( 'ID' ), 32 );
+
+			$byline = sprintf( esc_html_x( 'Posted by %s', 'post author', 'maxwell' ), maxwell_meta_author() );
+
+			echo '<div class="posted-by"> ' . $avatar . $byline . '</div>';
 		}
-
-		// Get author avatar.
-		$avatar = get_avatar( get_the_author_meta( 'ID' ), 32 );
-
-		$byline = sprintf( esc_html_x( 'Posted by %s', 'post author', 'maxwell' ), maxwell_meta_author() );
-
-		echo '<div class="posted-by"> ' . $avatar . $byline . '</div>';
 	}
 endif;
 
@@ -278,14 +257,11 @@ if ( ! function_exists( 'maxwell_entry_tags' ) ) :
 	 */
 	function maxwell_entry_tags() {
 
-		// Get theme options from database.
-		$theme_options = maxwell_theme_options();
-
 		// Get tags.
 		$tag_list = get_the_tag_list( '', '' );
 
 		// Display tags.
-		if ( $tag_list && $theme_options['meta_tags'] ) : ?>
+		if ( $tag_list ) : ?>
 
 			<div class="entry-tags clearfix">
 				<span class="meta-tags">
@@ -322,7 +298,7 @@ if ( ! function_exists( 'maxwell_post_navigation' ) ) :
 		// Get theme options from database.
 		$theme_options = maxwell_theme_options();
 
-		if ( true === $theme_options['post_navigation'] ) {
+		if ( true === $theme_options['post_navigation'] || is_customize_preview() ) {
 
 			the_post_navigation( array(
 				'prev_text' => '<span class="screen-reader-text">' . esc_html_x( 'Previous Post:', 'post navigation', 'maxwell' ) . '</span>%title',
