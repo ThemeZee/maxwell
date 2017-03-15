@@ -77,17 +77,6 @@
 		} );
 	} );
 
-	// Post Comments checkbox.
-	wp.customize( 'maxwell_theme_options[meta_comments]', function( value ) {
-		value.bind( function( newval ) {
-			if ( false === newval ) {
-				$( 'body' ).addClass( 'comments-hidden' );
-			} else {
-				$( 'body' ).removeClass( 'comments-hidden' );
-			}
-		} );
-	} );
-
 	// Post Tags checkbox.
 	wp.customize( 'maxwell_theme_options[meta_tags]', function( value ) {
 		value.bind( function( newval ) {
