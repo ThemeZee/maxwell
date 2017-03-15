@@ -157,30 +157,6 @@ if ( ! function_exists( 'maxwell_entry_meta' ) ) :
 endif;
 
 
-if ( ! function_exists( 'maxwell_magazine_entry_meta' ) ) :
-	/**
-	 * Displays the date and author of magazine posts
-	 */
-	function maxwell_magazine_entry_meta() {
-
-		$postmeta = maxwell_meta_date();
-		$postmeta .= maxwell_meta_author();
-
-		echo '<div class="entry-meta">' . $postmeta . '</div>';
-	}
-endif;
-
-
-if ( ! function_exists( 'maxwell_magazine_entry_date' ) ) :
-	/**
-	 * Displays the date of magazine posts
-	 */
-	function maxwell_magazine_entry_date() {
-		echo '<div class="entry-meta">' . maxwell_meta_date() . '</div>';
-	}
-endif;
-
-
 if ( ! function_exists( 'maxwell_meta_date' ) ) :
 	/**
 	 * Displays the post date
