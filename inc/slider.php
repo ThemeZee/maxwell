@@ -58,7 +58,7 @@ if ( ! function_exists( 'maxwell_slider_meta' ) ) :
 
 		echo '<div class="entry-meta">' . $postmeta . '</div>';
 
-	} // maxwell_slider_meta()
+	}
 endif;
 
 
