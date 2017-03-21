@@ -26,6 +26,9 @@ For more information about Maxwell please go to https://themezee.com/themes/maxw
 
 == Changelog ==
 
+= 1.2.2 =
+* fixed number of posts setting in Magazine widgets
+
 = 1.2.1 =
 * fixed layout rendering issue in Magazine Grid widget
 
