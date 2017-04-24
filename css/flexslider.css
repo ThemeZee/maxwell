@@ -234,18 +234,16 @@ html[xmlns] .zeeflexslider .zeeslides {
 	.post-slider .zeeslide .slide-content .entry-content .more-link {
 		display: none;
 	}
-
 }
 
 @media only screen and (max-width: 70em) {
 	.post-slider .zeeslide .slide-content .entry-content {
 		display: none;
 	}
-
 }
 
 @media only screen and (max-width: 60em) {
-	.post-slider .zeeslide .slide-image {
+	.post-slider .zeeslide .slide-image-wrap {
 		float: none;
 		padding: 0;
 		width: 100%;
@@ -271,7 +269,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 		right: 2em;
 		bottom: 2em;
 	}
-
 }
 
 @media only screen and (max-width: 30em) {
@@ -292,14 +289,12 @@ html[xmlns] .zeeflexslider .zeeslides {
 		right: 0;
 		bottom: 0;
 	}
-
 }
 
 @media only screen and (max-width: 25em) {
 	.post-slider-controls .zeeflex-control-nav {
 		display: none;
 	}
-
 }
 
 @media only screen and (max-width: 20em) {
@@ -314,5 +309,4 @@ html[xmlns] .zeeflexslider .zeeslides {
 	.post-slider-controls .zeeflex-direction-nav a {
 		margin-left: 0;
 	}
-
 }
