@@ -114,4 +114,5 @@ function maxwell_flush_magazine_post_ids() {
 }
 add_action( 'save_post', 'maxwell_flush_magazine_post_ids' );
 add_action( 'deleted_post', 'maxwell_flush_magazine_post_ids' );
+add_action( 'customize_save_after', 'maxwell_flush_magazine_post_ids' );
 add_action( 'switch_theme', 'maxwell_flush_magazine_post_ids' );
