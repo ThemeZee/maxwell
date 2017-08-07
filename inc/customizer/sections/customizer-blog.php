@@ -1,0 +1,77 @@
+<?php
+/**
+ * Blog Settings
+ *
+ * Register Blog Settings section, settings and controls for Theme Customizer
+ *
+ * @package Maxwell
+ */
+
+/**
+ * Adds blog settings in the Customizer
+ *
+ * @param object $wp_customize / Customizer Object.
+ */
+function maxwell_customize_register_blog_settings( $wp_customize ) {
+
+	// Add Sections for Post Settings.
+	$wp_customize->add_section( 'maxwell_section_blog', array(
+		'title'    => esc_html__( 'Blog Settings', 'maxwell' ),
+		'priority' => 25,
+		'panel' => 'maxwell_options_panel',
+	) );
+
+	// Add Post Layout Settings for archive posts.
+	$wp_customize->add_setting( 'maxwell_theme_options[post_layout]', array(
+		'default'           => 'three-columns',
+		'type'           	=> 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'maxwell_sanitize_select',
+		)
+	);
+	$wp_customize->add_control( 'maxwell_theme_options[post_layout]', array(
+		'label'    => esc_html__( 'Blog Layout', 'maxwell' ),
+		'section'  => 'maxwell_section_blog',
+		'settings' => 'maxwell_theme_options[post_layout]',
+		'type'     => 'select',
+		'priority' => 10,
+		'choices'  => array(
+			'one-column'    => esc_html__( 'One Column', 'maxwell' ),
+			'two-columns'   => esc_html__( 'Two Columns', 'maxwell' ),
+			'three-columns' => esc_html__( 'Three Columns without Sidebar', 'maxwell' ),
+		),
+	) );
+
+	// Add Blog Title setting and control.
+	$wp_customize->add_setting( 'maxwell_theme_options[blog_title]', array(
+		'default'           => '',
+		'type'           	=> 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'wp_kses_post',
+	) );
+
+	$wp_customize->add_control( 'maxwell_theme_options[blog_title]', array(
+		'label'    => esc_html__( 'Blog Title', 'maxwell' ),
+		'section'  => 'maxwell_section_blog',
+		'settings' => 'maxwell_theme_options[blog_title]',
+		'type'     => 'text',
+		'priority' => 20,
+	) );
+
+	// Add Blog Description setting and control.
+	$wp_customize->add_setting( 'maxwell_theme_options[blog_description]', array(
+		'default'           => '',
+		'type'           	=> 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'wp_kses_post',
+	) );
+
+	$wp_customize->add_control( 'maxwell_theme_options[blog_description]', array(
+		'label'    => esc_html__( 'Blog Description', 'maxwell' ),
+		'section'  => 'maxwell_section_blog',
+		'settings' => 'maxwell_theme_options[blog_description]',
+		'type'     => 'textarea',
+		'priority' => 30,
+	) );
+}
+add_action( 'customize_register', 'maxwell_customize_register_blog_settings' );
