@@ -24,8 +24,8 @@ function maxwell_customize_register_general_settings( $wp_customize ) {
 	// Add Settings and Controls for Layout.
 	$wp_customize->add_setting( 'maxwell_theme_options[layout]', array(
 		'default'           => 'right-sidebar',
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'maxwell_sanitize_select',
 	) );
 
