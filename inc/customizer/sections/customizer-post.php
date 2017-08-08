@@ -102,22 +102,6 @@ function maxwell_customize_register_post_settings( $wp_customize ) {
 		)
 	) );
 
-	// Featured Image Setting.
-	$wp_customize->add_setting( 'maxwell_theme_options[post_image_single]', array(
-		'default'           => true,
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'maxwell_sanitize_checkbox',
-	) );
-
-	$wp_customize->add_control( 'maxwell_theme_options[post_image_single]', array(
-		'label'    => esc_html__( 'Display featured image on single posts', 'maxwell' ),
-		'section'  => 'maxwell_section_post',
-		'settings' => 'maxwell_theme_options[post_image_single]',
-		'type'     => 'checkbox',
-		'priority' => 60,
-	) );
-
 	$wp_customize->add_setting( 'maxwell_theme_options[meta_author]', array(
 		'default'           => true,
 		'type'           	=> 'option',
@@ -130,7 +114,7 @@ function maxwell_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'maxwell_section_post',
 		'settings' => 'maxwell_theme_options[meta_author]',
 		'type'     => 'checkbox',
-		'priority' => 70,
+		'priority' => 60,
 	) );
 
 	$wp_customize->add_setting( 'maxwell_theme_options[meta_tags]', array(
@@ -145,7 +129,7 @@ function maxwell_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'maxwell_section_post',
 		'settings' => 'maxwell_theme_options[meta_tags]',
 		'type'     => 'checkbox',
-		'priority' => 80,
+		'priority' => 70,
 	) );
 
 	$wp_customize->add_setting( 'maxwell_theme_options[post_navigation]', array(
@@ -160,7 +144,50 @@ function maxwell_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'maxwell_section_post',
 		'settings' => 'maxwell_theme_options[post_navigation]',
 		'type'     => 'checkbox',
-		'priority' => 90,
+		'priority' => 80,
 	) );
+
+	// Add Featured Images Headline.
+	$wp_customize->add_control( new Maxwell_Customize_Header_Control(
+		$wp_customize, 'maxwell_theme_options[featured_images]', array(
+		'label'    => esc_html__( 'Featured Images', 'maxwell' ),
+		'section'  => 'maxwell_section_post',
+		'settings' => array(),
+		'priority' => 90,
+		)
+	) );
+
+	// Add Setting and Control for featured images on blog and archives.
+	$wp_customize->add_setting( 'maxwell_theme_options[post_image_archives]', array(
+		'default'           => true,
+		'type'           	=> 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'maxwell_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control( 'maxwell_theme_options[post_image_archives]', array(
+		'label'    => esc_html__( 'Display on blog and archives', 'maxwell' ),
+		'section'  => 'maxwell_section_post',
+		'settings' => 'maxwell_theme_options[post_image_archives]',
+		'type'     => 'checkbox',
+		'priority' => 100,
+	) );
+
+	// Add Setting and Control for featured images on single posts.
+	$wp_customize->add_setting( 'maxwell_theme_options[post_image_single]', array(
+		'default'           => true,
+		'type'           	=> 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'maxwell_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control( 'maxwell_theme_options[post_image_single]', array(
+		'label'    => esc_html__( 'Display on single posts', 'maxwell' ),
+		'section'  => 'maxwell_section_post',
+		'settings' => 'maxwell_theme_options[post_image_single]',
+		'type'     => 'checkbox',
+		'priority' => 110,
+	) );
+
 }
 add_action( 'customize_register', 'maxwell_customize_register_post_settings' );
