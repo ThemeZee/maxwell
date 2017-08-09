@@ -35,6 +35,10 @@
 	margin-bottom: 0;
 }
 
+#customize-control-maxwell_theme_options-blog_description textarea {
+	height: 5em;
+}
+
 #customize-control-maxwell_theme_options-pro_version div {
 	margin: 4px 0 16px;
 }
