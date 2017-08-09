@@ -14,18 +14,18 @@
  */
 function maxwell_customize_register_post_settings( $wp_customize ) {
 
-	// Add Sections for Post Settings.
+	// Add Section for Post Settings.
 	$wp_customize->add_section( 'maxwell_section_post', array(
 		'title'    => esc_html__( 'Post Settings', 'maxwell' ),
 		'priority' => 30,
-		'panel' => 'maxwell_options_panel',
+		'panel'    => 'maxwell_options_panel',
 		)
 	);
 
-	// Add Setting and Control for Excerpt Length.
+	// Add Excerpt Length setting and control.
 	$wp_customize->add_setting( 'maxwell_theme_options[excerpt_length]', array(
 		'default'           => 20,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'absint',
 	) );
@@ -38,26 +38,20 @@ function maxwell_customize_register_post_settings( $wp_customize ) {
 		'priority' => 10,
 	) );
 
-	// Add Post Meta Settings.
-	$wp_customize->add_setting( 'maxwell_theme_options[postmeta_headline]', array(
-		'default'           => '',
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'esc_attr',
-	) );
-
+	// Add Post Details Headline.
 	$wp_customize->add_control( new Maxwell_Customize_Header_Control(
 		$wp_customize, 'maxwell_theme_options[postmeta_headline]', array(
-		'label' => esc_html__( 'Post Meta', 'maxwell' ),
-		'section' => 'maxwell_section_post',
-		'settings' => 'maxwell_theme_options[postmeta_headline]',
+		'label'    => esc_html__( 'Post Meta', 'maxwell' ),
+		'section'  => 'maxwell_section_post',
+		'settings' => array(),
 		'priority' => 20,
 		)
 	) );
 
+	// Add Meta Date setting and control.
 	$wp_customize->add_setting( 'maxwell_theme_options[meta_date]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'maxwell_sanitize_checkbox',
 	) );
@@ -70,9 +64,10 @@ function maxwell_customize_register_post_settings( $wp_customize ) {
 		'priority' => 30,
 	) );
 
+	// Add Meta Category setting and control.
 	$wp_customize->add_setting( 'maxwell_theme_options[meta_category]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'maxwell_sanitize_checkbox',
 	) );
@@ -85,26 +80,20 @@ function maxwell_customize_register_post_settings( $wp_customize ) {
 		'priority' => 40,
 	) );
 
-	// Add Single Post Settings.
-	$wp_customize->add_setting( 'maxwell_theme_options[single_post_headline]', array(
-		'default'           => '',
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'esc_attr',
-	) );
-
+	// Add Single Posts Headline.
 	$wp_customize->add_control( new Maxwell_Customize_Header_Control(
 		$wp_customize, 'maxwell_theme_options[single_post_headline]', array(
 			'label'    => esc_html__( 'Single Posts', 'maxwell' ),
 			'section'  => 'maxwell_section_post',
-			'settings' => 'maxwell_theme_options[single_post_headline]',
+			'settings' => array(),
 			'priority' => 50,
 		)
 	) );
 
+	// Add Meta Author setting and control.
 	$wp_customize->add_setting( 'maxwell_theme_options[meta_author]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'maxwell_sanitize_checkbox',
 	) );
@@ -117,9 +106,10 @@ function maxwell_customize_register_post_settings( $wp_customize ) {
 		'priority' => 60,
 	) );
 
+	// Add Meta Tags setting and control.
 	$wp_customize->add_setting( 'maxwell_theme_options[meta_tags]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'maxwell_sanitize_checkbox',
 	) );
@@ -132,9 +122,10 @@ function maxwell_customize_register_post_settings( $wp_customize ) {
 		'priority' => 70,
 	) );
 
+	// Add Post Navigation setting and control.
 	$wp_customize->add_setting( 'maxwell_theme_options[post_navigation]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'maxwell_sanitize_checkbox',
 	) );
@@ -160,7 +151,7 @@ function maxwell_customize_register_post_settings( $wp_customize ) {
 	// Add Setting and Control for featured images on blog and archives.
 	$wp_customize->add_setting( 'maxwell_theme_options[post_image_archives]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'maxwell_sanitize_checkbox',
 	) );
@@ -176,7 +167,7 @@ function maxwell_customize_register_post_settings( $wp_customize ) {
 	// Add Setting and Control for featured images on single posts.
 	$wp_customize->add_setting( 'maxwell_theme_options[post_image_single]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'refresh',
 		'sanitize_callback' => 'maxwell_sanitize_checkbox',
 	) );
@@ -199,7 +190,6 @@ function maxwell_customize_register_post_settings( $wp_customize ) {
 		'render_callback'  => 'maxwell_customize_partial_blog_layout',
 		'fallback_refresh' => false,
 	) );
-
 }
 add_action( 'customize_register', 'maxwell_customize_register_post_settings' );
 

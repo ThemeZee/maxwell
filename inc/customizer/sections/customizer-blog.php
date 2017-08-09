@@ -14,14 +14,14 @@
  */
 function maxwell_customize_register_blog_settings( $wp_customize ) {
 
-	// Add Sections for Post Settings.
+	// Add Section for Blog Settings.
 	$wp_customize->add_section( 'maxwell_section_blog', array(
 		'title'    => esc_html__( 'Blog Settings', 'maxwell' ),
 		'priority' => 25,
 		'panel'    => 'maxwell_options_panel',
 	) );
 
-	// Add Post Layout Settings for archive posts.
+	// Add Blog Layout setting and control.
 	$wp_customize->add_setting( 'maxwell_theme_options[post_layout]', array(
 		'default'           => 'three-columns',
 		'type'              => 'option',
