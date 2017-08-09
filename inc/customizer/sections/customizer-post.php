@@ -26,7 +26,7 @@ function maxwell_customize_register_post_settings( $wp_customize ) {
 	$wp_customize->add_setting( 'maxwell_theme_options[excerpt_length]', array(
 		'default'           => 20,
 		'type'           	=> 'option',
-		'transport'         => 'refresh',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'absint',
 	) );
 
@@ -161,7 +161,7 @@ function maxwell_customize_register_post_settings( $wp_customize ) {
 	$wp_customize->add_setting( 'maxwell_theme_options[post_image_archives]', array(
 		'default'           => true,
 		'type'           	=> 'option',
-		'transport'         => 'refresh',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'maxwell_sanitize_checkbox',
 	) );
 
@@ -189,5 +189,26 @@ function maxwell_customize_register_post_settings( $wp_customize ) {
 		'priority' => 110,
 	) );
 
+	// Add Partial for Excerpt Length and Post Images on blog and archives.
+	$wp_customize->selective_refresh->add_partial( 'maxwell_blog_layout_partial', array(
+		'selector'         => '.site-main .post-wrapper',
+		'settings'         => array(
+			'maxwell_theme_options[excerpt_length]',
+			'maxwell_theme_options[post_image_archives]',
+		),
+		'render_callback'  => 'maxwell_customize_partial_blog_layout',
+		'fallback_refresh' => false,
+	) );
+
 }
 add_action( 'customize_register', 'maxwell_customize_register_post_settings' );
+
+/**
+ * Render the blog layout for the selective refresh partial.
+ */
+function maxwell_customize_partial_blog_layout() {
+	while ( have_posts() ) {
+		the_post();
+		get_template_part( 'template-parts/content' );
+	}
+}
