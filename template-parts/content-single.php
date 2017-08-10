@@ -35,6 +35,7 @@
 	<footer class="entry-footer">
 
 		<?php maxwell_entry_tags(); ?>
+		<?php do_action( 'maxwell_author_bio' ); ?>
 		<?php maxwell_post_navigation(); ?>
 
 	</footer><!-- .entry-footer -->

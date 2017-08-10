@@ -338,8 +338,8 @@ if ( ! function_exists( 'maxwell_post_navigation' ) ) :
 		if ( true === $theme_options['post_navigation'] || is_customize_preview() ) {
 
 			the_post_navigation( array(
-				'prev_text' => '<span class="screen-reader-text">' . esc_html_x( 'Previous Post:', 'post navigation', 'maxwell' ) . '</span>%title',
-				'next_text' => '<span class="screen-reader-text">' . esc_html_x( 'Next Post:', 'post navigation', 'maxwell' ) . '</span>%title',
+				'prev_text' => '<span class="nav-link-text">' . esc_html_x( 'Previous Post', 'post navigation', 'maxwell' ) . '</span><h3 class="entry-title">%title</h3>',
+				'next_text' => '<span class="nav-link-text">' . esc_html_x( 'Next Post', 'post navigation', 'maxwell' ) . '</span><h3 class="entry-title">%title</h3>',
 			) );
 
 		}
