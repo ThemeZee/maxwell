@@ -1402,11 +1402,10 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .entry-meta 
 .entry-tags .meta-tags a {
 	display: inline-block;
 	float: left;
-	margin: 0 2px 2px 0;
-	padding: 0.2em 0.5em;
-	background: #303030;
+	margin: 3px;
+	padding: 0.3em 0.8em;
+	border: 1px solid #ddd;
 	text-decoration: none;
-	text-transform: uppercase;
 	font-size: 13px !important;
 	font-size: 0.8125rem !important;
 }
@@ -1415,15 +1414,15 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .entry-meta 
 .widget_tag_cloud .tagcloud a:visited,
 .entry-tags .meta-tags a:link,
 .entry-tags .meta-tags a:visited {
-	color: #fff;
+	color: #999;
 }
 
 .widget_tag_cloud .tagcloud a:hover,
 .widget_tag_cloud .tagcloud a:active,
 .entry-tags .meta-tags a:hover,
 .entry-tags .meta-tags a:active {
-	background: #33bbcc;
-	color: #fff;
+	border-color: #999;
+	color: #303030;
 }
 
 /* Post Navigation */
