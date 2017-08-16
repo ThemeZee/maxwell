@@ -767,6 +767,7 @@ textarea {
 ## 10.1 - Main Navigation
 --------------------------------------------------------------*/
 .primary-navigation-wrap {
+	position: relative;
 	border-top: 1px solid #ddd;
 }
 
