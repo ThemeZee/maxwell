@@ -75,7 +75,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 
 .post-slider-wrap {
 	position: relative;
-	background: #f3f3f3;
+	background: rgba(0,0,0,0.05);
 }
 
 .post-slider, .zeeflexslider .zeeslides {
@@ -153,7 +153,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 
 .post-slider-controls .zeeflex-direction-nav a:before {
 	display: inline-block;
-	color: #fff;
 	vertical-align: text-bottom;
 	text-decoration: inherit;
 	font: normal 28px/1 Genericons;
@@ -161,7 +160,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 .post-slider-controls .zeeflex-direction-nav a.zeeflex-next:before {
-	margin: 0.25em;
+	margin: 0.18em 0.15em;
 	content: '\f431';
 	-webkit-transform:rotate(270deg);
 	-moz-transform:rotate(270deg);
@@ -170,7 +169,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 .post-slider-controls .zeeflex-direction-nav a.zeeflex-prev:before {
-	margin: 0.3em;
+	margin: 0.25em 0.2em;
 	content: '\f431';
 	-webkit-transform:rotate(90deg);
 	-moz-transform:rotate(90deg);
