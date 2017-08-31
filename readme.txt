@@ -26,6 +26,12 @@ For more information about Maxwell please go to https://themezee.com/themes/maxw
 
 == Changelog ==
 
+= 1.4.1 =
+* added action hook for author bio and header search
+* added filter to allow plugins to add own elements to be hidden
+* updated styling of tags and post navigation
+* updated styling for improved color settings
+
 = 1.4 =
 * added new section for Blog Settings in Customizer
 * added option to hide featured images on blog and archives
