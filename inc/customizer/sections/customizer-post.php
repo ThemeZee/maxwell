@@ -19,32 +19,15 @@ function maxwell_customize_register_post_settings( $wp_customize ) {
 		'title'    => esc_html__( 'Post Settings', 'maxwell' ),
 		'priority' => 30,
 		'panel'    => 'maxwell_options_panel',
-		)
-	);
-
-	// Add Excerpt Length setting and control.
-	$wp_customize->add_setting( 'maxwell_theme_options[excerpt_length]', array(
-		'default'           => 20,
-		'type'              => 'option',
-		'transport'         => 'postMessage',
-		'sanitize_callback' => 'absint',
-	) );
-
-	$wp_customize->add_control( 'maxwell_theme_options[excerpt_length]', array(
-		'label'    => esc_html__( 'Excerpt Length', 'maxwell' ),
-		'section'  => 'maxwell_section_post',
-		'settings' => 'maxwell_theme_options[excerpt_length]',
-		'type'     => 'text',
-		'priority' => 10,
 	) );
 
 	// Add Post Details Headline.
 	$wp_customize->add_control( new Maxwell_Customize_Header_Control(
 		$wp_customize, 'maxwell_theme_options[postmeta_headline]', array(
-		'label'    => esc_html__( 'Post Meta', 'maxwell' ),
-		'section'  => 'maxwell_section_post',
-		'settings' => array(),
-		'priority' => 20,
+			'label'    => esc_html__( 'Post Meta', 'maxwell' ),
+			'section'  => 'maxwell_section_post',
+			'settings' => array(),
+			'priority' => 20,
 		)
 	) );
 
@@ -141,10 +124,10 @@ function maxwell_customize_register_post_settings( $wp_customize ) {
 	// Add Featured Images Headline.
 	$wp_customize->add_control( new Maxwell_Customize_Header_Control(
 		$wp_customize, 'maxwell_theme_options[featured_images]', array(
-		'label'    => esc_html__( 'Featured Images', 'maxwell' ),
-		'section'  => 'maxwell_section_post',
-		'settings' => array(),
-		'priority' => 90,
+			'label'    => esc_html__( 'Featured Images', 'maxwell' ),
+			'section'  => 'maxwell_section_post',
+			'settings' => array(),
+			'priority' => 90,
 		)
 	) );
 

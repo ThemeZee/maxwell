@@ -14,11 +14,11 @@
 	margin-bottom: 16px;
 }
 
-#customize-control-maxwell_theme_options-blog_title,
 #customize-control-maxwell_theme_options-blog_description,
-#customize-control-maxwell_theme_options-blog_magazine_widgets_title,
+#customize-control-maxwell_theme_options-post_layout,
 #customize-control-maxwell_theme_options-excerpt_length,
-#customize-control-maxwell_theme_options-postmeta_headline,
+#customize-control-maxwell_theme_options-read_more_text,
+#customize-control-maxwell_theme_options-blog_magazine_widgets_title,
 #customize-control-maxwell_theme_options-single_post_headline,
 #customize-control-maxwell_theme_options-featured_images,
 #customize-control-maxwell_theme_options-slider_category,
@@ -36,7 +36,7 @@
 }
 
 #customize-control-maxwell_theme_options-blog_description textarea {
-	height: 5em;
+	height: 4em;
 }
 
 #customize-control-maxwell_theme_options-pro_version div {

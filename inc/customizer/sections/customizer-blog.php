@@ -21,27 +21,6 @@ function maxwell_customize_register_blog_settings( $wp_customize ) {
 		'panel'    => 'maxwell_options_panel',
 	) );
 
-	// Add Blog Layout setting and control.
-	$wp_customize->add_setting( 'maxwell_theme_options[post_layout]', array(
-		'default'           => 'three-columns',
-		'type'              => 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'maxwell_sanitize_select',
-		)
-	);
-	$wp_customize->add_control( 'maxwell_theme_options[post_layout]', array(
-		'label'    => esc_html__( 'Blog Layout', 'maxwell' ),
-		'section'  => 'maxwell_section_blog',
-		'settings' => 'maxwell_theme_options[post_layout]',
-		'type'     => 'select',
-		'priority' => 10,
-		'choices'  => array(
-			'one-column'    => esc_html__( 'One Column', 'maxwell' ),
-			'two-columns'   => esc_html__( 'Two Columns', 'maxwell' ),
-			'three-columns' => esc_html__( 'Three Columns without Sidebar', 'maxwell' ),
-		),
-	) );
-
 	// Add Blog Title setting and control.
 	$wp_customize->add_setting( 'maxwell_theme_options[blog_title]', array(
 		'default'           => '',
@@ -55,7 +34,7 @@ function maxwell_customize_register_blog_settings( $wp_customize ) {
 		'section'  => 'maxwell_section_blog',
 		'settings' => 'maxwell_theme_options[blog_title]',
 		'type'     => 'text',
-		'priority' => 20,
+		'priority' => 10,
 	) );
 
 	$wp_customize->selective_refresh->add_partial( 'maxwell_theme_options[blog_title]', array(
@@ -77,7 +56,7 @@ function maxwell_customize_register_blog_settings( $wp_customize ) {
 		'section'  => 'maxwell_section_blog',
 		'settings' => 'maxwell_theme_options[blog_description]',
 		'type'     => 'textarea',
-		'priority' => 30,
+		'priority' => 20,
 	) );
 
 	$wp_customize->selective_refresh->add_partial( 'maxwell_theme_options[blog_description]', array(
@@ -86,13 +65,66 @@ function maxwell_customize_register_blog_settings( $wp_customize ) {
 		'fallback_refresh' => false,
 	) );
 
+	// Add Blog Layout setting and control.
+	$wp_customize->add_setting( 'maxwell_theme_options[post_layout]', array(
+		'default'           => 'three-columns',
+		'type'              => 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'maxwell_sanitize_select',
+	) );
+
+	$wp_customize->add_control( 'maxwell_theme_options[post_layout]', array(
+		'label'    => esc_html__( 'Blog Layout', 'maxwell' ),
+		'section'  => 'maxwell_section_blog',
+		'settings' => 'maxwell_theme_options[post_layout]',
+		'type'     => 'select',
+		'priority' => 30,
+		'choices'  => array(
+			'one-column'    => esc_html__( 'One Column', 'maxwell' ),
+			'two-columns'   => esc_html__( 'Two Columns', 'maxwell' ),
+			'three-columns' => esc_html__( 'Three Columns without Sidebar', 'maxwell' ),
+		),
+	) );
+
+	// Add Excerpt Length setting and control.
+	$wp_customize->add_setting( 'maxwell_theme_options[excerpt_length]', array(
+		'default'           => 20,
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'absint',
+	) );
+
+	$wp_customize->add_control( 'maxwell_theme_options[excerpt_length]', array(
+		'label'    => esc_html__( 'Excerpt Length', 'maxwell' ),
+		'section'  => 'maxwell_section_blog',
+		'settings' => 'maxwell_theme_options[excerpt_length]',
+		'type'     => 'text',
+		'priority' => 40,
+	) );
+
+	// Add Setting and Control for Read More Text.
+	$wp_customize->add_setting( 'maxwell_theme_options[read_more_text]', array(
+		'default'           => esc_html__( 'Continue reading', 'maxwell' ),
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	$wp_customize->add_control( 'maxwell_theme_options[read_more_text]', array(
+		'label'    => esc_html__( 'Read More Text', 'maxwell' ),
+		'section'  => 'maxwell_section_blog',
+		'settings' => 'maxwell_theme_options[read_more_text]',
+		'type'     => 'text',
+		'priority' => 50,
+	) );
+
 	// Add Magazine Widgets Headline.
 	$wp_customize->add_control( new Maxwell_Customize_Header_Control(
 		$wp_customize, 'maxwell_theme_options[blog_magazine_widgets_title]', array(
 			'label'    => esc_html__( 'Magazine Widgets', 'maxwell' ),
 			'section'  => 'maxwell_section_blog',
 			'settings' => array(),
-			'priority' => 40,
+			'priority' => 60,
 		)
 	) );
 
@@ -109,7 +141,7 @@ function maxwell_customize_register_blog_settings( $wp_customize ) {
 		'section'  => 'maxwell_section_blog',
 		'settings' => 'maxwell_theme_options[blog_magazine_widgets]',
 		'type'     => 'checkbox',
-		'priority' => 50,
+		'priority' => 70,
 	) );
 }
 add_action( 'customize_register', 'maxwell_customize_register_blog_settings' );
