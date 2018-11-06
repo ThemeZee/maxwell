@@ -56,17 +56,17 @@ if ( ! function_exists( 'maxwell_setup' ) ) :
 
 		// Set up the WordPress core custom logo feature.
 		add_theme_support( 'custom-logo', apply_filters( 'maxwell_custom_logo_args', array(
-			'height' => 60,
-			'width' => 300,
+			'height'      => 60,
+			'width'       => 300,
 			'flex-height' => true,
-			'flex-width' => true,
+			'flex-width'  => true,
 		) ) );
 
 		// Set up the WordPress core custom header feature.
 		add_theme_support( 'custom-header', apply_filters( 'maxwell_custom_header_args', array(
 			'header-text' => false,
-			'width'	=> 1200,
-			'height' => 400,
+			'width'       => 1200,
+			'height'      => 400,
 			'flex-height' => true,
 		) ) );
 
@@ -79,6 +79,34 @@ if ( ! function_exists( 'maxwell_setup' ) ) :
 		// Add Theme Support for Selective Refresh in Customizer.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
+		// Add custom color palette for Gutenberg.
+		add_theme_support( 'editor-color-palette', array(
+			array(
+				'name'  => esc_html_x( 'Primary', 'Gutenberg Color Palette', 'maxwell' ),
+				'slug'  => 'primary',
+				'color' => apply_filters( 'maxwell_primary_color', '#33bbcc' ),
+			),
+			array(
+				'name'  => esc_html_x( 'White', 'Gutenberg Color Palette', 'maxwell' ),
+				'slug'  => 'white',
+				'color' => '#ffffff',
+			),
+			array(
+				'name'  => esc_html_x( 'Light Gray', 'Gutenberg Color Palette', 'maxwell' ),
+				'slug'  => 'light-gray',
+				'color' => '#f0f0f0',
+			),
+			array(
+				'name'  => esc_html_x( 'Dark Gray', 'Gutenberg Color Palette', 'maxwell' ),
+				'slug'  => 'dark-gray',
+				'color' => '#777777',
+			),
+			array(
+				'name'  => esc_html_x( 'Black', 'Gutenberg Color Palette', 'maxwell' ),
+				'slug'  => 'black',
+				'color' => '#303030',
+			),
+		) );
 	}
 endif;
 add_action( 'after_setup_theme', 'maxwell_setup' );
@@ -104,35 +132,34 @@ add_action( 'after_setup_theme', 'maxwell_content_width', 0 );
 function maxwell_widgets_init() {
 
 	register_sidebar( array(
-		'name' => esc_html__( 'Sidebar', 'maxwell' ),
-		'id' => 'sidebar',
-		'description' => esc_html__( 'Appears on posts and pages except the full width template.', 'maxwell' ),
+		'name'          => esc_html__( 'Sidebar', 'maxwell' ),
+		'id'            => 'sidebar',
+		'description'   => esc_html__( 'Appears on posts and pages except the full width template.', 'maxwell' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
-		'after_widget' => '</aside>',
-		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
-		'after_title' => '</h3></div>',
-	));
+		'after_widget'  => '</aside>',
+		'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
+		'after_title'   => '</h3></div>',
+	) );
 
 	register_sidebar( array(
-		'name' => esc_html__( 'Header', 'maxwell' ),
-		'id' => 'header',
-		'description' => esc_html__( 'Appears on header area. You can use a search or ad widget here.', 'maxwell' ),
+		'name'          => esc_html__( 'Header', 'maxwell' ),
+		'id'            => 'header',
+		'description'   => esc_html__( 'Appears on header area. You can use a search or ad widget here.', 'maxwell' ),
 		'before_widget' => '<aside id="%1$s" class="header-widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h4 class="header-widget-title">',
-		'after_title' => '</h4>',
-	));
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="header-widget-title">',
+		'after_title'   => '</h4>',
+	) );
 
 	register_sidebar( array(
-		'name' => esc_html__( 'Magazine Homepage', 'maxwell' ),
-		'id' => 'magazine-homepage',
-		'description' => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine widgets here.', 'maxwell' ),
+		'name'          => esc_html__( 'Magazine Homepage', 'maxwell' ),
+		'id'            => 'magazine-homepage',
+		'description'   => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine widgets here.', 'maxwell' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
-		'after_title' => '</h3></div>',
-	));
-
+		'after_widget'  => '</div>',
+		'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
+		'after_title'   => '</h3></div>',
+	) );
 }
 add_action( 'widgets_init', 'maxwell_widgets_init' );
 
@@ -165,7 +192,6 @@ function maxwell_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-
 }
 add_action( 'wp_enqueue_scripts', 'maxwell_scripts' );
 
@@ -174,12 +200,19 @@ add_action( 'wp_enqueue_scripts', 'maxwell_scripts' );
  * Enqueue custom fonts.
  */
 function maxwell_custom_fonts() {
-
-	// Register and Enqueue Theme Fonts.
 	wp_enqueue_style( 'maxwell-custom-fonts', get_template_directory_uri() . '/assets/css/custom-fonts.css', array(), '20180413' );
-
 }
 add_action( 'wp_enqueue_scripts', 'maxwell_custom_fonts', 1 );
+add_action( 'enqueue_block_editor_assets', 'maxwell_custom_fonts', 1 );
+
+
+/**
+ * Enqueue editor styles for the new Gutenberg Editor.
+ */
+function maxwell_block_editor_assets() {
+	wp_enqueue_style( 'maxwell-editor-styles', get_theme_file_uri( '/assets/css/gutenberg-styles.css' ), array(), '20181102', 'all' );
+}
+add_action( 'enqueue_block_editor_assets', 'maxwell_block_editor_assets' );
 
 
 /**
@@ -194,7 +227,6 @@ function maxwell_add_image_sizes() {
 	add_image_size( 'maxwell-thumbnail-small', 120, 80, true );
 	add_image_size( 'maxwell-thumbnail-medium', 360, 230, true );
 	add_image_size( 'maxwell-thumbnail-large', 600, 380, true );
-
 }
 add_action( 'after_setup_theme', 'maxwell_add_image_sizes' );
 
