@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/maxwell/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Maxwell is a minimalistic and elegant WordPress theme featuring an ultra clean magazine layout. With a beautiful typography, various post layouts and a gorgeous featured posts slideshow Maxwell truly helps you to stand out.
-Version: 1.6
+Version: 1.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: maxwell
@@ -153,10 +153,6 @@ figure {
 hr {
 	box-sizing: content-box;
 	height: 0;
-}
-
-pre {
-	overflow: auto;
 }
 
 code,
@@ -336,8 +332,8 @@ address {
 
 pre {
 	overflow: auto;
-	margin-bottom: 1.6em;
-	padding: 1.6em;
+	margin-bottom: 1.5em;
+	padding: 1.5em;
 	max-width: 100%;
 	border: 1px solid rgba(0,0,0,0.15);
 	background: none;
@@ -704,7 +700,7 @@ textarea {
 
 .site-title {
 	display: inline-block;
-	margin: 0;
+	margin: 0.15em 0;
 	padding: 0;
 	color: #303030;
 	text-decoration: none;
@@ -712,6 +708,7 @@ textarea {
 	font-size: 44px;
 	font-size: 2.75rem;
 	font-family: 'Amaranth', sans-serif;
+	line-height: 1.4;
 }
 
 .site-title a:link,
@@ -1287,6 +1284,10 @@ textarea {
 .entry-content {
 	font-size: 18px;
 	font-size: 1.125rem;
+}
+
+.entry-content a {
+	text-decoration: underline;
 }
 
 .entry-content p:first-child {
