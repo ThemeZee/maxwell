@@ -413,10 +413,12 @@ function maxwell_footer_text() {
 	?>
 
 	<span class="credit-link">
-		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'maxwell' ),
-			'<a href="http://wordpress.org" title="WordPress">WordPress</a>',
+		<?php
+		// translators: Theme Name
+		printf( esc_html__( 'WordPress Theme: %s by ThemeZee.', 'maxwell' ),
 			'<a href="https://themezee.com/themes/maxwell/" title="Maxwell WordPress Theme">Maxwell</a>'
-		); ?>
+		);
+		?>
 	</span>
 
 	<?php
