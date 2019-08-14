@@ -235,6 +235,19 @@ add_action( 'after_setup_theme', 'maxwell_add_image_sizes' );
 
 
 /**
+ * Make custom image sizes available in Gutenberg.
+ */
+function maxwell_add_image_size_names( $sizes ) {
+	return array_merge( $sizes, array(
+		'post-thumbnail'          => esc_html__( 'Maxwell Single Post', 'maxwell' ),
+		'maxwell-thumbnail-large' => esc_html__( 'Maxwell Magazine Post', 'maxwell' ),
+		'maxwell-thumbnail-small' => esc_html__( 'Maxwell Thumbnail', 'maxwell' ),
+	) );
+}
+add_filter( 'image_size_names_choose', 'maxwell_add_image_size_names' );
+
+
+/**
  * Include Files
  */
 
