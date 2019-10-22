@@ -43,13 +43,13 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 				</p>
 
 				<p>
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/maxwell/', 'maxwell' ) ); ?>" target="_blank">
-						<?php esc_html_e( 'Support Forum', 'maxwell' ); ?>
+					<a href="<?php echo esc_url( __( 'https://themezee.com/changelogs/?action=themezee-changelog&type=theme&slug=maxwell/', 'maxwell' ) ); ?>" target="_blank">
+						<?php esc_html_e( 'Theme Changelog', 'maxwell' ); ?>
 					</a>
 				</p>
 
 				<p>
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/maxwell/reviews/?filter=5', 'maxwell' ) ); ?>" target="_blank">
+					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/maxwell/reviews/', 'maxwell' ) ); ?>" target="_blank">
 						<?php esc_html_e( 'Rate this theme', 'maxwell' ); ?>
 					</a>
 				</p>

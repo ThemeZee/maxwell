@@ -47,7 +47,8 @@ function maxwell_theme_info_page() {
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/maxwell/', 'maxwell' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=maxwell&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'maxwell' ); ?></a>
 				<a href="http://preview.themezee.com/?demo=maxwell&utm_source=theme-info&utm_campaign=maxwell" target="_blank"><?php esc_html_e( 'Theme Demo', 'maxwell' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/maxwell-documentation/', 'maxwell' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=maxwell&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'maxwell' ); ?></a>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/maxwell/reviews/?filter=5', 'maxwell' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'maxwell' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/changelogs/?action=themezee-changelog&type=theme&slug=maxwell', 'maxwell' ) ); ?>" target="_blank"><?php esc_html_e( 'Theme Changelog', 'maxwell' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/maxwell/reviews/', 'maxwell' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'maxwell' ); ?></a>
 			</p>
 		</div>
 		<hr>
@@ -149,7 +150,7 @@ function maxwell_theme_info_page() {
 			<p><?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'maxwell' ),
 				$theme->display( 'Name' ),
 				'<a target="_blank" href="' . __( 'https://themezee.com/', 'maxwell' ) . '?utm_source=theme-info&utm_medium=footer&utm_campaign=maxwell" title="ThemeZee">ThemeZee</a>',
-				'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/maxwell/reviews/?filter=5', 'maxwell' ) . '" title="' . esc_attr__( 'Review Maxwell', 'maxwell' ) . '">' . esc_html__( 'rate it', 'maxwell' ) . '</a>'); ?>
+				'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/maxwell/reviews/', 'maxwell' ) . '" title="' . esc_attr__( 'Review Maxwell', 'maxwell' ) . '">' . esc_html__( 'rate it', 'maxwell' ) . '</a>'); ?>
 			</p>
 
 		</div>
