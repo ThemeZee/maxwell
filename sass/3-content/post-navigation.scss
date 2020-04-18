@@ -1,0 +1,52 @@
+
+/* Post Navigation */
+.post-navigation {
+	margin: 2em 0 0;
+	padding: 1.5rem 0 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.15);
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+.post-navigation .nav-links .nav-previous {
+	float: left;
+	box-sizing: border-box;
+	padding-right: 1em;
+	max-width: 50%;
+}
+
+.post-navigation .nav-links .nav-next {
+	float: right;
+	box-sizing: border-box;
+	padding-left: 1em;
+	max-width: 50%;
+	text-align: right;
+}
+
+.post-navigation .nav-links .nav-link-text {
+	display: block;
+	color: #303030;
+}
+
+.post-navigation .nav-links .nav-previous .nav-link-text::before {
+	margin-right: 3px;
+	content: "\00AB";
+}
+
+.post-navigation .nav-links .nav-next .nav-link-text::after {
+	margin-left: 4px;
+	content: "\00BB";
+}
+
+.post-navigation .nav-links .entry-title {
+	font-size: 17px;
+	font-size: 1.0625rem;
+}
+
+.post-navigation .nav-links a:hover .nav-link-text {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.post-navigation .nav-links a:hover .entry-title {
+	text-decoration: underline;
+}

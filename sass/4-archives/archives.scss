@@ -1,0 +1,80 @@
+/* Archives and Search Heading */
+.page-header {
+	margin: 0 0 3em 0;
+}
+
+.archive-title {
+	margin: 0;
+	padding: 0;
+	color: #303030;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+	font-size: 20px;
+	font-size: 1.25rem;
+	font-family: 'Amaranth', Tahoma, Arial;
+}
+
+.blog-description,
+.archive-description p {
+	margin-bottom: 0;
+}
+
+
+/* Post Styling */
+.post-wrapper .type-post .entry-title {
+	font-size: 28px;
+	font-size: 1.75rem;
+}
+
+.post-wrapper .type-post .entry-content {
+	font-size: 17px;
+	font-size: 1.0625rem;
+}
+
+/* One Column Layout */
+.post-layout-one-column .post-wrapper .type-post .wp-post-image {
+	float: left;
+	margin: 0 2em 1em 0;
+	padding: 0;
+	max-width: 45%;
+}
+
+.post-layout-one-column .post-wrapper .type-post .entry-title {
+	display: inline;
+}
+
+
+/* Multiple Post Columns */
+.post-layout-columns .post-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -3em;
+}
+
+.post-layout-columns .post-wrapper .post-column {
+	box-sizing: border-box;
+	padding-right: 3em;
+}
+
+.post-layout-columns .post-wrapper .post-column .type-post .wp-post-image {
+	margin: 0;
+}
+
+/* 2 Columns */
+.post-layout-two-columns .post-wrapper .post-column {
+	width: 50%;
+}
+
+/* 3 Columns */
+.post-layout-three-columns .content-archive {
+	float: none;
+	padding: 0;
+	width: 100%;
+}
+
+.post-layout-three-columns .post-wrapper .post-column {
+	width: 33.3333333333333%;
+}
