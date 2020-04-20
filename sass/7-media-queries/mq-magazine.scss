@@ -1,0 +1,132 @@
+@media only screen and (max-width: 70em) {
+
+	/* Magazine Post Widgets */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 24px;
+		font-size: 1.5rem;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title,
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 17px;
+		font-size: 1.0625rem;
+	}
+
+	.widget-magazine-posts .small-post .entry-meta span:after,
+	.widget-magazine-posts .small-post .entry-meta .meta-author {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 60em) {
+
+	/* Magazine Post Widgets */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 28px;
+		font-size: 1.75rem;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title,
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+}
+
+@media only screen and (max-width: 50em) {
+
+	/* Magazine Post Widgets */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 24px;
+		font-size: 1.5rem;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title,
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 17px;
+		font-size: 1.0625rem;
+	}
+}
+
+@media only screen and (max-width: 45em) {
+	.widget-magazine-posts .medium-post .entry-title,
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+}
+
+@media only screen and (max-width: 40em) {
+
+	/* Magazine Post Widgets */
+	.widget-magazine-posts .magazine-grid {
+		margin-right: 0;
+	}
+
+	.widget-magazine-posts .magazine-grid .large-post,
+	.widget-magazine-posts-columns .magazine-posts-column-left,
+	.widget-magazine-posts .medium-post {
+		float: none;
+		padding: 0;
+		width: 100%;
+	}
+
+	.widget-magazine-posts-columns .magazine-posts-column-right {
+		margin-left: 0;
+		padding-top: 1em;
+		padding-left: 0;
+		width: 100%;
+	}
+
+	.widget-magazine-posts .medium-post .wp-post-image {
+		float: left;
+		margin: 0 1.5em 0 0;
+		max-width: 40%;
+	}
+
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 28px;
+		font-size: 1.75rem;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title,
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+}
+
+@media only screen and (max-width: 30em) {
+
+	/* Magazine Homepage: Category Post Widgets */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 24px;
+		font-size: 1.5rem;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title,
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+}
+
+@media only screen and (max-width: 20em) {
+
+	/* Magazine Homepage: Category Post Widgets */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title,
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+
+	.widget-magazine-posts .medium-post .entry-meta,
+	.widget-magazine-posts .small-post .entry-meta {
+		display: none;
+	}
+}

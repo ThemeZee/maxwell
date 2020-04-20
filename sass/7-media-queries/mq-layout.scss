@@ -1,0 +1,199 @@
+@media only screen and (max-width: 80em) {
+	.site {
+		padding: 0 3em;
+	}
+
+	.site-content {
+		padding: 2em 0 1em;
+	}
+
+	.header-main,
+	.site-footer .site-info {
+		padding: 2em 0;
+	}
+
+	.widget,
+	.page-header,
+	.type-post,
+	.type-page,
+	.type-attachment,
+	.pagination,
+	.comments-area {
+		margin-bottom: 2em;
+	}
+
+	/* Multiple Post Columns */
+	.post-layout-columns .post-wrapper {
+		margin-right: -2em;
+	}
+
+	.post-layout-columns .post-wrapper .post-column {
+		padding-right: 2em;
+	}
+}
+
+@media only screen and (max-width: 70em) {
+	.content-area {
+		padding-right: 3em;
+	}
+
+	.header-widget {
+		max-width: 70%;
+	}
+
+	/* One Column Layout */
+	.post-layout-one-column .post-wrapper .type-post .wp-post-image {
+		max-width: 40%;
+	}
+
+	.post-layout-one-column .post-wrapper .type-post .entry-content {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+}
+
+@media only screen and (max-width: 60em) {
+	.content-area,
+	.site-content .content-fullwidth {
+		float: none;
+		padding: 0;
+		width: 100%;
+	}
+
+	.sidebar {
+		float: none;
+		padding: 0;
+		width: 100%;
+	}
+
+	.header-main {
+		padding-top: 1.5em;
+	}
+
+	.site-branding {
+		float: none;
+		margin: 0;
+		text-align: center;
+	}
+
+	.site-branding .custom-logo {
+		margin: 0.5em 0 0 0;
+	}
+
+	.site-title {
+		display: block;
+	}
+
+	.header-widgets {
+		display: block;
+		text-align: center;
+	}
+
+	.header-widget {
+		display: inline-block;
+		float: none;
+		margin: 1em 0 0;
+		max-width: 100%;
+		vertical-align: top;
+
+	}
+
+	.header-widget .search-form {
+		max-width: 300px;
+	}
+
+	/* One Column Layout */
+	.post-layout-one-column .post-wrapper .type-post .wp-post-image {
+		max-width: 45%;
+	}
+
+	.post-layout-one-column .post-wrapper .type-post .entry-content {
+		font-size: 17px;
+		font-size: 1.0625rem;
+	}
+
+	/* Three Column Layout */
+	.post-layout-three-columns .post-wrapper .post-column {
+		width: 50%;
+	}
+
+	/* Footer */
+	.site-footer .site-info {
+		float: none;
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 50em) {
+	.site {
+		padding: 0 2em;
+	}
+}
+
+@media only screen and (max-width: 40em) {
+	.type-post .wp-post-image,
+	.type-page .wp-post-image {
+		margin: 0;
+	}
+
+	/* One Column Layout */
+	.post-layout-one-column .post-wrapper .type-post .wp-post-image {
+		float: none;
+		margin: 0;
+		max-width: 100%;
+	}
+
+	/* Multiple Columns Layout */
+	.post-layout-columns .post-wrapper {
+		display: block;
+		margin-right: 0;
+	}
+
+	.post-layout-columns .post-wrapper .post-column {
+		display: block;
+		float: none;
+		padding-right: 0;
+	}
+
+	.post-layout-two-columns .post-wrapper .post-column,
+	.post-layout-three-columns .post-wrapper .post-column {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 30em) {
+
+	/* Post Navigation */
+	.post-navigation {
+		font-size: 15px;
+		font-size: 0.9375rem;
+	}
+
+	.post-navigation .nav-links .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+
+	.post-navigation .nav-links .nav-previous,
+	.post-navigation .nav-links .nav-next {
+		float: none;
+		padding: 0 0 0.5em;
+		max-width: 100%;
+	}
+
+	.post-navigation .nav-links a {
+		display: block;
+		margin-bottom: 0.5em;
+	}
+}
+
+@media only screen and (max-width: 20em) {
+	.entry-meta .meta-date,
+	.entry-meta .meta-category {
+		display: block;
+	}
+
+	.entry-meta span::after {
+		display: none;
+	}
+}
