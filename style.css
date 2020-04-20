@@ -1716,10 +1716,6 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 	text-decoration: underline;
 }
 
-/*--------------------------------------------------------------
-## 11.1 - Default Widgets
---------------------------------------------------------------*/
-
 /* Theme Search Widget */
 .search-form {
 	position: relative;
@@ -1769,7 +1765,7 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 }
 
 /*--------------------------------------------------------------
-## 11.2 - Magazine Posts Widgets
+# - Magazine Widgets
 --------------------------------------------------------------*/
 .widget-magazine-posts {
 	margin-bottom: -1em;
