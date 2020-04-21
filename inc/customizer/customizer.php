@@ -52,15 +52,24 @@ add_action( 'customize_register', 'maxwell_customize_register_options' );
  * Embed JS file to make Theme Customizer preview reload changes asynchronously.
  */
 function maxwell_customize_preview_js() {
-	wp_enqueue_script( 'maxwell-customizer-preview', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), '20191022', true );
+	wp_enqueue_script( 'maxwell-customizer-preview', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), '20200410', true );
 }
 add_action( 'customize_preview_init', 'maxwell_customize_preview_js' );
+
+
+/**
+ * Embed JS for Customizer Controls.
+ */
+function maxwell_customizer_controls_js() {
+	wp_enqueue_script( 'maxwell-customizer-controls', get_template_directory_uri() . '/assets/js/customizer-controls.js', array(), '20200410', true );
+}
+add_action( 'customize_controls_enqueue_scripts', 'maxwell_customizer_controls_js' );
 
 
 /**
  * Embed CSS styles for the theme options in the Customizer
  */
 function maxwell_customize_preview_css() {
-	wp_enqueue_style( 'maxwell-customizer-css', get_template_directory_uri() . '/assets/css/customizer.css', array(), '20191022' );
+	wp_enqueue_style( 'maxwell-customizer-css', get_template_directory_uri() . '/assets/css/customizer.css', array(), '20200410' );
 }
 add_action( 'customize_controls_print_styles', 'maxwell_customize_preview_css' );
