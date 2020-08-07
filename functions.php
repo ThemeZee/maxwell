@@ -189,10 +189,15 @@ function maxwell_scripts() {
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 
 	// Register and enqueue navigation.js.
-	wp_enqueue_script( 'maxwell-jquery-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array( 'jquery' ), '20160719' );
-
-	// Passing Parameters to navigation.js.
-	wp_localize_script( 'maxwell-jquery-navigation', 'maxwell_menu_title', esc_html__( 'Navigation', 'maxwell' ) );
+	if ( has_nav_menu( 'primary' ) ) {
+		wp_enqueue_script( 'maxwell-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '20191114', true );
+		$maxwell_l10n = array(
+			'expand'   => esc_html__( 'Expand child menu', 'maxwell' ),
+			'collapse' => esc_html__( 'Collapse child menu', 'maxwell' ),
+			'icon'     => maxwell_get_svg( 'expand' ),
+		);
+		wp_localize_script( 'maxwell-navigation', 'maxwellScreenReaderText', $maxwell_l10n );
+	}
 
 	// Register Comment Reply Script for Threaded Comments.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
