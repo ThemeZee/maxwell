@@ -56,6 +56,7 @@
 	.main-navigation > ul > li > a:hover,
 	.main-navigation > ul > li > a:active {
 		color: rgba(0, 0, 0, 0.5);
+		background: none;
 	}
 
 	.main-navigation > ul > li.current-menu-item > a {
@@ -69,7 +70,6 @@
 		left: -999em;
 		top: 100%;
 		z-index: 99999;
-		border-top: 1px solid #fff;
 		background: #303030;
 	}
 
@@ -85,7 +85,6 @@
 
 	.main-navigation ul ul ul {
 		left: -999em;
-		margin-top: -1px;
 		top: 0;
 	}
 
