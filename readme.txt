@@ -26,7 +26,10 @@ For more information about Maxwell please go to https://themezee.com/themes/maxw
 
 == Changelog ==
 
-= 2.0.2 - 2020-04-24 =
+= 2.0.3 - 2020-08-27 =
+* fixed styling of footer area in Safari
+
+= 2.0.2 - 2020-08-24 =
 * fixed styling of menu items with empty links
 * fixed undefined naviClass variable warning
 
