@@ -189,7 +189,7 @@ function maxwell_scripts() {
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 
 	// Register and enqueue navigation.js.
-	if ( has_nav_menu( 'primary' ) || has_nav_menu( 'secondary' ) ) {
+	if ( ( has_nav_menu( 'primary' ) || has_nav_menu( 'secondary' ) ) && ! maxwell_is_amp() ) {
 		wp_enqueue_script( 'maxwell-navigation', get_theme_file_uri( '/assets/js/navigation.min.js' ), array( 'jquery' ), '20200822', true );
 		$maxwell_l10n = array(
 			'expand'   => esc_html__( 'Expand child menu', 'maxwell' ),
@@ -200,7 +200,9 @@ function maxwell_scripts() {
 	}
 
 	// Enqueue svgxuse to support external SVG Sprites in Internet Explorer.
-	wp_enqueue_script( 'svgxuse', get_theme_file_uri( '/assets/js/svgxuse.min.js' ), array(), '1.2.6' );
+	if ( ! maxwell_is_amp() ) {
+		wp_enqueue_script( 'svgxuse', get_theme_file_uri( '/assets/js/svgxuse.min.js' ), array(), '1.2.6' );
+	}
 
 	// Register Comment Reply Script for Threaded Comments.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

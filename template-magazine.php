@@ -13,7 +13,7 @@ get_header();
 $theme_options = maxwell_theme_options();
 
 // Display Slider.
-if ( true == $theme_options['slider_magazine'] ) :
+if ( true === $theme_options['slider_magazine'] && ! maxwell_is_amp() ) :
 
 	get_template_part( 'template-parts/post-slider' );
 

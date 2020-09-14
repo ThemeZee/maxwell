@@ -59,6 +59,11 @@ function maxwell_body_classes( $classes ) {
 		$classes[] = 'categories-hidden';
 	}
 
+	// Check for AMP pages.
+	if ( maxwell_is_amp() ) {
+		$classes[] = 'is-amp-page';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'maxwell_body_classes' );
