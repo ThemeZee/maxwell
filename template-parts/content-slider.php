@@ -9,7 +9,7 @@
 
 <li id="slide-<?php the_ID(); ?>" class="zeeslide clearfix">
 
-	<?php maxwell_slider_image( 'maxwell-slider-image', array( 'class' => 'slide-image' ) ); ?>
+	<?php maxwell_slider_image( 'maxwell-slider-image', array( 'class' => 'slide-image', 'loading' => false ) ); ?>
 
 	<div class="slide-content clearfix">
 
