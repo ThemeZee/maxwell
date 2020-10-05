@@ -23,11 +23,11 @@
 	padding: 0;
 	color: #303030;
 	text-decoration: none;
-	font-weight: bold;
-	font-size: 44px;
-	font-size: 2.75rem;
-	font-family: 'Amaranth', sans-serif;
-	line-height: 1.4;
+	@include font-size(44);
+	@include font-family(--title-font);
+	@include font-weight(--title-font-weight);
+	@include text-transform(--title-text-transform);
+	@include line-height(--title-line-height);
 }
 
 .site-title a:link,

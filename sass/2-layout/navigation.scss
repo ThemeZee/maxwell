@@ -15,7 +15,9 @@
 	background: #303030;
 	list-style: none;
 	@include font-size(17);
-	font-family: 'Titillium Web', Tahoma, Arial;
+	@include font-family(--navi-font);
+	@include font-weight(--navi-font-weight);
+	@include text-transform(--navi-text-transform);
 }
 
 /* Hide the menu on small screens when JavaScript is available. */
@@ -93,7 +95,9 @@
 	color: #303030;
 	text-decoration: none;
 	@include font-size(17);
-	font-family: 'Titillium Web', Tahoma, Arial;
+	@include font-family(--navi-font);
+	@include font-weight(--navi-font-weight);
+	@include text-transform(--navi-text-transform);
 	text-align: left;
 	transition: all 0.15s ease;
 	align-items: center;
