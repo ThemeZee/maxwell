@@ -73,21 +73,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	--button-hover-color: #303030;
 	--button-hover-text-color: #fff;
 	--page-background-color: #fff;
-	--header-background-color: #111133;
-	--site-title-color: #fff;
-	--site-title-hover-color: rgba(255, 255, 255, 0.6);
-	--navi-color: #fff;
-	--navi-hover-color: rgba(255, 255, 255, 0.6);
-	--navi-border-color: rgba(255, 255, 255, 0.1);
-	--title-color: #111133;
-	--title-hover-color: #4477aa;
-	--widget-title-color: #111133;
-	--widget-title-hover-color: #4477aa;
-	--widget-title-border-color: #111133;
-	--footer-background-color: #111133;
-	--footer-text-color: rgba(255, 255, 255, 0.6);
-	--footer-link-color: #fff;
-	--footer-link-hover-color: rgba(255, 255, 255, 0.6);
+	--site-title-color: #303030;
+	--navi-color: #303030;
+	--navi-hover-color: rgba(0, 0, 0, 0.5);
+	--navi-submenu-color: #303030;
+	--navi-submenu-text-color: #fff;
+	--navi-submenu-hover-color: rgba(255, 255, 255, 0.1);
+	--navi-submenu-border-color: rgba(255, 255, 255, 0.1);
+	--title-color: #303030;
+	--widget-title-color: #303030;
 	--text-font: "Titillium Web", arial, helvetica, sans-serif;
 	--title-font: "Amaranth", arial, helvetica, sans-serif;
 	--navi-font: "Titillium Web", arial, helvetica, sans-serif;
@@ -723,7 +717,8 @@ textarea {
 	padding: 0 5em;
 	max-width: 1340px;
 	width: 100%;
-	background: #fff;
+	background-color: #fff;
+	background-color: var(--page-background-color);
 }
 
 .site-content {
@@ -788,6 +783,7 @@ textarea {
 	margin: 0.15em 0;
 	padding: 0;
 	color: #303030;
+	color: var(--site-title-color);
 	text-decoration: none;
 	font-size: 44px;
 	font-size: 2.75rem;
@@ -804,6 +800,7 @@ textarea {
 .site-title a:link,
 .site-title a:visited {
 	color: #303030;
+	color: var(--site-title-color);
 }
 
 .site-title a:hover,
@@ -865,7 +862,9 @@ textarea {
 --------------------------------------------------------------*/
 .primary-navigation-wrap {
 	position: relative;
-	border-top: 1px solid rgba(0, 0, 0, 0.15);
+	border-top: 1px solid;
+	border-color: rgba(0, 0, 0, 0.15);
+	border-color: var(--light-border-color);
 }
 
 .primary-navigation {
@@ -877,7 +876,9 @@ textarea {
 	margin: 0;
 	padding: 0;
 	color: #fff;
-	background: #303030;
+	color: var(--navi-submenu-text-color);
+	background-color: #303030;
+	background-color: var(--navi-submenu-color);
 	list-style: none;
 	font-size: 17px;
 	font-size: 1.0625rem;
@@ -910,7 +911,9 @@ textarea {
 	display: block;
 	margin: 0;
 	padding: 1em 1.5em;
-	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	border-top: 1px solid;
+	border-color: rgba(255, 255, 255, 0.1);
+	border-color: var(--navi-submenu-border-color);
 	text-decoration: none;
 }
 
@@ -918,6 +921,7 @@ textarea {
 .main-navigation ul a:link,
 .main-navigation ul a:visited {
 	color: #fff;
+	color: var(--navi-submenu-text-color);
 	text-decoration: none;
 	transition: all 0.15s ease;
 }
@@ -925,7 +929,8 @@ textarea {
 .main-navigation ul a:hover,
 .main-navigation ul a:active,
 .main-navigation ul a:focus {
-	background: rgba(255, 255, 255, 0.1);
+	background-color: rgba(255, 255, 255, 0.1);
+	background-color: var(--navi-submenu-hover-color);
 }
 
 .main-navigation ul li.current-menu-item > a {
@@ -960,9 +965,12 @@ textarea {
 	display: flex;
 	margin: -1px 0 0;
 	padding: 0.8em 1em 1em;
-	border-top: 0.3em solid #303030;
+	border-top: 0.3em solid;
+	border-color: #303030;
+	border-color: var(--navi-color);
 	background: none;
 	color: #303030;
+	color: var(--navi-color);
 	text-decoration: none;
 	font-size: 17px;
 	font-size: 1.0625rem;
@@ -984,12 +992,14 @@ textarea {
 .primary-menu-toggle:focus {
 	outline: thin dotted;
 	color: #303030;
+	color: var(--navi-color);
 	background: none;
 }
 
 .primary-menu-toggle:hover,
 .primary-menu-toggle:active {
 	color: rgba(0, 0, 0, 0.5);
+	color: var(--navi-hover-color);
 	background: none;
 	cursor: pointer;
 }
@@ -1000,12 +1010,14 @@ textarea {
 	height: 24px;
 	vertical-align: top;
 	fill: #303030;
+	fill: var(--navi-color);
 	transition: fill 0.15s ease;
 }
 
 .primary-menu-toggle:hover .icon,
 .primary-menu-toggle:active .icon {
 	fill: rgba(0, 0, 0, 0.5);
+	fill: var(--navi-hover-color);
 }
 
 .primary-menu-toggle[aria-expanded="true"] .icon-menu,
@@ -1031,12 +1043,14 @@ textarea {
 .main-navigation .dropdown-toggle:focus {
 	outline: thin dotted;
 	color: #fff;
+	color: var(--navi-submenu-text-color);
 	background: none;
 }
 
 .main-navigation .dropdown-toggle:hover,
 .main-navigation .dropdown-toggle:active {
-	background: rgba(255, 255, 255, 0.1);
+	background-color: rgba(255, 255, 255, 0.1);
+	background-color: var(--navi-submenu-hover-color);
 }
 
 .main-navigation .dropdown-toggle .icon {
@@ -1045,6 +1059,7 @@ textarea {
 	height: 22px;
 	vertical-align: top;
 	fill: #fff;
+	fill: var(--navi-submenu-text-color);
 	transition: fill 0.15s ease;
 }
 
@@ -2247,7 +2262,9 @@ object {
 # - Footer
 --------------------------------------------------------------*/
 .footer-wrap {
-	border-top: 1px solid rgba(0, 0, 0, 0.15);
+	border-top: 1px solid;
+	border-color: rgba(0, 0, 0, 0.15);
+	border-color: var(--light-border-color);
 }
 
 .site-footer .site-info {

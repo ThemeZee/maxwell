@@ -21,7 +21,7 @@
 	display: inline-block;
 	margin: 0.15em 0;
 	padding: 0;
-	color: #303030;
+	@include color(--site-title-color);
 	text-decoration: none;
 	@include font-size(44);
 	@include font-family(--title-font);
@@ -32,7 +32,7 @@
 
 .site-title a:link,
 .site-title a:visited {
-	color: #303030;
+	@include color(--site-title-color);
 }
 
 .site-title a:hover,
