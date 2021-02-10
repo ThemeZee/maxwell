@@ -10,7 +10,7 @@
 	display: inline-block;
 	margin: 0;
 	padding: 0;
-	color: #303030;
+	@include color(--widget-title-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	@include font-size(20);
@@ -30,7 +30,8 @@
 .comment {
 	margin: 0 0 1.5em;
 	padding: 1.5em 0 0;
-	border-top: 1px solid rgba(0,0,0,0.15);
+	border-top: 1px solid;
+	@include border-color(--light-border-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }

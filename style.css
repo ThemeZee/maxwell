@@ -61,8 +61,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 :root {
 	--text-color: #303030;
-	--medium-text-color: #777;
-	--light-text-color: #999;
+	--medium-text-color: rgba(0, 0, 0, 0.75);
+	--light-text-color: rgba(0, 0, 0, 0.5);
 	--dark-border-color: #303030;
 	--medium-border-color: rgba(0, 0, 0, 0.25);
 	--light-border-color: rgba(0, 0, 0, 0.15);
@@ -447,7 +447,7 @@ blockquote {
 	border-left: 4px solid;
 	border-color: #303030;
 	border-color: var(--dark-border-color);
-	color: #777;
+	color: rgba(0, 0, 0, 0.75);
 	color: var(--medium-text-color);
 	font-style: italic;
 	font-size: 18px;
@@ -612,7 +612,7 @@ textarea {
 	border: 1px solid;
 	border-color: rgba(0, 0, 0, 0.15);
 	border-color: var(--light-border-color);
-	color: #777;
+	color: rgba(0, 0, 0, 0.75);
 	color: var(--medium-text-color);
 	background: none;
 }
@@ -1247,6 +1247,7 @@ textarea {
 	margin: 0;
 	padding: 0;
 	color: #303030;
+	color: var(--title-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	font-size: 36px;
@@ -1264,6 +1265,7 @@ textarea {
 .entry-title a:link,
 .entry-title a:visited {
 	color: #303030;
+	color: var(--title-color);
 	text-decoration: none;
 }
 
@@ -1306,6 +1308,7 @@ textarea {
 	margin: 0.5em 0 0;
 	padding: 0;
 	color: rgba(0, 0, 0, 0.5);
+	color: var(--light-text-color);
 	font-size: 14px;
 	font-size: 0.875rem;
 }
@@ -1313,11 +1316,13 @@ textarea {
 .entry-meta a:link,
 .entry-meta a:visited {
 	color: rgba(0, 0, 0, 0.5);
+	color: var(--light-text-color);
 }
 
 .entry-meta a:hover,
 .entry-meta a:active {
 	color: rgba(0, 0, 0, 0.75);
+	color: var(--medium-text-color);
 }
 
 .entry-meta span::after {
@@ -1405,7 +1410,9 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 	float: left;
 	margin: 3px;
 	padding: 0.3em 0.8em;
-	border: 1px solid rgba(0, 0, 0, 0.15);
+	border: 1px solid;
+	border-color: rgba(0, 0, 0, 0.15);
+	border-color: var(--light-border-color);
 	text-decoration: none;
 	font-size: 13px !important;
 	font-size: 0.8125rem !important;
@@ -1416,6 +1423,7 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 .entry-tags .meta-tags a:link,
 .entry-tags .meta-tags a:visited {
 	color: rgba(0, 0, 0, 0.5);
+	color: var(--light-text-color);
 }
 
 .widget_tag_cloud .tagcloud a:hover,
@@ -1423,7 +1431,9 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 .entry-tags .meta-tags a:hover,
 .entry-tags .meta-tags a:active {
 	border-color: rgba(0, 0, 0, 0.5);
+	border-color: var(--light-text-color);
 	color: #303030;
+	color: var(--text-color);
 }
 
 /* Read more Link */
@@ -1431,8 +1441,10 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 	display: inline-block;
 	margin: 0;
 	padding: 0.4em 0.8em;
-	background: #33bbcc;
+	background-color: #33bbcc;
+	background-color: var(--button-color);
 	color: #fff;
+	color: var(--button-text-color);
 	text-decoration: none;
 	font-size: 15px;
 	font-size: 0.9375rem;
@@ -1441,11 +1453,15 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 .more-link:link,
 .more-link:visited {
 	color: #fff;
+	color: var(--button-text-color);
 }
 
 .more-link:hover,
 .more-link:active {
-	background: #303030;
+	background-color: #303030;
+	background-color: var(--button-hover-color);
+	color: #fff;
+	color: var(--button-hover-text-color);
 	text-decoration: none;
 }
 
@@ -1461,7 +1477,9 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 .post-navigation {
 	margin: 2em 0 0;
 	padding: 1.5rem 0 0;
-	border-top: 1px solid rgba(0, 0, 0, 0.15);
+	border-top: 1px solid;
+	border-color: rgba(0, 0, 0, 0.15);
+	border-color: var(--light-border-color);
 	font-size: 16px;
 	font-size: 1rem;
 }
@@ -1483,7 +1501,8 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 
 .post-navigation .nav-links .nav-link-text {
 	display: block;
-	color: #303030;
+	color: rgba(0, 0, 0, 0.5);
+	color: var(--light-text-color);
 }
 
 .post-navigation .nav-links .nav-previous .nav-link-text::before {
@@ -1499,10 +1518,6 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 .post-navigation .nav-links .entry-title {
 	font-size: 17px;
 	font-size: 1.0625rem;
-}
-
-.post-navigation .nav-links a:hover .nav-link-text {
-	color: rgba(0, 0, 0, 0.5);
 }
 
 .post-navigation .nav-links a:hover .entry-title {
@@ -1522,6 +1537,7 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 	margin: 0;
 	padding: 0;
 	color: #303030;
+	color: var(--title-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	font-size: 20px;
@@ -1609,8 +1625,10 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 	display: inline-block;
 	margin: 0 3px 3px 0;
 	padding: 0.4em 1em;
-	background: #303030;
+	background-color: #303030;
+	background-color: var(--button-hover-color);
 	color: #fff;
+	color: var(--button-hover-text-color);
 	text-align: center;
 	text-decoration: none;
 }
@@ -1618,12 +1636,16 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 .pagination a:link,
 .pagination a:visited {
 	color: #fff;
+	color: var(--button-hover-text-color);
 }
 
 .pagination a:hover,
 .pagination a:active,
 .pagination .current {
-	background: #33bbcc;
+	background-color: #33bbcc;
+	background-color: var(--button-color);
+	color: #fff;
+	color: var(--button-text-color);
 }
 
 /* Infinite Scroll Pagination */
@@ -1647,14 +1669,20 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 	display: inline-block;
 	margin: 0 0 3em;
 	padding: 0.4em 1em;
-	background: #303030;
+	background-color: #303030;
+	background-color: var(--button-hover-color);
+	color: #fff;
+	color: var(--button-hover-text-color);
 	text-decoration: none;
 	font-size: 17px;
 	font-size: 1.0625rem;
 }
 
 .infinite-scroll #infinite-handle span:hover {
-	background: #33bbcc;
+	background-color: #33bbcc;
+	background-color: var(--button-color);
+	color: #fff;
+	color: var(--button-text-color);
 }
 
 /*--------------------------------------------------------------
@@ -1819,6 +1847,7 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 	margin: 0;
 	padding: 0;
 	color: #303030;
+	color: var(--widget-title-color);
 	font-size: 20px;
 	font-size: 1.25rem;
 	font-family: "Amaranth", arial, helvetica, sans-serif;
@@ -1851,6 +1880,7 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 .widget-title a:link,
 .widget-title a:visited {
 	color: #303030;
+	color: var(--widget-title-color);
 }
 
 .widget-title a:hover,
@@ -2030,6 +2060,7 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 	margin: 0;
 	padding: 0;
 	color: #303030;
+	color: var(--widget-title-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	font-size: 20px;
@@ -2054,7 +2085,9 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 .comment {
 	margin: 0 0 1.5em;
 	padding: 1.5em 0 0;
-	border-top: 1px solid rgba(0, 0, 0, 0.15);
+	border-top: 1px solid;
+	border-color: rgba(0, 0, 0, 0.15);
+	border-color: var(--light-border-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -2813,16 +2846,19 @@ object {
 	.main-navigation > ul > li > a:link,
 	.main-navigation > ul > li > a:visited {
 		color: #303030;
+		color: var(--navi-color);
 	}
 
 	.main-navigation > ul > li > a:hover,
 	.main-navigation > ul > li > a:active {
 		color: rgba(0, 0, 0, 0.5);
+		color: var(--navi-hover-color);
 		background: none;
 	}
 
 	.main-navigation > ul > li.current-menu-item > a {
 		border-color: #303030;
+		border-color: var(--navi-color);
 		text-decoration: none;
 	}
 
@@ -2832,7 +2868,8 @@ object {
 		left: -999em;
 		top: 100%;
 		z-index: 99999;
-		background: #303030;
+		background-color: #303030;
+		background-color: var(--navi-submenu-color);
 	}
 
 	.main-navigation ul li:hover > ul,
@@ -2871,6 +2908,7 @@ object {
 		width: 12px;
 		height: 12px;
 		fill: #303030;
+		fill: var(--navi-color);
 		transition: fill 0.15s ease;
 	}
 
@@ -2881,6 +2919,7 @@ object {
 		top: 50%;
 		margin-top: -0.3rem;
 		fill: #fff;
+		fill: var(--navi-submenu-text-color);
 		-webkit-transform: rotate(-90deg);
 		-ms-transform: rotate(-90deg);
 		transform: rotate(-90deg);

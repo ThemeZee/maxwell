@@ -1,7 +1,7 @@
 .type-post,
 .type-page,
 .type-attachment,
-.comments-area  {
+.comments-area {
 	margin: 0 0 3em 0;
 	padding: 0;
 	max-width: 100%;
@@ -11,7 +11,7 @@
 .entry-title {
 	margin: 0;
 	padding: 0;
-	color: #303030;
+	@include color(--title-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	@include font-size(36);
@@ -23,7 +23,7 @@
 
 .entry-title a:link,
 .entry-title a:visited {
-	color: #303030;
+	@include color(--title-color);
 	text-decoration: none;
 }
 

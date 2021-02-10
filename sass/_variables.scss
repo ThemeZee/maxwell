@@ -23,8 +23,8 @@ $themeColors: (
 
 	// Text Colors
 	--text-color                     : #303030,
-	--medium-text-color              : #777,
-	--light-text-color               : #999,
+	--medium-text-color              : rgba(0, 0, 0, 0.75),
+	--light-text-color               : rgba(0, 0, 0, 0.5),
 	--dark-border-color              : #303030,
 	--medium-border-color            : rgba(0, 0, 0, 0.25),
 	--light-border-color             : rgba(0, 0, 0, 0.15),

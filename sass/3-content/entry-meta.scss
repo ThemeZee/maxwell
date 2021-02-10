@@ -3,19 +3,19 @@
 .entry-meta {
 	margin: 0.5em 0 0;
 	padding: 0;
-	color: rgba(0, 0, 0, 0.5);
+	@include color(--light-text-color);
 	font-size: 14px;
 	font-size: 0.875rem;
 }
 
 .entry-meta a:link,
 .entry-meta a:visited {
-	color: rgba(0, 0, 0, 0.5);
+	@include color(--light-text-color);
 }
 
 .entry-meta a:hover,
 .entry-meta a:active {
-	color: rgba(0, 0, 0, 0.75);
+	@include color(--medium-text-color);
 }
 
 .entry-meta span::after {
@@ -103,7 +103,8 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 	float: left;
 	margin: 3px;
 	padding: 0.3em 0.8em;
-	border: 1px solid rgba(0, 0, 0, 0.15);
+	border: 1px solid;
+	@include border-color(--light-border-color);
 	text-decoration: none;
 	font-size: 13px !important;
 	font-size: 0.8125rem !important;
@@ -113,13 +114,13 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 .widget_tag_cloud .tagcloud a:visited,
 .entry-tags .meta-tags a:link,
 .entry-tags .meta-tags a:visited {
-	color: rgba(0, 0, 0, 0.5);
+	@include color(--light-text-color);
 }
 
 .widget_tag_cloud .tagcloud a:hover,
 .widget_tag_cloud .tagcloud a:active,
 .entry-tags .meta-tags a:hover,
 .entry-tags .meta-tags a:active {
-	border-color: rgba(0, 0, 0, 0.5);
-	color: #303030;
+	@include border-color(--light-text-color);
+	@include color(--text-color);
 }

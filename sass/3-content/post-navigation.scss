@@ -3,7 +3,8 @@
 .post-navigation {
 	margin: 2em 0 0;
 	padding: 1.5rem 0 0;
-	border-top: 1px solid rgba(0, 0, 0, 0.15);
+	border-top: 1px solid;
+	@include border-color(--light-border-color);
 	font-size: 16px;
 	font-size: 1rem;
 }
@@ -25,7 +26,7 @@
 
 .post-navigation .nav-links .nav-link-text {
 	display: block;
-	color: #303030;
+	@include color(--light-text-color);
 }
 
 .post-navigation .nav-links .nav-previous .nav-link-text::before {
@@ -41,10 +42,6 @@
 .post-navigation .nav-links .entry-title {
 	font-size: 17px;
 	font-size: 1.0625rem;
-}
-
-.post-navigation .nav-links a:hover .nav-link-text {
-	color: rgba(0, 0, 0, 0.5);
 }
 
 .post-navigation .nav-links a:hover .entry-title {
