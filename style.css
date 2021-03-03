@@ -82,6 +82,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	--navi-submenu-border-color: rgba(255, 255, 255, 0.1);
 	--title-color: #303030;
 	--widget-title-color: #303030;
+	--footer-text-color: #303030;
+	--footer-text-hover-color: rgba(0, 0, 0, 0.5);
+	--footer-border-color: rgba(0, 0, 0, 0.15);
 	--text-font: "Titillium Web", arial, helvetica, sans-serif;
 	--title-font: "Amaranth", arial, helvetica, sans-serif;
 	--navi-font: "Titillium Web", arial, helvetica, sans-serif;
@@ -2297,7 +2300,7 @@ object {
 .footer-wrap {
 	border-top: 1px solid;
 	border-color: rgba(0, 0, 0, 0.15);
-	border-color: var(--light-border-color);
+	border-color: var(--footer-border-color);
 }
 
 .site-footer .site-info {

@@ -28,7 +28,7 @@ function maxwell_slider_scripts() {
 		wp_enqueue_script( 'maxwell-slider', get_template_directory_uri() . '/assets/js/slider.js', array( 'jquery-flexslider' ), '20170421' );
 
 		// Register and enqueue slider CSS.
-		wp_enqueue_style( 'maxwell-slider', get_template_directory_uri() . '/assets/css/flexslider.css', array(), '20170421' );
+		wp_enqueue_style( 'maxwell-slider', get_template_directory_uri() . '/assets/css/flexslider.css', array(), '20210303' );
 
 	endif;
 

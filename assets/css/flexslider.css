@@ -75,7 +75,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 
 .post-slider-wrap {
 	position: relative;
-	background: rgba(0,0,0,0.05);
+	background: rgba(0, 0, 0, 0.05);
 }
 
 .post-slider, .zeeflexslider .zeeslides {
@@ -95,7 +95,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 	margin: 0;
 	padding: 0;
 	width: 65%;
-	background: #e5e5e5;
+	background: rgba(0, 0, 0, 0.15);
 }
 
 .post-slider .zeeslide .slide-image {
@@ -139,15 +139,20 @@ html[xmlns] .zeeflexslider .zeeslides {
 	margin: -38px 0 0 -76px;
 	width: 38px;
 	height: 38px;
-	background: #33bbcc;
+	background-color: #33bbcc;
+	background-color: var(--button-color);
 	color: #fff;
+	color: var(--button-text-color);
 	text-align: left;
 	font-size: 0;
 	cursor: pointer;
 }
 
 .post-slider-controls .zeeflex-direction-nav a:hover {
-	background: #303030;
+	background-color: #303030;
+	background-color: var(--button-hover-color);
+	color: #fff;
+	color: var(--button-hover-text-color);
 	text-decoration: none;
 }
 
@@ -200,17 +205,17 @@ html[xmlns] .zeeflexslider .zeeslides {
 	display: block;
 	width: 25px;
 	height: 10px;
-	background: rgba(255,255,255,0.5);
+	background: rgba(255, 255, 255, 0.5);
 	text-indent: -9999px;
 	cursor: pointer;
 }
 
 .post-slider-controls .zeeflex-control-nav li a:hover {
-	background: rgba(255,255,255,0.7);
+	background: rgba(255, 255, 255, 0.7);
 }
 
 .post-slider-controls .zeeflex-control-nav li a.zeeflex-active {
-	background: rgba(255,255,255,0.9);
+	background: rgba(255, 255, 255, 0.9);
 	cursor: default;
 }
 
