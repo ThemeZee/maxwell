@@ -4,9 +4,9 @@ Theme URI: https://themezee.com/themes/maxwell/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Maxwell is a minimalistic and elegant WordPress theme featuring an ultra clean magazine layout. With a beautiful typography, various post layouts and a gorgeous featured posts slideshow Maxwell truly helps you to stand out.
-Version: 2.2
+Version: 2.2.1
 Requires at least: 5.2
-Tested up to: 5.5
+Tested up to: 5.7
 Requires PHP: 5.6
 AMP: true
 License: GNU General Public License v2 or later
@@ -60,11 +60,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # - CSS Variables
 --------------------------------------------------------------*/
 :root {
-	--primary-color: #cc5555;
-	--secondary-color: #5d7b94;
-	--tertiary-color: #90aec7;
-	--accent-color: #60945d;
-	--highlight-color: #915d94;
+	--primary-color: #33bbcc;
+	--secondary-color: #008899;
+	--tertiary-color: #005566;
+	--accent-color: #cc3833;
+	--highlight-color: #009912;
 	--light-gray-color: #f0f0f0;
 	--gray-color: #999;
 	--dark-gray-color: #303030;
@@ -1799,31 +1799,31 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 /* Block Text Colors */
 .has-primary-color,
 .wp-block-button__link.has-primary-color {
-	color: #cc5555;
+	color: #33bbcc;
 	color: var(--primary-color);
 }
 
 .has-secondary-color,
 .wp-block-button__link.has-secondary-color {
-	color: #5d7b94;
+	color: #008899;
 	color: var(--secondary-color);
 }
 
 .has-tertiary-color,
 .wp-block-button__link.has-tertiary-color {
-	color: #90aec7;
+	color: #005566;
 	color: var(--tertiary-color);
 }
 
 .has-accent-color,
 .wp-block-button__link.has-accent-color {
-	color: #60945d;
+	color: #cc3833;
 	color: var(--accent-color);
 }
 
 .has-highlight-color,
 .wp-block-button__link.has-highlight-color {
-	color: #915d94;
+	color: #009912;
 	color: var(--highlight-color);
 }
 
@@ -1858,31 +1858,31 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 /* Block Background Colors */
 .has-primary-background-color,
 .has-primary-background-color[class] {
-	background-color: #cc5555;
+	background-color: #33bbcc;
 	background-color: var(--primary-color);
 }
 
 .has-secondary-background-color,
 .has-secondary-background-color[class] {
-	background-color: #5d7b94;
+	background-color: #008899;
 	background-color: var(--secondary-color);
 }
 
 .has-tertiary-background-color,
 .has-tertiary-background-color[class] {
-	background-color: #90aec7;
+	background-color: #005566;
 	background-color: var(--tertiary-color);
 }
 
 .has-accent-background-color,
 .has-accent-background-color[class] {
-	background-color: #60945d;
+	background-color: #cc3833;
 	background-color: var(--accent-color);
 }
 
 .has-highlight-background-color,
 .has-highlight-background-color[class] {
-	background-color: #915d94;
+	background-color: #009912;
 	background-color: var(--highlight-color);
 }
 
