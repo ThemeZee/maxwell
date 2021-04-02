@@ -60,6 +60,7 @@ function maxwell_default_options() {
 		'post_layout'           => 'one-column',
 		'read_more_text'        => esc_html__( 'Continue reading', 'maxwell' ),
 		'blog_magazine_widgets' => true,
+		'excerpt_use_more_tag'  => false,
 		'excerpt_length'        => 20,
 		'meta_date'             => true,
 		'meta_author'           => true,
