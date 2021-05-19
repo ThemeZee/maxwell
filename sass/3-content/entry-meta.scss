@@ -20,11 +20,9 @@
 
 .entry-meta span::after {
 	display: inline-block;
-	margin-left: 0.2em;
-	content: '\f428';
-	vertical-align: middle;
-	font: normal 16px 'Genericons';
-	-webkit-font-smoothing: antialiased;
+	@include color(--light-text-color);
+	margin: 0 0.5rem;
+	content: "\2022";
 }
 
 .entry-meta span:last-child::after {
