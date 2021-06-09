@@ -170,7 +170,7 @@ add_filter( 'excerpt_length', 'maxwell_excerpt_length' );
  * @return string
  */
 function maxwell_excerpt_more( $more_text ) {
-	return '';
+	return ' ...';
 }
 add_filter( 'excerpt_more', 'maxwell_excerpt_more' );
 

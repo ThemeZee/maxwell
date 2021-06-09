@@ -22,8 +22,14 @@
 		</header><!-- .entry-header -->
 
 		<div class="entry-content entry-excerpt clearfix">
-			<?php the_excerpt(); ?>
-			<?php maxwell_more_link(); ?>
+			<?php
+				if ( maxwell_get_option( 'excerpt_use_more_tag' ) ) {
+					the_content(maxwell_get_option( 'read_more_text' ));
+				} else {
+					the_excerpt();
+					maxwell_more_link();
+				}
+				?>
 		</div><!-- .entry-content -->
 
 	</article>
