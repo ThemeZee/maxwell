@@ -27,6 +27,8 @@ endif;
 		// Display Magazine Homepage Widgets.
 		maxwell_magazine_widgets();
 
+		do_action( 'maxwell_before_blog' );
+
 		if ( have_posts() ) :
 
 			// Display Blog Title.

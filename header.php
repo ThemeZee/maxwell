@@ -24,9 +24,13 @@
 
 	<?php do_action( 'maxwell_header_bar' ); ?>
 
+	<?php do_action( 'maxwell_before_site' ); ?>
+
 	<div id="page" class="hfeed site">
 
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'maxwell' ); ?></a>
+
+		<?php do_action( 'maxwell_before_header' ); ?>
 
 		<header id="masthead" class="site-header clearfix" role="banner">
 
@@ -56,6 +60,8 @@
 			<?php get_template_part( 'template-parts/header/site', 'navigation' ); ?>
 
 		</header><!-- #masthead -->
+
+		<?php do_action( 'maxwell_after_header' ); ?>
 
 		<?php maxwell_header_image(); ?>
 
