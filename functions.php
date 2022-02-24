@@ -158,7 +158,7 @@ function maxwell_scripts() {
 
 	// Register and enqueue navigation.js.
 	if ( ( has_nav_menu( 'primary' ) || has_nav_menu( 'secondary' ) ) && ! maxwell_is_amp() ) {
-		wp_enqueue_script( 'maxwell-navigation', get_theme_file_uri( '/assets/js/navigation.min.js' ), array(), '20211105', true );
+		wp_enqueue_script( 'maxwell-navigation', get_theme_file_uri( '/assets/js/navigation.min.js' ), array(), '20220224', true );
 		$maxwell_l10n = array(
 			'expand'   => esc_html__( 'Expand child menu', 'maxwell' ),
 			'collapse' => esc_html__( 'Collapse child menu', 'maxwell' ),
