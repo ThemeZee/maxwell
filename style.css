@@ -1,9 +1,9 @@
 /*
-Theme Name: Maxwell
-Theme URI: https://themezee.com/themes/maxwell/
+Theme Name: MaxwellFixes
+Theme URI: https://github.com/itelmenko/maxwell/tree/master
 Author: ThemeZee
 Author URI: https://themezee.com
-Description: Maxwell is a minimalistic and elegant WordPress theme featuring an ultra clean magazine layout. With a beautiful typography, various post layouts and a gorgeous featured posts slideshow Maxwell truly helps you to stand out.
+Description: Maxwell Theme from https://themezee.com/themes/maxwell/ with fixes. Unfortunately, my PR was declined. For example, it has fix for "more" tag. In admin part you can define behaviour of "Excerpt" (Theme Options -> Blog Settings -> Excerpt Settings).
 Version: 2.3.6
 Requires at least: 5.2
 Tested up to: 5.9
