@@ -46,6 +46,10 @@
 	text-decoration: underline;
 }
 
+.entry-content > *:first-child {
+	margin-top: 1.5em;
+}
+
 .entry-content p:first-child {
 	margin-top: 0.5em;
 }
