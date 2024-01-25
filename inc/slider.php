@@ -69,7 +69,8 @@ if ( ! function_exists( 'maxwell_slider_image' ) ) :
 				</figure>
 			</a>
 
-		<?php endif;
+			<?php
+		endif;
 	}
 endif;
 
@@ -80,7 +81,7 @@ if ( ! function_exists( 'maxwell_slider_meta' ) ) :
 	 */
 	function maxwell_slider_meta() {
 
-		$postmeta = maxwell_meta_date();
+		$postmeta  = maxwell_meta_date();
 		$postmeta .= maxwell_meta_author();
 
 		echo '<div class="entry-meta">' . $postmeta . '</div>';
