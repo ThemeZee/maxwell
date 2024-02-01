@@ -93,10 +93,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	--footer-text-color: #303030;
 	--footer-text-hover-color: rgba(0, 0, 0, 0.5);
 	--footer-border-color: rgba(0, 0, 0, 0.15);
-	--text-font: "Titillium Web", arial, helvetica, sans-serif;
-	--title-font: "Amaranth", arial, helvetica, sans-serif;
-	--navi-font: "Titillium Web", arial, helvetica, sans-serif;
-	--widget-title-font: "Amaranth", arial, helvetica, sans-serif;
+	--text-font: "Roboto", arial, helvetica, sans-serif;
+	--title-font: "Sofia Sans Semi Condensed", arial, helvetica, sans-serif;
+	--navi-font: "Roboto", arial, helvetica, sans-serif;
+	--widget-title-font: "Sofia Sans Semi Condensed", arial, helvetica, sans-serif;
 	--title-font-weight: bold;
 	--navi-font-weight: normal;
 	--widget-title-font-weight: bold;
@@ -329,7 +329,7 @@ textarea {
 	color: var(--text-color);
 	font-size: 17px;
 	font-size: 1.0625rem;
-	font-family: "Titillium Web", arial, helvetica, sans-serif;
+	font-family: "Roboto", arial, helvetica, sans-serif;
 	font-family: var(--text-font);
 	line-height: 1.75;
 	line-height: var(--text-line-height);
@@ -847,7 +847,7 @@ textarea {
 	text-decoration: none;
 	font-size: 44px;
 	font-size: 2.75rem;
-	font-family: "Amaranth", arial, helvetica, sans-serif;
+	font-family: "Sofia Sans Semi Condensed", arial, helvetica, sans-serif;
 	font-family: var(--title-font);
 	font-weight: bold;
 	font-weight: var(--title-font-weight);
@@ -942,7 +942,7 @@ textarea {
 	list-style: none;
 	font-size: 17px;
 	font-size: 1.0625rem;
-	font-family: "Titillium Web", arial, helvetica, sans-serif;
+	font-family: "Roboto", arial, helvetica, sans-serif;
 	font-family: var(--navi-font);
 	font-weight: normal;
 	font-weight: var(--navi-font-weight);
@@ -1034,7 +1034,7 @@ textarea {
 	text-decoration: none;
 	font-size: 17px;
 	font-size: 1.0625rem;
-	font-family: "Titillium Web", arial, helvetica, sans-serif;
+	font-family: "Roboto", arial, helvetica, sans-serif;
 	font-family: var(--navi-font);
 	font-weight: normal;
 	font-weight: var(--navi-font-weight);
@@ -1160,7 +1160,7 @@ textarea {
 	word-wrap: break-word;
 	font-size: 36px;
 	font-size: 2.25rem;
-	font-family: "Amaranth", arial, helvetica, sans-serif;
+	font-family: "Sofia Sans Semi Condensed", arial, helvetica, sans-serif;
 	font-family: var(--title-font);
 	font-weight: bold;
 	font-weight: var(--title-font-weight);
@@ -1453,7 +1453,7 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 	word-wrap: break-word;
 	font-size: 20px;
 	font-size: 1.25rem;
-	font-family: "Amaranth", arial, helvetica, sans-serif;
+	font-family: "Sofia Sans Semi Condensed", arial, helvetica, sans-serif;
 	font-family: var(--widget-title-font);
 	font-weight: bold;
 	font-weight: var(--widget-title-font-weight);
@@ -2099,7 +2099,7 @@ div.wp-block-columns {
 	color: var(--widget-title-color);
 	font-size: 20px;
 	font-size: 1.25rem;
-	font-family: "Amaranth", arial, helvetica, sans-serif;
+	font-family: "Sofia Sans Semi Condensed", arial, helvetica, sans-serif;
 	font-family: var(--widget-title-font);
 	font-weight: bold;
 	font-weight: var(--widget-title-font-weight);
@@ -2266,7 +2266,7 @@ div.wp-block-columns {
 	word-wrap: break-word;
 	font-size: 20px;
 	font-size: 1.25rem;
-	font-family: "Amaranth", arial, helvetica, sans-serif;
+	font-family: "Sofia Sans Semi Condensed", arial, helvetica, sans-serif;
 	font-family: var(--widget-title-font);
 	font-weight: bold;
 	font-weight: var(--widget-title-font-weight);
