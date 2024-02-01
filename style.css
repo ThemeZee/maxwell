@@ -1,12 +1,14 @@
+@charset "UTF-8";
+
 /*
 Theme Name: MaxwellFixes
 Theme URI: https://github.com/itelmenko/maxwell/tree/master
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Maxwell Theme from https://themezee.com/themes/maxwell/ with fixes. Unfortunately, my PR was declined. For example, it has fix for "more" tag. In admin part you can define behaviour of "Excerpt" (Theme Options -> Blog Settings -> Excerpt Settings).
-Version: 2.3.8
+Version: 2.4.0
 Requires at least: 5.2
-Tested up to: 6.0
+Tested up to: 6.5
 Requires PHP: 5.6
 AMP: true
 License: GNU General Public License v2 or later
@@ -168,7 +170,7 @@ abbr[title] {
 
 b,
 strong {
-	font-weight: bold;
+	font-weight: 700;
 }
 
 dfn {
@@ -222,7 +224,7 @@ kbd,
 pre,
 samp {
 	font-size: 1em;
-	font-family: monospace, monospace;
+	font-family: monospace;
 }
 
 button,
@@ -250,6 +252,7 @@ input[type="reset"],
 input[type="submit"] {
 	cursor: pointer;
 	-webkit-appearance: button;
+	appearance: button;
 }
 
 button[disabled],
@@ -281,6 +284,7 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
 	box-sizing: content-box;
 	-webkit-appearance: textfield;
+	appearance: textfield;
 }
 
 input[type="search"]::-webkit-search-cancel-button,
@@ -304,7 +308,7 @@ textarea {
 }
 
 optgroup {
-	font-weight: bold;
+	font-weight: 700;
 }
 
 table {
@@ -476,7 +480,7 @@ blockquote small {
 
 blockquote cite::before,
 blockquote small::before {
-	content: "\2014\00a0";
+	content: "— ";
 }
 
 blockquote em,
@@ -519,7 +523,7 @@ li > ol {
 }
 
 dt {
-	font-weight: bold;
+	font-weight: 700;
 }
 
 dd {
@@ -548,7 +552,7 @@ td {
 }
 
 th {
-	font-weight: normal;
+	font-weight: 400;
 	text-align: initial;
 	background: rgba(0, 0, 0, 0.05);
 }
@@ -666,10 +670,6 @@ textarea {
 	flex-grow: 1;
 }
 
-.search-form .screen-reader-text {
-	display: none;
-}
-
 .search-form .search-field {
 	display: inline-block;
 	box-sizing: border-box;
@@ -691,7 +691,7 @@ textarea {
 .search-form .search-submit .icon-search {
 	width: 20px;
 	height: 20px;
-	fill: currentColor;
+	fill: currentcolor;
 }
 
 /*--------------------------------------------------------------
@@ -723,7 +723,7 @@ textarea {
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	color: #21759b;
 	text-decoration: none;
-	font-weight: bold;
+	font-weight: 700;
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: normal;
@@ -753,19 +753,19 @@ textarea {
 /*--------------------------------------------------------------
 # - Clearings
 --------------------------------------------------------------*/
-.clearfix:before,
-.clearfix:after,
-.post-navigation .nav-links:before,
-.post-navigation .nav-links:after,
-.comment-navigation:before,
-.comment-navigation:after {
+.clearfix::before,
+.clearfix::after,
+.post-navigation .nav-links::before,
+.post-navigation .nav-links::after,
+.comment-navigation::before,
+.comment-navigation::after {
 	display: table;
 	content: "";
 }
 
-.clearfix:after,
-.post-navigation .nav-links:after,
-.comment-navigation:after {
+.clearfix::after,
+.post-navigation .nav-links::after,
+.comment-navigation::after {
 	clear: both;
 }
 
@@ -849,7 +849,7 @@ textarea {
 	font-size: 2.75rem;
 	font-family: "Sofia Sans Semi Condensed", arial, helvetica, sans-serif;
 	font-family: var(--title-font);
-	font-weight: bold;
+	font-weight: 700;
 	font-weight: var(--title-font-weight);
 	text-transform: none;
 	text-transform: var(--title-text-transform);
@@ -944,7 +944,7 @@ textarea {
 	font-size: 1.0625rem;
 	font-family: "Roboto", arial, helvetica, sans-serif;
 	font-family: var(--navi-font);
-	font-weight: normal;
+	font-weight: 400;
 	font-weight: var(--navi-font-weight);
 	text-transform: none;
 	text-transform: var(--navi-text-transform);
@@ -1036,7 +1036,7 @@ textarea {
 	font-size: 1.0625rem;
 	font-family: "Roboto", arial, helvetica, sans-serif;
 	font-family: var(--navi-font);
-	font-weight: normal;
+	font-weight: 400;
 	font-weight: var(--navi-font-weight);
 	text-transform: none;
 	text-transform: var(--navi-text-transform);
@@ -1162,7 +1162,7 @@ textarea {
 	font-size: 2.25rem;
 	font-family: "Sofia Sans Semi Condensed", arial, helvetica, sans-serif;
 	font-family: var(--title-font);
-	font-weight: bold;
+	font-weight: 700;
 	font-weight: var(--title-font-weight);
 	text-transform: none;
 	text-transform: var(--title-text-transform);
@@ -1212,7 +1212,7 @@ textarea {
 .page-links {
 	margin: 0 0 1.5em;
 	word-spacing: 0.75em;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 /* Entry Meta */
@@ -1242,7 +1242,7 @@ textarea {
 	color: rgba(0, 0, 0, 0.5);
 	color: var(--light-text-color);
 	margin: 0 0.5rem;
-	content: "\2022";
+	content: "•";
 }
 
 .entry-meta span:last-child::after {
@@ -1377,7 +1377,7 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 }
 
 .more-link::after {
-	content: " \00BB";
+	content: " »";
 }
 
 .entry-content > .more-link {
@@ -1418,12 +1418,12 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 
 .post-navigation .nav-links .nav-previous .nav-link-text::before {
 	margin-right: 3px;
-	content: "\00AB";
+	content: "«";
 }
 
 .post-navigation .nav-links .nav-next .nav-link-text::after {
 	margin-left: 4px;
-	content: "\00BB";
+	content: "»";
 }
 
 .post-navigation .nav-links .entry-title {
@@ -1455,7 +1455,7 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 	font-size: 1.25rem;
 	font-family: "Sofia Sans Semi Condensed", arial, helvetica, sans-serif;
 	font-family: var(--widget-title-font);
-	font-weight: bold;
+	font-weight: 700;
 	font-weight: var(--widget-title-font-weight);
 	text-transform: none;
 	text-transform: var(--widget-title-text-transform);
@@ -1523,7 +1523,7 @@ body.date-hidden.author-hidden .content-area .widget-magazine-posts .type-post .
 }
 
 .post-layout-three-columns .post-wrapper .post-column {
-	width: 33.3333333333333%;
+	width: 33.3333333333%;
 }
 
 /* Theme Pagination */
@@ -1621,7 +1621,7 @@ p.has-background {
 .has-drop-cap:not(:focus)::first-letter {
 	font-size: 4.5rem;
 	line-height: 0.7;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 /* Code Block */
@@ -2101,7 +2101,7 @@ div.wp-block-columns {
 	font-size: 1.25rem;
 	font-family: "Sofia Sans Semi Condensed", arial, helvetica, sans-serif;
 	font-family: var(--widget-title-font);
-	font-weight: bold;
+	font-weight: 700;
 	font-weight: var(--widget-title-font-weight);
 	text-transform: none;
 	text-transform: var(--widget-title-text-transform);
@@ -2268,7 +2268,7 @@ div.wp-block-columns {
 	font-size: 1.25rem;
 	font-family: "Sofia Sans Semi Condensed", arial, helvetica, sans-serif;
 	font-family: var(--widget-title-font);
-	font-weight: bold;
+	font-weight: 700;
 	font-weight: var(--widget-title-font-weight);
 	text-transform: none;
 	text-transform: var(--widget-title-text-transform);
@@ -2352,14 +2352,14 @@ div.wp-block-columns {
 	float: right;
 }
 
-.comment-navigation .nav-previous a:before {
+.comment-navigation .nav-previous a::before {
 	margin-right: 3px;
-	content: "\00AB";
+	content: "«";
 }
 
-.comment-navigation .nav-next a:after {
+.comment-navigation .nav-next a::after {
 	margin-left: 4px;
-	content: "\00BB";
+	content: "»";
 }
 
 /* Comment Form */
@@ -2370,7 +2370,7 @@ div.wp-block-columns {
 .comment-form label {
 	display: inline-block;
 	min-width: 150px;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 .comment-form textarea {
@@ -2384,13 +2384,13 @@ div.wp-block-columns {
 .comment-form input[type="checkbox"] + label {
 	display: inline;
 	padding-left: 0.5em;
-	font-weight: normal;
+	font-weight: 400;
 }
 
 .comment-reply-title small a {
 	margin-left: 1em;
 	text-decoration: underline;
-	font-weight: normal;
+	font-weight: 400;
 	font-size: 14px;
 	font-size: 0.875rem;
 }
@@ -2552,7 +2552,7 @@ figcaption,
 
 .breadcrumbs .trail-browse {
 	margin-right: 0.5em;
-	font-weight: normal;
+	font-weight: 400;
 	font-size: 14px;
 	font-size: 0.875rem;
 }
@@ -2563,35 +2563,35 @@ figcaption,
 
 .breadcrumbs .trail-items li::after {
 	padding: 0 0.5em;
-	content: "\00bb"; /* Raquo */
+	content: "»"; /* Raquo */
 }
 
 .trail-separator-slash .trail-items li::after {
-	content: "\002F";
+	content: "/";
 }
 
 .trail-separator-dash .trail-items li::after {
-	content: "\2013";
+	content: "–";
 }
 
 .trail-separator-bull .trail-items li::after {
-	content: "\2022";
+	content: "•";
 }
 
 .trail-separator-arrow-bracket .trail-items li::after {
-	content: "\003e";
+	content: ">";
 }
 
 .trail-separator-raquo .trail-items li::after {
-	content: "\00bb";
+	content: "»";
 }
 
 .trail-separator-single-arrow .trail-items li::after {
-	content: "\2192";
+	content: "→";
 }
 
 .trail-separator-double-arrow .trail-items li::after {
-	content: "\21D2";
+	content: "⇒";
 }
 
 .breadcrumbs .trail-items li:last-of-type::after {
@@ -2611,7 +2611,7 @@ figcaption,
 
 .tz-magazine-block .tz-magazine-thumbnail-list .tz-entry-title {
 	font-size: 16px;
-	font-size: 1.0rem;
+	font-size: 1rem;
 }
 
 .tz-magazine-block .tz-entry-meta {
@@ -2665,7 +2665,7 @@ figcaption,
 
 	.tz-magazine-block .tz-magazine-thumbnail-list .tz-entry-title {
 		font-size: 16px;
-		font-size: 1.0rem;
+		font-size: 1rem;
 	}
 
 	.tz-magazine-block .tz-magazine-grid-columns-4 .tz-entry-title {
@@ -2770,22 +2770,22 @@ ul.related-posts-list {
 }
 
 .related-posts-three-columns .related-post-column {
-	width: 33.3333333333333%;
+	width: 33.3333333333%;
 }
 
 .related-posts-four-columns .related-post-column {
 	width: 25%;
 }
 
-.related-posts-two-columns .related-post-column:nth-child(2n + 1) {
+.related-posts-two-columns .related-post-column:nth-child(2n+1) {
 	clear: left;
 }
 
-.related-posts-three-columns .related-post-column:nth-child(3n + 1) {
+.related-posts-three-columns .related-post-column:nth-child(3n+1) {
 	clear: left;
 }
 
-.related-posts-four-columns .related-post-column:nth-child(4n + 1) {
+.related-posts-four-columns .related-post-column:nth-child(4n+1) {
 	clear: left;
 }
 
@@ -2826,6 +2826,7 @@ ul.related-posts-list {
 }
 
 @media only screen and (max-width: 80em) {
+
 	/* Columns */
 	.related-posts-two-columns .related-post-column .entry-title {
 		font-size: 22px;
@@ -2845,7 +2846,7 @@ ul.related-posts-list {
 		width: 50%;
 	}
 
-	.related-posts-four-columns .related-post-column:nth-child(2n + 1) {
+	.related-posts-four-columns .related-post-column:nth-child(2n+1) {
 		clear: left;
 	}
 
@@ -3088,7 +3089,7 @@ ul.related-posts-list {
 	width: 20px;
 	height: 20px;
 	vertical-align: middle;
-	fill: currentColor;
+	fill: currentcolor;
 }
 
 /*
@@ -3145,7 +3146,7 @@ ul.related-posts-list {
 	visibility: hidden;
 	clear: both;
 	height: 0;
-	content: "\0020";
+	content: " ";
 	line-height: 0;
 }
 
@@ -3255,19 +3256,19 @@ html[xmlns] .zeeflexslider .zeeslides {
 .post-slider-controls .zeeflex-direction-nav a::before {
 	display: inline-block;
 	margin: -0.2rem 0 0;
-	color: currentColor;
+	color: currentcolor;
 	vertical-align: top;
 	text-decoration: inherit;
 	font-size: 22px;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 .post-slider-controls .zeeflex-direction-nav a.zeeflex-next::before {
-	content: '\003e';
+	content: ">";
 }
 
 .post-slider-controls .zeeflex-direction-nav a.zeeflex-prev::before {
-	content: '\003c';
+	content: "<";
 }
 
 .post-slider-controls .zeeflex-direction-nav .zeeflex-next {
@@ -3654,6 +3655,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 @media only screen and (max-width: 30em) {
+
 	/* Post Navigation */
 	.post-navigation {
 		font-size: 15px;
@@ -3844,6 +3846,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 # - Media Queries for Magazine widgets
 --------------------------------------------------------------*/
 @media only screen and (max-width: 70em) {
+
 	/* Magazine Post Widgets */
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 24px;
@@ -3856,13 +3859,14 @@ html[xmlns] .zeeflexslider .zeeslides {
 		font-size: 1.0625rem;
 	}
 
-	.widget-magazine-posts .small-post .entry-meta span:after,
+	.widget-magazine-posts .small-post .entry-meta span::after,
 	.widget-magazine-posts .small-post .entry-meta .meta-author {
 		display: none;
 	}
 }
 
 @media only screen and (max-width: 60em) {
+
 	/* Magazine Post Widgets */
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 28px;
@@ -3877,6 +3881,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 @media only screen and (max-width: 50em) {
+
 	/* Magazine Post Widgets */
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 24px;
@@ -3899,6 +3904,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 @media only screen and (max-width: 40em) {
+
 	/* Magazine Post Widgets */
 	.widget-magazine-posts .magazine-grid {
 		margin-right: 0;
@@ -3938,6 +3944,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 @media only screen and (max-width: 30em) {
+
 	/* Magazine Homepage: Category Post Widgets */
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 24px;
@@ -3952,6 +3959,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 @media only screen and (max-width: 20em) {
+
 	/* Magazine Homepage: Category Post Widgets */
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 20px;
@@ -3974,6 +3982,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 # - Media Queries for Media
 --------------------------------------------------------------*/
 @media only screen and (max-width: 50em) {
+
 	/* Gallery */
 	.gallery-columns-6 .gallery-item,
 	.gallery-columns-7 .gallery-item,

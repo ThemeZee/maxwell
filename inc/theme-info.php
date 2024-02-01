@@ -147,10 +147,15 @@ function maxwell_theme_info_page() {
 
 		<div id="theme-author">
 
-			<p><?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'maxwell' ),
+			<p>
+			<?php
+			printf(
+				esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'maxwell' ),
 				$theme->display( 'Name' ),
 				'<a target="_blank" href="' . __( 'https://themezee.com/', 'maxwell' ) . '?utm_source=theme-info&utm_medium=footer&utm_campaign=maxwell" title="ThemeZee">ThemeZee</a>',
-				'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/maxwell/reviews/', 'maxwell' ) . '" title="' . esc_attr__( 'Review Maxwell', 'maxwell' ) . '">' . esc_html__( 'rate it', 'maxwell' ) . '</a>'); ?>
+				'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/maxwell/reviews/', 'maxwell' ) . '" title="' . esc_attr__( 'Review Maxwell', 'maxwell' ) . '">' . esc_html__( 'rate it', 'maxwell' ) . '</a>'
+			);
+			?>
 			</p>
 
 		</div>
