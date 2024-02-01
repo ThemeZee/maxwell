@@ -222,13 +222,13 @@ add_action( 'enqueue_block_editor_assets', 'maxwell_theme_fonts', 1 );
  */
 function maxwell_get_fonts_url() {
 	$font_families = array(
-		'Titillium Web:400,400italic,700,700italic',
-		'Amaranth:400,400italic,700,700italic',
+		'Roboto:400,400italic,700,700italic',
+		'Sofia Sans Semi Condensed:400,400italic,700,700italic',
 	);
 
 	$query_args = array(
 		'family'  => urlencode( implode( '|', $font_families ) ),
-		'subset'  => urlencode( 'latin,latin-ext' ),
+		'subset'  => urlencode( 'latin,cyrillic' ),
 		'display' => urlencode( 'swap' ),
 	);
 

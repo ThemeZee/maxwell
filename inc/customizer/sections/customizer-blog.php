@@ -90,7 +90,7 @@ function maxwell_customize_register_blog_settings( $wp_customize ) {
 	$wp_customize->add_setting(
 		'maxwell_theme_options[post_layout]',
 		array(
-			'default'           => 'three-columns',
+			'default'           => 'one-column',
 			'type'              => 'option',
 			'transport'         => 'refresh',
 			'sanitize_callback' => 'maxwell_sanitize_select',
@@ -112,6 +112,32 @@ function maxwell_customize_register_blog_settings( $wp_customize ) {
 			),
 		)
 	);
+
+	// Add Excerpt Settings Headline.
+	$wp_customize->add_control( new Maxwell_Customize_Header_Control(
+		$wp_customize, 'maxwell_theme_options[blog_excerpt_settings_title]', array(
+			'label'    => esc_html__( 'Excerpt Settings', 'maxwell' ),
+			'section'  => 'maxwell_section_blog',
+			'settings' => array(),
+			'priority' => 32,
+		)
+	) );
+
+	// Add Setting and Control for support for More Block.
+	$wp_customize->add_setting( 'maxwell_theme_options[excerpt_use_more_tag]', array(
+		'default'           => false,
+		'type'              => 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'maxwell_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control( 'maxwell_theme_options[excerpt_use_more_tag]', array(
+		'label'    => esc_html__( 'Excerpt based on More Block', 'maxwell' ),
+		'section'  => 'maxwell_section_blog',
+		'settings' => 'maxwell_theme_options[excerpt_use_more_tag]',
+		'type'     => 'checkbox',
+		'priority' => 35,
+	) );
 
 	// Add Excerpt Length setting and control.
 	$wp_customize->add_setting(
